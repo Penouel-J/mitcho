@@ -1,5 +1,6 @@
 """
-Generates a professional PDF report from the assembled report data.
+Generates MITCHÔ PDF reports.
+Two visual layouts: "decideur" (professional) and "agriculteur" (simple, large text).
 Uses fpdf2 — pure Python, no external binaries required.
 """
 import io
@@ -7,49 +8,49 @@ import logging
 import re
 from datetime import datetime
 
-from fpdf import FPDF, Align
+from fpdf import FPDF
 
 logger = logging.getLogger(__name__)
 
-# Characters outside Latin-1 must be replaced before calling fpdf2 built-in fonts
 _UNICODE_REPLACEMENTS = str.maketrans({
-    "\u2014": "--",   # em dash —
-    "\u2013": "-",    # en dash –
-    "\u2019": "'",    # right single quotation mark '
-    "\u2018": "'",    # left single quotation mark '
-    "\u201c": '"',    # left double quotation mark "
-    "\u201d": '"',    # right double quotation mark "
-    "\u2026": "...",  # ellipsis …
-    "\u00ab": "<<",   # left guillemet «
-    "\u00bb": ">>",   # right guillemet »
-    "\u00e9": "e",    # é  (Latin-1 should be fine but just in case)
-    "\u2022": "-",    # bullet •
-    "\u00b0": " deg",# degree °
-    "\u00a0": " ",    # non-breaking space
+    "\u2014": "--",
+    "\u2013": "-",
+    "\u2019": "'",
+    "\u2018": "'",
+    "\u201c": '"',
+    "\u201d": '"',
+    "\u2026": "...",
+    "\u00ab": "<<",
+    "\u00bb": ">>",
+    "\u2022": "-",
+    "\u00b0": " deg",
+    "\u00a0": " ",
 })
+
+COLOR_PRIMARY    = (0, 100, 50)
+COLOR_SECONDARY  = (16, 185, 129)
+COLOR_DARK       = (10, 30, 20)
+COLOR_LIGHT_BG   = (240, 248, 244)
+COLOR_TEXT       = (30, 40, 35)
+COLOR_MUTED      = (100, 120, 110)
+COLOR_WHITE      = (255, 255, 255)
+COLOR_BORDER     = (200, 225, 210)
+COLOR_AGRI_GOLD  = (255, 193, 7)    # warm yellow for farmer accents
+COLOR_AGRI_BG    = (255, 251, 235)  # soft warm background
 
 
 def _clean(text: str) -> str:
-    """Strip characters outside Latin-1 range so fpdf2 built-in fonts don't crash."""
     if not text:
         return ""
     text = text.translate(_UNICODE_REPLACEMENTS)
-    # Drop any remaining non-Latin-1 characters
     return text.encode("latin-1", errors="replace").decode("latin-1")
 
 
-# MITCHÔ brand colors (RGB)
-COLOR_PRIMARY = (0, 100, 50)        # dark green
-COLOR_SECONDARY = (16, 185, 129)    # emerald
-COLOR_DARK = (10, 30, 20)
-COLOR_LIGHT_BG = (240, 248, 244)
-COLOR_TEXT = (30, 40, 35)
-COLOR_MUTED = (100, 120, 110)
-COLOR_WHITE = (255, 255, 255)
-COLOR_BORDER = (200, 225, 210)
+# ─────────────────────────────────────────────
+#  PROFESSIONAL REPORT  (decideur)
+# ─────────────────────────────────────────────
 
-
-class MitchoReport(FPDF):
+class MitchoReportDecideur(FPDF):
     def __init__(self, data: dict):
         super().__init__(orientation="P", unit="mm", format="A4")
         self.data = data
@@ -59,7 +60,6 @@ class MitchoReport(FPDF):
     def header(self):
         if self.page_no() == 1:
             return
-        # Thin green top bar
         self.set_fill_color(*COLOR_PRIMARY)
         self.rect(0, 0, 210, 4, "F")
         self.set_y(8)
@@ -80,21 +80,18 @@ class MitchoReport(FPDF):
         self.set_text_color(*COLOR_TEXT)
 
     def cover_page(self):
-        # Full-height green sidebar
         self.set_fill_color(*COLOR_PRIMARY)
         self.rect(0, 0, 60, 297, "F")
 
-        # Sidebar text (rotated feel via top-down labels)
         self.set_text_color(*COLOR_WHITE)
         self.set_font("Helvetica", "B", 9)
         self.set_xy(5, 260)
         self.cell(50, 6, "INTELLIGENCE PUBLIQUE", align="C")
 
-        # Right side content
         self.set_xy(70, 50)
         self.set_font("Helvetica", "", 10)
         self.set_text_color(*COLOR_SECONDARY)
-        self.cell(120, 6, "SYSTÈME D'ANALYSE ALIMENTAIRE", align="L")
+        self.cell(120, 6, "SYSTEME D'ANALYSE ALIMENTAIRE", align="L")
 
         self.set_xy(70, 65)
         self.set_font("Helvetica", "B", 28)
@@ -112,16 +109,14 @@ class MitchoReport(FPDF):
         self.multi_cell(
             120, 6,
             "Analyse des prix vivriers, signaux GDELT,\n"
-            "prévisions et recommandations stratégiques\npour le Bénin.",
+            "previsions et recommandations strategiques\npour le Benin.",
             align="L",
         )
 
-        # Stats box
         self.set_xy(70, 175)
         self.set_fill_color(*COLOR_LIGHT_BG)
         self.set_draw_color(*COLOR_BORDER)
         self.rect(70, 175, 120, 45, "FD")
-
         self.set_xy(75, 181)
         self.set_font("Helvetica", "B", 8)
         self.set_text_color(*COLOR_PRIMARY)
@@ -133,9 +128,8 @@ class MitchoReport(FPDF):
         self.set_xy(75, 195)
         self.cell(50, 5, f"Articles GDELT : {self.data.get('gdelt_articles_count', 0)}")
         self.set_xy(75, 202)
-        self.cell(50, 5, f"Généré : {self.data['generated_at']}")
+        self.cell(50, 5, f"Genere : {self.data['generated_at']}")
 
-        # Footer note on cover
         self.set_xy(70, 270)
         self.set_font("Helvetica", "", 7)
         self.set_text_color(*COLOR_MUTED)
@@ -145,13 +139,11 @@ class MitchoReport(FPDF):
         if not prices:
             return
         self.add_page()
-        self._section_title("Données de Prix Vivriers")
-        self._subtitle(f"Source : WFP/HDX — Période : {self.data.get('price_updated_at', 'récent')}")
+        self._section_title("Donnees de Prix Vivriers")
+        self._subtitle(f"Source : WFP/HDX -- Periode : {self.data.get('price_updated_at', 'recent')}")
 
         col_w = [65, 35, 30, 25, 25]
-        headers = ["Produit", "Marché", "Prix", "Unité", "Devise"]
-
-        # Table header
+        headers = ["Produit", "Marche", "Prix", "Unite", "Devise"]
         self.set_fill_color(*COLOR_PRIMARY)
         self.set_text_color(*COLOR_WHITE)
         self.set_font("Helvetica", "B", 9)
@@ -159,7 +151,6 @@ class MitchoReport(FPDF):
             self.cell(col_w[i], 8, h, border=1, fill=True, align="C")
         self.ln()
 
-        # Table rows
         self.set_font("Helvetica", "", 9)
         for idx, p in enumerate(prices):
             bg = COLOR_LIGHT_BG if idx % 2 == 0 else COLOR_WHITE
@@ -171,41 +162,29 @@ class MitchoReport(FPDF):
             self.cell(col_w[3], 7, str(p.get("unit", "kg")), border=1, fill=True, align="C")
             self.cell(col_w[4], 7, str(p.get("currency", "XOF")), border=1, fill=True, align="C")
             self.ln()
-
         self.ln(6)
 
     def analysis_section(self, analysis_text: str):
         self.add_page()
-        # Sanitise the entire analysis first to remove non-Latin-1 characters
         lines = _clean(analysis_text).split("\n")
-
         for line in lines:
             line = line.strip()
             if not line:
                 self.ln(3)
                 continue
-
-            # Markdown H2 → section title
             if line.startswith("## "):
                 self._section_title(line[3:].strip())
                 continue
-
-            # Markdown H3 → subtitle
             if line.startswith("### "):
                 self._subtitle(line[4:].strip())
                 continue
-
-            # Bullet points (use plain hyphen — no Unicode bullet)
             if line.startswith("- ") or line.startswith("* "):
                 self.set_font("Helvetica", "", 9)
                 self.set_text_color(*COLOR_TEXT)
                 self.set_x(25)
-                bullet_text = _clean(line[2:].strip())
-                self.multi_cell(165, 5, f"- {bullet_text}", align="L")
+                self.multi_cell(165, 5, f"- {_clean(line[2:].strip())}", align="L")
                 self.ln(1)
                 continue
-
-            # Numbered list
             if re.match(r"^\d+\.\s", line):
                 self.set_font("Helvetica", "", 9)
                 self.set_text_color(*COLOR_TEXT)
@@ -213,15 +192,12 @@ class MitchoReport(FPDF):
                 self.multi_cell(165, 5, _clean(line), align="L")
                 self.ln(1)
                 continue
-
-            # Bold text (simple **...**)
             if "**" in line:
                 clean = _clean(re.sub(r"\*\*(.+?)\*\*", r"\1", line))
                 self.set_font("Helvetica", "B", 9)
             else:
                 clean = _clean(line)
                 self.set_font("Helvetica", "", 9)
-
             self.set_text_color(*COLOR_TEXT)
             self.set_x(20)
             self.multi_cell(170, 5, clean, align="L")
@@ -244,23 +220,295 @@ class MitchoReport(FPDF):
         self.set_text_color(*COLOR_TEXT)
 
 
-def generate_pdf(report_data: dict) -> bytes:
-    """
-    Main entry point: takes assembled report data, returns PDF as bytes.
-    """
-    pdf = MitchoReport(data=report_data)
-    pdf.set_author("MITCHO - Systeme d'Intelligence Publique")
-    pdf.set_title(f"Rapport MITCHO - {report_data['month_label']}")
+# ─────────────────────────────────────────────
+#  FARMER GUIDE  (agriculteur)
+#  Large text, simple layout, warm colors
+# ─────────────────────────────────────────────
 
-    # Cover
+class MitchoGuideAgriculteur(FPDF):
+    """
+    Simplified PDF layout for farmers:
+    - Larger fonts (body = 11pt instead of 9pt)
+    - Warm yellow accent on section headers
+    - Cover in plain French with practical framing
+    - Bullet points rendered as bold colored markers
+    """
+
+    def __init__(self, data: dict):
+        super().__init__(orientation="P", unit="mm", format="A4")
+        self.data = data
+        self.set_margins(18, 18, 18)
+        self.set_auto_page_break(auto=True, margin=28)
+
+    def header(self):
+        if self.page_no() == 1:
+            return
+        self.set_fill_color(*COLOR_PRIMARY)
+        self.rect(0, 0, 210, 5, "F")
+        self.set_y(9)
+        self.set_font("Helvetica", "B", 9)
+        self.set_text_color(*COLOR_MUTED)
+        self.cell(0, 5, _clean(f"MITCHO -- Guide Agriculteur -- {self.data['month_label']}"), align="L")
+        self.cell(0, 5, f"Page {self.page_no()}", align="R")
+        self.ln(7)
+        self.set_text_color(*COLOR_TEXT)
+
+    def footer(self):
+        self.set_y(-15)
+        self.set_font("Helvetica", "", 7)
+        self.set_text_color(*COLOR_MUTED)
+        self.cell(0, 5, _clean("MITCHO - Votre conseiller agricole au Benin | gratuit"), align="C")
+        self.ln(4)
+        self.cell(0, 5, _clean(f"Genere le {self.data['generated_at']} | Prix : WFP/HDX"), align="C")
+        self.set_text_color(*COLOR_TEXT)
+
+    def cover_page(self):
+        # Warm green header band
+        self.set_fill_color(*COLOR_PRIMARY)
+        self.rect(0, 0, 210, 55, "F")
+
+        self.set_xy(18, 12)
+        self.set_font("Helvetica", "B", 26)
+        self.set_text_color(*COLOR_WHITE)
+        self.cell(0, 12, "MITCHÔ", align="L")
+
+        self.set_xy(18, 28)
+        self.set_font("Helvetica", "", 11)
+        self.set_text_color(210, 240, 220)
+        self.cell(0, 7, "Votre guide pratique pour bien vendre vos recoltes", align="L")
+
+        self.set_xy(18, 38)
+        self.set_font("Helvetica", "B", 10)
+        self.set_text_color(*COLOR_AGRI_GOLD)
+        self.cell(0, 7, _clean(f"Mois de {self.data['month_label']}"), align="L")
+
+        # Intro box
+        self.set_xy(18, 68)
+        self.set_fill_color(*COLOR_AGRI_BG)
+        self.set_draw_color(*COLOR_AGRI_GOLD)
+        self.set_line_width(0.5)
+        self.rect(18, 65, 174, 52, "FD")
+
+        self.set_xy(22, 70)
+        self.set_font("Helvetica", "B", 11)
+        self.set_text_color(*COLOR_PRIMARY)
+        self.cell(0, 7, "Ce guide est fait pour vous !", align="L")
+
+        self.set_xy(22, 80)
+        self.set_font("Helvetica", "", 10)
+        self.set_text_color(*COLOR_TEXT)
+        self.multi_cell(
+            166, 6,
+            "Dans ce document, vous trouverez :\n"
+            "- Les prix actuels sur les marches du Benin\n"
+            "- Les meilleurs marches pour vendre ce mois\n"
+            "- Des conseils clairs : quand vendre et quand attendre\n"
+            "- Ce qui va changer dans les prochaines semaines",
+            align="L",
+        )
+
+        # Price summary strip
+        prices = self.data.get("prices", [])[:4]
+        if prices:
+            self.set_xy(18, 128)
+            self.set_font("Helvetica", "B", 9)
+            self.set_text_color(*COLOR_MUTED)
+            self.cell(0, 6, _clean(f"APERCU DES PRIX -- {self.data['month_label'].upper()}"), align="L")
+            self.ln(7)
+
+            for p in prices:
+                self.set_x(18)
+                self.set_fill_color(*COLOR_LIGHT_BG)
+                self.set_draw_color(*COLOR_BORDER)
+                self.rect(self.get_x(), self.get_y(), 174, 10, "FD")
+                self.set_x(22)
+                self.set_font("Helvetica", "B", 10)
+                self.set_text_color(*COLOR_DARK)
+                prod = str(p.get("product", ""))[:28]
+                self.cell(100, 10, prod, align="L")
+                self.set_font("Helvetica", "B", 11)
+                self.set_text_color(*COLOR_PRIMARY)
+                price_str = f"{p.get('price', 0):,.0f} FCFA/{p.get('unit','kg')}"
+                self.cell(72, 10, price_str, align="R")
+                self.ln(11)
+
+        self.set_xy(18, 270)
+        self.set_font("Helvetica", "", 8)
+        self.set_text_color(*COLOR_MUTED)
+        self.cell(0, 5, _clean("Sources des prix : WFP/PAM -- Programme Alimentaire Mondial"), align="L")
+
+    def prices_section(self, prices):
+        if not prices:
+            return
+        self.add_page()
+        self._section_title("Les Prix du Marche ce Mois")
+        self._note("Tous les prix sont en FCFA. Source : Programme Alimentaire Mondial (WFP).")
+
+        for idx, p in enumerate(prices):
+            bg = COLOR_AGRI_BG if idx % 2 == 0 else COLOR_WHITE
+            self.set_fill_color(*bg)
+            self.set_draw_color(*COLOR_BORDER)
+            self.rect(self.get_x(), self.get_y(), 174, 12, "FD")
+
+            self.set_x(22)
+            self.set_font("Helvetica", "B", 11)
+            self.set_text_color(*COLOR_DARK)
+            prod = str(p.get("product", ""))[:30]
+            market = str(p.get("market", ""))[:15]
+            self.cell(80, 12, prod, align="L")
+
+            self.set_font("Helvetica", "", 10)
+            self.set_text_color(*COLOR_MUTED)
+            self.cell(46, 12, f"Marche : {market}", align="L")
+
+            self.set_font("Helvetica", "B", 12)
+            self.set_text_color(*COLOR_PRIMARY)
+            price_str = f"{p.get('price', 0):,.0f} FCFA"
+            self.cell(46, 12, price_str, align="R")
+            self.ln(13)
+
+        self.ln(4)
+
+    def analysis_section(self, analysis_text: str):
+        self.add_page()
+        lines = _clean(analysis_text).split("\n")
+
+        for line in lines:
+            line = line.strip()
+            if not line:
+                self.ln(4)
+                continue
+
+            if line.startswith("## "):
+                self._section_title(line[3:].strip())
+                continue
+
+            if line.startswith("### "):
+                self._subsection(line[4:].strip())
+                continue
+
+            # ATTENTION markers — render prominently
+            if line.startswith("ATTENTION"):
+                self.ln(2)
+                self.set_fill_color(255, 240, 200)
+                self.set_draw_color(*COLOR_AGRI_GOLD)
+                self.set_line_width(0.8)
+                clean = _clean(line)
+                self.set_x(18)
+                # Draw a yellow warning box
+                box_h = max(10, len(clean) // 40 * 6 + 10)
+                self.rect(18, self.get_y(), 174, box_h, "FD")
+                self.set_x(22)
+                self.set_font("Helvetica", "B", 11)
+                self.set_text_color(180, 80, 0)
+                self.multi_cell(166, 6, clean, align="L")
+                self.set_line_width(0.2)
+                self.ln(3)
+                continue
+
+            if line.startswith("- ") or line.startswith("* "):
+                body = _clean(line[2:].strip())
+                self.set_x(22)
+                # Bullet marker
+                self.set_fill_color(*COLOR_PRIMARY)
+                self.ellipse(18.5, self.get_y() + 3, 3, 3, "F")
+                self.set_font("Helvetica", "", 11)
+                self.set_text_color(*COLOR_TEXT)
+                self.set_x(26)
+                self.multi_cell(166, 6, body, align="L")
+                self.ln(2)
+                continue
+
+            if re.match(r"^\d+\.\s", line):
+                self.set_x(22)
+                self.set_font("Helvetica", "B", 11)
+                self.set_text_color(*COLOR_PRIMARY)
+                # Draw number badge
+                num_match = re.match(r"^(\d+)\.\s*(.*)", line)
+                if num_match:
+                    num = num_match.group(1)
+                    rest = _clean(num_match.group(2))
+                    self.set_fill_color(*COLOR_PRIMARY)
+                    self.set_text_color(*COLOR_WHITE)
+                    self.cell(7, 7, num, fill=True, align="C")
+                    self.set_font("Helvetica", "", 11)
+                    self.set_text_color(*COLOR_TEXT)
+                    self.set_x(32)
+                    self.multi_cell(160, 6, rest, align="L")
+                else:
+                    self.set_font("Helvetica", "", 11)
+                    self.set_text_color(*COLOR_TEXT)
+                    self.multi_cell(166, 6, _clean(line), align="L")
+                self.ln(2)
+                continue
+
+            # Bold text
+            if "**" in line:
+                clean = _clean(re.sub(r"\*\*(.+?)\*\*", r"\1", line))
+                self.set_font("Helvetica", "B", 11)
+            else:
+                clean = _clean(line)
+                self.set_font("Helvetica", "", 11)
+
+            self.set_text_color(*COLOR_TEXT)
+            self.set_x(18)
+            self.multi_cell(174, 6, clean, align="L")
+            self.ln(1)
+
+    def _section_title(self, text: str):
+        self.ln(5)
+        # Yellow left accent bar + green background
+        self.set_fill_color(*COLOR_PRIMARY)
+        self.rect(18, self.get_y(), 174, 11, "F")
+        self.set_fill_color(*COLOR_AGRI_GOLD)
+        self.rect(18, self.get_y(), 4, 11, "F")
+        self.set_font("Helvetica", "B", 12)
+        self.set_text_color(*COLOR_WHITE)
+        self.set_x(26)
+        self.cell(166, 11, _clean(text.upper()), align="L")
+        self.ln(5)
+        self.set_text_color(*COLOR_TEXT)
+
+    def _subsection(self, text: str):
+        self.ln(2)
+        self.set_font("Helvetica", "B", 11)
+        self.set_text_color(*COLOR_PRIMARY)
+        self.set_x(18)
+        self.cell(0, 7, _clean(text), align="L")
+        self.ln(4)
+        self.set_text_color(*COLOR_TEXT)
+
+    def _note(self, text: str):
+        self.set_font("Helvetica", "I", 9)
+        self.set_text_color(*COLOR_MUTED)
+        self.set_x(18)
+        self.cell(0, 5, _clean(text), ln=True)
+        self.ln(3)
+        self.set_text_color(*COLOR_TEXT)
+
+
+# ─────────────────────────────────────────────
+#  Entry point
+# ─────────────────────────────────────────────
+
+def generate_pdf(report_data: dict) -> bytes:
+    profile = report_data.get("profile", "decideur")
+
+    if profile == "agriculteur":
+        pdf = MitchoGuideAgriculteur(data=report_data)
+        pdf.set_author("MITCHO - Conseiller Agricole du Benin")
+        pdf.set_title(_clean(f"Guide Agriculteur MITCHO - {report_data['month_label']}"))
+    else:
+        pdf = MitchoReportDecideur(data=report_data)
+        pdf.set_author("MITCHO - Systeme d'Intelligence Publique")
+        pdf.set_title(_clean(f"Rapport MITCHO - {report_data['month_label']}"))
+
     pdf.add_page()
     pdf.cover_page()
 
-    # Prices table
     if report_data.get("prices"):
         pdf.prices_section(report_data["prices"])
 
-    # Analysis (RAG-generated text)
     if report_data.get("analysis_text"):
         pdf.analysis_section(report_data["analysis_text"])
 

@@ -84,9 +84,9 @@
         <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
         Rapport mensuel · Mai 2026
       </div>
-      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-3">Rapport Mensuel</p>
-      <h1 class="font-display-lg text-headline-lg-mobile md:text-[42px] text-on-surface mb-3 leading-tight">Prévisions Mensuelles<br/><span class="text-primary">Mai 2026</span></h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant">Analyse des marchés agricoles, signaux détectés et recommandations stratégiques.</p>
+      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-3" id="hero-label">Rapport Mensuel</p>
+      <h1 class="font-display-lg text-headline-lg-mobile md:text-[42px] text-on-surface mb-3 leading-tight" id="hero-title">Prévisions Mensuelles<br/><span class="text-primary">Mai 2026</span></h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant" id="hero-subtitle">Analyse des marchés agricoles, signaux détectés et recommandations stratégiques.</p>
     </div>
     <div class="fade-in flex-shrink-0 md:col-span-4" style="transition-delay:.15s">
       <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 shadow-sm">
@@ -112,12 +112,9 @@
 <section class="py-16 bg-white border-b border-outline-variant/30">
   <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-12 gap-10">
     <div class="md:col-span-8 fade-in">
-      <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Synthèse du mois</h2>
-      <div class="prose max-w-none space-y-5 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-        <p>Le mois de mai 2026 s'inscrit dans une <strong class="text-on-surface font-semibold">dynamique de tension persistante</strong> sur les marchés vivriers du Bénin. Le maïs blanc recule légèrement à <strong class="text-on-surface font-semibold">299 FCFA/kg</strong> (-3% vs avril), mais demeure 9% au-dessus de sa moyenne annuelle des 12 derniers mois (275 FCFA), reflétant des stocks encore sous pression dans les préfectures de Borgou et Alibori.</p>
-        <p>Le riz importé s'établit à <strong class="text-on-surface font-semibold">687 FCFA/kg</strong> (+4% vs avril), soit 13% au-dessus de sa moyenne 12 mois (606 FCFA). Cette hausse structurelle est portée par la dépréciation du franc CFA, les coûts de fret en mer Rouge et une demande régionale soutenue. L'écart de 46 FCFA/kg constaté entre Cotonou et Lomé (641 FCFA) génère des flux d'arbitrage qui fragilisent l'approvisionnement local.</p>
-        <p>Le gari blanc se stabilise à <strong class="text-on-surface font-semibold">382 FCFA/kg</strong> (+1% vs avril), indicateur de la résilience de la filière manioc locale. Le niébé blanc recule à <strong class="text-on-surface font-semibold">595 FCFA/kg</strong> (-4% vs avril), signalant une amélioration de l'offre pour cette protéine végétale stratégique. Ces deux produits restent néanmoins 10 à 12% au-dessus de leurs moyennes annuelles.</p>
-        <p>MITCHÔ identifie <strong class="text-on-surface font-semibold">deux actions prioritaires ce mois</strong> : renforcer les stocks régulateurs de maïs dans les zones transfrontalières avec le Niger, où la demande extérieure soutient les prix locaux ; et surveiller l'évolution du riz importé, dont la trajectoire haussière depuis janvier 2026 (+7% en 4 mois) expose les ménages urbains à faibles revenus à une érosion de leur pouvoir d'achat alimentaire.</p>
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-6" id="synthese-titre">Synthèse du mois</h2>
+      <div class="prose max-w-none space-y-5 font-body-lg text-body-lg text-on-surface-variant leading-relaxed" id="synthese-content">
+        <!-- contenu injecté par JS selon profil -->
       </div>
     </div>
     <div class="md:col-span-4 fade-in space-y-4" style="transition-delay:.15s">
@@ -340,34 +337,11 @@
 <section class="py-16 bg-surface-container-low border-b border-outline-variant/30">
   <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
     <div class="mb-10 fade-in">
-      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Pour les décideurs</p>
-      <h2 class="font-headline-md text-headline-md text-on-surface">Recommandations stratégiques</h2>
+      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2" id="reco-label">Pour les décideurs</p>
+      <h2 class="font-headline-md text-headline-md text-on-surface" id="reco-titre">Recommandations stratégiques</h2>
     </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-9 h-9 bg-tertiary rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">01</div>
-          <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Urgent</span>
-        </div>
-        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">Surveiller les stocks de maïs, zone nord</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Bien que le maïs recule à 299 FCFA/kg (-3%), il reste 9% au-dessus de sa moyenne annuelle. Le marché de Niamey (286 FCFA/kg) exerce une pression transfrontalière sur Borgou-Alibori. Déclencher un audit des stocks régulateurs avant fin mai.</p>
-      </div>
-      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:.1s">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-9 h-9 bg-secondary rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">02</div>
-          <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wide">Anticipation</span>
-        </div>
-        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">Contenir la hausse du riz importé</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Le riz importé atteint 687 FCFA/kg (+4% en un mois, +13% vs moyenne annuelle). L'écart de 46 FCFA/kg avec Lomé génère des sorties de stocks vers le Togo. Envisager une régulation des exportations informelles et négocier des contrats d'importation groupée.</p>
-      </div>
-      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:.2s">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">03</div>
-          <span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Opportunité</span>
-        </div>
-        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">Valoriser le recul du niébé</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Le niébé à 595 FCFA/kg (-4% vs avril) signale une amélioration de l'offre en protéines végétales. C'est une opportunité pour renforcer les programmes d'alimentation scolaire et les filets de sécurité en ciblant ce produit pendant la fenêtre de prix favorable.</p>
-      </div>
+    <div class="grid md:grid-cols-3 gap-6" id="reco-cards">
+      <!-- cartes injectées par JS selon profil -->
     </div>
   </div>
 </section>
@@ -376,30 +350,15 @@
   <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div class="fade-in">
-        <p class="font-label-sm text-label-sm text-inverse-primary uppercase tracking-widest mb-4">Rapport institutionnel</p>
-        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4">Rapport d'analyse complet</h2>
-        <p class="font-body-lg text-body-lg text-on-primary/70 mb-8 leading-relaxed">Le rapport PDF institutionnel de mai 2026 contient l'intégralité de l'analyse : méthodologie, données brutes, graphiques de tendances, prévisions sur 60 jours et recommandations détaillées pour chaque ministère concerné.</p>
-        <div class="space-y-3 mb-10">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span class="font-body-md text-body-md text-on-primary/80">Analyse narrative complète (8 pages)</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span class="font-body-md text-body-md text-on-primary/80">Données brutes et graphiques (12 pages)</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span class="font-body-md text-body-md text-on-primary/80">Prévisions sur 60 jours (4 pages)</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span class="font-body-md text-body-md text-on-primary/80">Recommandations stratégiques par institution (6 pages)</span>
-          </div>
+        <p class="font-label-sm text-label-sm text-inverse-primary uppercase tracking-widest mb-4" id="pdf-section-label">Rapport institutionnel</p>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4" id="pdf-section-title">Rapport d'analyse complet</h2>
+        <p class="font-body-lg text-body-lg text-on-primary/70 mb-8 leading-relaxed" id="pdf-section-desc">Le rapport PDF institutionnel de mai 2026 contient l'intégralité de l'analyse : méthodologie, données brutes, graphiques de tendances, prévisions sur 60 jours et recommandations détaillées pour chaque ministère concerné.</p>
+        <div class="space-y-3 mb-10" id="pdf-checklist">
+          <!-- items injectés par JS -->
         </div>
         <button id="btn-download-pdf" onclick="handleDownloadPDF()" class="inline-flex items-center gap-3 bg-inverse-primary text-on-surface px-8 py-4 rounded-xl font-label-sm text-label-sm hover:opacity-90 active:scale-[0.98] transition-all shadow-lg">
           <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;">download</span>
-          Télécharger le rapport PDF, Mai 2026
+          <span id="btn-pdf-label">Télécharger le rapport PDF, Mai 2026</span>
         </button>
         <div id="pdf-progress-container" class="hidden mt-6">
           <div class="flex items-center justify-between mb-2">
@@ -531,24 +490,128 @@
     document.getElementById('navbar').classList.toggle('shadow-md', window.scrollY > 40);
   });
 
-  function refreshAuthNav() {
-    const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
-    const btnLogin  = document.getElementById('btn-login');
-    const btnLogout = document.getElementById('btn-logout');
-    const navUser   = document.getElementById('nav-username');
-    if (session?.loggedIn) {
-      btnLogin.classList.add('hidden');
-      btnLogout.classList.remove('hidden');
-      navUser.textContent = session.name.split(' ')[0];
-      navUser.classList.remove('hidden');
-    } else {
-      btnLogin.classList.remove('hidden');
-      btnLogout.classList.add('hidden');
-      navUser.classList.add('hidden');
-    }
-  }
   document.getElementById('auth-nav').classList.remove('hidden');
-  refreshAuthNav();
+
+  /* ── Contenu statique par profil ── */
+  const CONTENT = {
+    decideur: {
+      heroLabel: 'Rapport Mensuel',
+      heroTitle: 'Prévisions Mensuelles<br/><span class="text-primary">Mai 2026</span>',
+      heroSubtitle: 'Analyse des marchés agricoles, signaux détectés et recommandations stratégiques.',
+      syntheseTitre: 'Synthèse du mois',
+      syntheseHTML: `
+        <p>Le mois de mai 2026 s'inscrit dans une <strong class="text-on-surface font-semibold">dynamique de tension persistante</strong> sur les marchés vivriers du Bénin. Le maïs blanc recule légèrement à <strong class="text-on-surface font-semibold">299 FCFA/kg</strong> (-3% vs avril), mais demeure 9% au-dessus de sa moyenne annuelle (275 FCFA), reflétant des stocks sous pression dans les préfectures de Borgou et Alibori.</p>
+        <p>Le riz importé s'établit à <strong class="text-on-surface font-semibold">687 FCFA/kg</strong> (+4% vs avril), soit 13% au-dessus de sa moyenne 12 mois. L'écart de 46 FCFA/kg entre Cotonou et Lomé (641 FCFA) génère des flux d'arbitrage fragilisant l'approvisionnement local.</p>
+        <p>Le gari blanc se stabilise à <strong class="text-on-surface font-semibold">382 FCFA/kg</strong> (+1%). Le niébé blanc recule à <strong class="text-on-surface font-semibold">595 FCFA/kg</strong> (-4%), signalant une amélioration de l'offre en protéines végétales.</p>
+        <p>MITCHÔ identifie <strong class="text-on-surface font-semibold">deux actions prioritaires</strong> : renforcer les stocks régulateurs de maïs dans les zones transfrontalières avec le Niger, et surveiller la trajectoire haussière du riz importé (+7% en 4 mois) qui érode le pouvoir d'achat des ménages urbains.</p>`,
+      recoLabel: 'Pour les décideurs',
+      recoTitre: 'Recommandations stratégiques',
+      recoCards: [
+        { num:'01', color:'tertiary', tag:'Urgent',
+          titre:'Surveiller les stocks de maïs, zone nord',
+          texte:'Le maïs recule à 299 FCFA/kg (-3%) mais reste 9% au-dessus de sa moyenne annuelle. Le marché de Niamey (286 FCFA/kg) exerce une pression transfrontalière sur Borgou-Alibori. Déclencher un audit des stocks régulateurs avant fin mai.' },
+        { num:'02', color:'secondary', tag:'Anticipation',
+          titre:'Contenir la hausse du riz importé',
+          texte:"Le riz importé atteint 687 FCFA/kg (+4% en un mois, +13% vs moyenne). L'écart de 46 FCFA/kg avec Lomé génère des sorties vers le Togo. Envisager une régulation des exportations informelles et négocier des contrats d'importation groupée." },
+        { num:'03', color:'primary', tag:'Opportunité',
+          titre:'Valoriser le recul du niébé',
+          texte:"Le niébé à 595 FCFA/kg (-4% vs avril) signale une amélioration de l'offre. C'est une fenêtre pour renforcer les programmes d'alimentation scolaire et les filets de sécurité ciblant ce produit." },
+      ],
+      pdfLabel: 'Rapport institutionnel',
+      pdfTitle: "Rapport d'analyse complet",
+      pdfDesc: "Le rapport PDF institutionnel de mai 2026 contient l'intégralité de l'analyse : méthodologie, données brutes, prévisions sur 60 jours et recommandations détaillées pour chaque ministère.",
+      pdfItems: [
+        "Analyse narrative complète (8 pages)",
+        "Données brutes et graphiques (12 pages)",
+        "Prévisions sur 60 jours (4 pages)",
+        "Recommandations stratégiques par institution (6 pages)",
+      ],
+      pdfBtn: 'Télécharger le rapport PDF, Mai 2026',
+    },
+
+    agriculteur: {
+      heroLabel: 'Conseils de mai 2026',
+      heroTitle: 'Que faire ce mois ?<br/><span class="text-primary">Les prix de vos marchés</span>',
+      heroSubtitle: 'Les prix actuels, les bons marchés pour vendre, et vos conseils pratiques pour le mois de mai.',
+      syntheseTitre: 'Comment vont les prix ce mois ?',
+      syntheseHTML: `
+        <p>Ce mois de mai 2026, <strong class="text-on-surface font-semibold">les prix sont hauts</strong>. C'est une bonne nouvelle si vous avez des récoltes à vendre.</p>
+        <p>Le <strong class="text-on-surface font-semibold">maïs blanc vaut 299 FCFA le kilo</strong> à Cotonou. C'est moins cher qu'en avril (-3%), mais toujours <strong class="text-on-surface font-semibold">24 FCFA de plus que la normale</strong> de l'année. Si vous avez du maïs, c'est encore le bon moment pour vendre.</p>
+        <p>Le <strong class="text-on-surface font-semibold">niébé blanc a baissé à 595 FCFA le kilo</strong> (-4% vs avril). Si vous aviez attendu pour vendre votre niébé, il vaut mieux vendre maintenant avant que le prix baisse encore.</p>
+        <p>Le <strong class="text-on-surface font-semibold">gari blanc reste stable à 382 FCFA le kilo</strong>. Pas urgent de vendre — vous pouvez attendre un peu si vous voulez un meilleur prix.</p>`,
+      recoLabel: 'Vos conseils du mois',
+      recoTitre: 'Que faire maintenant ?',
+      recoCards: [
+        { num:'01', color:'tertiary', tag:'Faites vite',
+          titre:'Vendez votre niébé cette semaine',
+          texte:'Le prix du niébé est à 595 FCFA/kg et il continue de baisser. Si vous avez du niébé à vendre, ne tardez pas. Dans 3 à 4 semaines, le prix sera probablement plus bas à cause des nouvelles récoltes.' },
+        { num:'02', color:'primary', tag:'Bon moment',
+          titre:'Vendez votre maïs à Malanville',
+          texte:'Le maïs vaut 299 FCFA/kg à Cotonou, mais les acheteurs du Niger payent souvent plus à Malanville. Si vous êtes dans le nord du Bénin, allez au marché de Malanville — vous pouvez gagner 20 à 30 FCFA de plus par kilo.' },
+        { num:'03', color:'secondary', tag:'Attendez',
+          titre:'Gardez votre gari encore un peu',
+          texte:"Le gari blanc est stable à 382 FCFA/kg. Les prix du manioc sont bons en ce moment. Vous pouvez garder votre stock encore 2 à 3 semaines — le prix pourrait monter un peu avec l'approche de la saison sèche." },
+      ],
+      pdfLabel: 'Votre guide agricole',
+      pdfTitle: 'Guide pratique du mois',
+      pdfDesc: 'Téléchargez votre guide pratique de mai 2026. Il contient tous les prix, les meilleurs marchés, et vos conseils pour vendre au bon moment. Facile à lire et à partager.',
+      pdfItems: [
+        "Les prix de tous vos produits en FCFA",
+        "Les meilleurs marchés où vendre ce mois",
+        "Conseils clairs : vendre maintenant ou attendre ?",
+        "Ce qui va changer dans les prochaines semaines",
+      ],
+      pdfBtn: 'Télécharger mon guide, Mai 2026',
+    },
+  };
+
+  function applyProfileContent() {
+    const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
+    const profile = session?.profile || 'decideur';
+    const c = CONTENT[profile] || CONTENT.decideur;
+
+    // Hero
+    document.getElementById('hero-label').textContent = c.heroLabel;
+    document.getElementById('hero-title').innerHTML   = c.heroTitle;
+    document.getElementById('hero-subtitle').textContent = c.heroSubtitle;
+
+    // Synthèse
+    document.getElementById('synthese-titre').textContent = c.syntheseTitre;
+    document.getElementById('synthese-content').innerHTML  = c.syntheseHTML;
+
+    // Recommandations
+    document.getElementById('reco-label').textContent = c.recoLabel;
+    document.getElementById('reco-titre').textContent  = c.recoTitre;
+
+    const delays = [0, 0.1, 0.2];
+    document.getElementById('reco-cards').innerHTML = c.recoCards.map((r, i) => `
+      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:${delays[i]}s">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-${r.color} rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">${r.num}</div>
+          <span class="font-label-sm text-label-sm text-${r.color} uppercase tracking-wide">${r.tag}</span>
+        </div>
+        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">${r.titre}</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">${r.texte}</p>
+      </div>`).join('');
+
+    // Re-observe les nouvelles cartes pour fade-in
+    document.querySelectorAll('#reco-cards .fade-in').forEach(el => obs.observe(el));
+
+    // Section PDF
+    document.getElementById('pdf-section-label').textContent = c.pdfLabel;
+    document.getElementById('pdf-section-title').textContent  = c.pdfTitle;
+    document.getElementById('pdf-section-desc').textContent   = c.pdfDesc;
+    document.getElementById('btn-pdf-label').textContent      = c.pdfBtn;
+    document.getElementById('pdf-checklist').innerHTML = c.pdfItems.map(item => `
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
+        <span class="font-body-md text-body-md text-on-primary/80">${item}</span>
+      </div>`).join('');
+  }
+
+  // Appliqué immédiatement + après connexion
+  applyProfileContent();
+  window.addEventListener('mitcho-auth-changed', applyProfileContent);
 
   function handleDownloadPDF() {
     const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');

@@ -27,20 +27,22 @@ Produits surveillés : Maïs blanc, Riz importé, Gari blanc, Niébé blanc, Sor
 
 Tu réponds TOUJOURS en français. Ton ton est analytique, institutionnel, et professionnel."""
 
-SYSTEM_PROMPT_AGRICULTEUR = """Tu es MITCHÔ, un assistant d'aide à la décision pour les agriculteurs et producteurs du Bénin.
+SYSTEM_PROMPT_AGRICULTEUR = """Tu es MITCHÔ, un conseiller de confiance pour les paysans et agriculteurs du Bénin.
 
-Ta mission est d'analyser les prix des marchés vivriers pour aider les agriculteurs à prendre de meilleures décisions : quand vendre, quand stocker, quels marchés cibler, comment anticiper les fluctuations.
+Tu parles comme un ami du village qui connait bien les marchés et qui veut vraiment aider. Ton rôle : dire clairement quand vendre, où vendre, et quand attendre.
 
-Tes analyses doivent :
-- Utiliser un langage simple, clair et accessible
-- Indiquer concrètement les opportunités de vente ou de stockage selon les prix actuels
-- Signaler les marchés où les prix sont les plus favorables (Cotonou, Malanville, Parakou)
-- Donner des conseils pratiques et locaux basés sur les tendances observées
-- Alerter sur les risques de baisse de prix ou de surplus
+REGLES ABSOLUES pour ecrire :
+- Langage tres simple. Pas de mots compliques. Dis "le prix monte" pas "hausse conjoncturelle".
+- Toujours des chiffres en FCFA. Ex : "250 FCFA le kilo" pas "250 XOF/kg".
+- Sois direct et court. Une idee par phrase. Phrases courtes.
+- Dis clairement ce qu'il faut faire : "Vendez maintenant", "Attendez encore 3 semaines", "Allez a Malanville".
+- Compare avec ce que les gens connaissent : "c'est 40 FCFA de plus par kilo qu'en janvier".
+- Si c'est urgent, dis-le fort : "ATTENTION : les prix vont baisser dans 4 semaines !"
+- Parle a la 2e personne : "vous pouvez vendre", "si vous avez du stock, gardez-le".
+- Jamais de jargon : pas de "volatilite", "conjoncture", "macroeconomique", "indicateurs".
 
-Produits surveillés : Maïs blanc, Riz, Gari, Niébé, Sorgho, Mil.
-
-Tu réponds TOUJOURS en français simple et accessible. Évite le jargon technique. Parle directement à l'agriculteur (utilise "vous")."""
+TES LECTEURS ont souvent une education limitee. Sois simple, concret, et utile comme un bon voisin.
+Produits : Mais blanc, Riz, Gari blanc, Niebe blanc, Sorgho, Mil."""
 
 REPORT_PROMPT_DECIDEUR = """
 Voici les données contextuelles récentes disponibles :
@@ -78,36 +80,49 @@ Le rapport doit contenir exactement les sections suivantes :
 """
 
 REPORT_PROMPT_AGRICULTEUR = """
-Voici les informations sur les prix des marchés du Bénin :
-
+Prix des marches au Benin ce mois :
 {prices_text}
 
-Contexte additionnel :
+Informations recentes (nouvelles, evenements) :
 {context}
 
 ---
 
-Sur la base de ces informations, génère un guide pratique pour les agriculteurs béninois pour le mois de {month_label}.
+Ecris un guide pratique pour les paysans beninois pour le mois de {month_label}.
+Ecris EN FRANCAIS TRES SIMPLE. Phrases courtes. Pas de mots compliques.
+Chaque section doit etre utile et comprehe nsible par quelqu'un qui sait a peine lire.
 
-Le guide doit contenir exactement les sections suivantes :
+Utilise exactement ces sections :
 
-## Situation du marché ce mois
-(En 2-3 phrases simples : comment se portent les prix des aliments ce mois-ci ?)
+## Les prix ce mois - comment ca va ?
+(2 ou 3 phrases tres simples. Ex : "Ce mois, le mais est cher. C'est bon pour vendre.")
 
-## Prix par produit — Ce que ça veut dire pour vous
-(Pour chaque produit : le prix actuel, si c'est un bon ou mauvais moment pour vendre, et pourquoi — en langage simple)
+## Produit par produit - que faire ?
+Pour chaque produit, dis :
+- Le prix en FCFA au kilo (ou au sac)
+- Est-ce le bon moment pour vendre ? OUI ou ATTENDRE ?
+- Un conseil court (1 phrase max)
+Format simple : "MAIS BLANC : 230 FCFA/kg a Cotonou. BON MOMENT POUR VENDRE. Le prix est 20% plus haut qu'en janvier."
 
-## Marchés les plus favorables
-(Quels marchés offrent les meilleurs prix ce mois ? Conseils concrets sur où vendre)
+## Ou vendre ? Les meilleurs marches
+Cite 2 ou 3 marches avec leurs prix. Dis lequel est le mieux et pourquoi.
+Ex : "Marche de Malanville : 260 FCFA/kg pour le mais. C'est le meilleur prix ce mois."
 
-## Ce qui risque de changer dans les 1 à 2 prochains mois
-(Prévisions simples : est-ce que les prix vont monter, baisser, ou rester stables ?)
+## Ce qui va changer dans 4 a 8 semaines
+Dis clairement : les prix vont MONTER, BAISSER, ou RESTER PAREILS ?
+Explique pourquoi en une phrase simple.
+Si c'est urgent : ecris "ATTENTION !" en debut de ligne.
 
-## Conseils pratiques
-(3 à 5 actions concrètes que vous pouvez prendre maintenant : vendre, stocker, négocier, attendre...)
+## Que faire maintenant ? (5 conseils pratiques)
+5 conseils tres concrets. Chaque conseil = 1 action precise.
+Ex :
+- "Vendez votre stock de niebe cette semaine - le prix va baisser apres la recolte."
+- "Si vous avez du riz, attendez encore 3 semaines - le prix monte."
+- "Allez au marche de Parakou plutot que Cotonou pour le gari - 30 FCFA de plus par kilo."
 
-## À surveiller
-(2-3 signaux simples à observer dans votre région le mois prochain)
+## A surveiller ce mois
+2 ou 3 choses simples a regarder dans votre region.
+Ex : "Regardez si d'autres paysans commencent a vendre - si beaucoup vendent en meme temps, le prix va baisser."
 """
 
 

@@ -289,6 +289,7 @@ async function handleRegister(e) {
     setSession({ ...data.user, token: data.access_token, loggedIn: true });
     closeAuthModal();
     refreshAuthNav();
+    _dispatchAuthChanged();
     const isAgri = profile === 'agriculteur';
     const msg = subscribed
       ? `Bienvenue ${name.split(' ')[0]} ! Prévisions mensuelles activées.`
@@ -318,6 +319,7 @@ async function handleRegister(e) {
   setSession({ ...user, loggedIn: true });
   closeAuthModal();
   refreshAuthNav();
+  _dispatchAuthChanged();
   showToast(`Bienvenue, ${name.split(' ')[0]} !`, 'check_circle');
   if (_afterAuthCallback) { _afterAuthCallback(); _afterAuthCallback = null; }
 }
@@ -344,6 +346,7 @@ async function handleLogin(e) {
     setSession({ ...data.user, token: data.access_token, loggedIn: true });
     closeAuthModal();
     refreshAuthNav();
+    _dispatchAuthChanged();
     showToast(`Bon retour, ${data.user.name.split(' ')[0]} !`, 'check_circle');
     if (_afterAuthCallback) { _afterAuthCallback(); _afterAuthCallback = null; }
     return;
@@ -366,6 +369,7 @@ async function handleLogin(e) {
   setSession({ ...user, loggedIn: true });
   closeAuthModal();
   refreshAuthNav();
+  _dispatchAuthChanged();
   showToast(`Bon retour, ${user.name.split(' ')[0]} !`, 'check_circle');
   if (_afterAuthCallback) { _afterAuthCallback(); _afterAuthCallback = null; }
 }
@@ -390,6 +394,10 @@ function getUserProfile() {
 }
 
 /* ── Mise à jour de la nav ── */
+function _dispatchAuthChanged() {
+  window.dispatchEvent(new Event('mitcho-auth-changed'));
+}
+
 function refreshAuthNav() {
   const session = getSession();
   const loggedIn = !!session?.loggedIn;

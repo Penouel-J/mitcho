@@ -29,12 +29,9 @@ class Settings(BaseSettings):
     GDELT_MAX_RECORDS: int = 50
     WFP_COUNTRY_CODE: str = "BEN"
 
-    # Google BigQuery — GDELT historique
-    # Laisser vide pour utiliser le DOC API classique
-    # Valeur : ID de votre projet Google Cloud (ex: "mitcho-analytics-2026")
-    GOOGLE_CLOUD_PROJECT: str = ""
-    # Chemin vers le fichier JSON du compte de service (optionnel si gcloud CLI est configuré)
-    GOOGLE_APPLICATION_CREDENTIALS: str = ""
+    # Chemins vers les données locales (CSV GDELT + Excel prix)
+    GDELT_CSV_PATH: str = ""   # laisser vide = chemin auto (../data/raw/gdelt_data.csv)
+    PRIX_XLS_PATH: str  = ""   # laisser vide = chemin auto (../data/raw/base_donnees_prix_vivriers.xlsx)
 
     # CORS — includes "null" for file:// origins and common dev ports
     ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:5500,http://localhost:5500,http://localhost:8080,null"

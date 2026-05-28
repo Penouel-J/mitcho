@@ -31,51 +31,56 @@ def _sync_upsert(chunks):
 
 async def _ingest_gdelt():
     """
-    Fetch GDELT articles and index them into ChromaDB.
+    Ingestion GDELT en deux temps :
+      1. Données historiques CSV (2020-2026) — une seule fois au démarrage via ingest_gdelt_csv()
+      2. Données récentes DOC API (7 derniers jours) — toutes les 6h
 
-    Strategy:
-      1. If GOOGLE_CLOUD_PROJECT is configured → use BigQuery (full history, no rate limit)
-      2. Otherwise → fallback to DOC API (last 7 days, may be rate-limited)
+    Cette fonction gère uniquement le rafraîchissement DOC API.
+    L'ingestion initiale du CSV est déclenchée séparément (voir ingest_gdelt_csv).
     """
-    from app.core.config import settings
     from app.rag.vector_store import collection_count
 
-    logger.info("[Scheduler] GDELT ingestion started")
-
+    logger.info("[Scheduler] GDELT DOC API refresh démarré")
     try:
-        if settings.GOOGLE_CLOUD_PROJECT:
-            # ── BigQuery path (preferred) ──────────────────────────────────────
-            from app.data.gdelt_bq_loader import (
-                fetch_gdelt_bq_articles,
-                bq_articles_to_rag_chunks,
-            )
-            target_month = datetime.now().strftime("%Y-%m")
-            articles = await fetch_gdelt_bq_articles(
-                project_id=settings.GOOGLE_CLOUD_PROJECT,
-                target_month=target_month,
-                max_rows=500,
-            )
-            chunks = bq_articles_to_rag_chunks(articles)
-            source_label = f"BigQuery [{target_month}]"
-        else:
-            # ── DOC API fallback ───────────────────────────────────────────────
-            from app.data.gdelt_loader import fetch_gdelt_articles, articles_to_rag_chunks
-            articles = await fetch_gdelt_articles(timespan="7d")
-            chunks = articles_to_rag_chunks(articles)
-            source_label = "DOC API [7d]"
-
+        from app.data.gdelt_loader import fetch_gdelt_articles, articles_to_rag_chunks
+        articles = await fetch_gdelt_articles(timespan="7d")
+        chunks = articles_to_rag_chunks(articles)
         if chunks:
             loop = asyncio.get_event_loop()
             n = await loop.run_in_executor(_index_executor, _sync_upsert, chunks)
-            logger.info(
-                f"[Scheduler] GDELT ingestion complete ({source_label}): "
-                f"{n} chunks indexed. Total KB: {collection_count()}"
-            )
+            logger.info(f"[Scheduler] DOC API: {n} chunks indexés. Total: {collection_count()}")
         else:
-            logger.info(f"[Scheduler] GDELT ingestion: 0 articles ({source_label})")
-
+            logger.info("[Scheduler] DOC API: 0 articles trouvés")
     except Exception as exc:
-        logger.error(f"[Scheduler] GDELT ingestion failed: {exc}")
+        logger.error(f"[Scheduler] GDELT DOC API échoué: {exc}")
+
+
+async def ingest_gdelt_csv():
+    """
+    Ingestion initiale des données historiques GDELT depuis le fichier CSV local.
+    Doit être appelé une fois au démarrage si la base vectorielle est vide.
+    Fonctionne en arrière-plan (executor) car le chargement CSV est synchrone.
+    """
+    from app.rag.vector_store import collection_count
+
+    logger.info("[Startup] Ingestion CSV GDELT historique démarrée...")
+    try:
+        def _sync_load_and_upsert():
+            from app.data.gdelt_csv_loader import load_gdelt_csv_chunks
+            from app.rag.vector_store import upsert_chunks
+            chunks = load_gdelt_csv_chunks()
+            if not chunks:
+                return 0
+            return upsert_chunks(chunks)
+
+        loop = asyncio.get_event_loop()
+        n = await loop.run_in_executor(_index_executor, _sync_load_and_upsert)
+        total = collection_count()
+        logger.info(f"[Startup] CSV GDELT : {n} chunks indexés. Total base: {total}")
+        return n
+    except Exception as exc:
+        logger.error(f"[Startup] Ingestion CSV GDELT échouée: {exc}")
+        return 0
 
 
 async def _ingest_wfp():

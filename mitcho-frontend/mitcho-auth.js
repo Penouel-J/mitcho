@@ -193,7 +193,21 @@ function selectProfile(profile) {
   document.getElementById('badge-icon').textContent = isAgri ? 'agriculture' : 'account_balance';
   document.getElementById('badge-label').textContent = isAgri ? 'Agriculteur' : 'Décideur public';
 
-  // Transition vers étape 2
+  // Si déjà connecté mais sans profil → sauvegarder le choix directement et fermer
+  const session = getSession();
+  if (session?.loggedIn && !session.profile) {
+    const updated = { ...session, profile };
+    setSession(updated);
+    _forcedAuth = false;
+    closeAuthModal();
+    refreshAuthNav();
+    _dispatchAuthChanged();
+    const msg = isAgri ? 'Profil Agriculteur activé !' : 'Profil Décideur activé !';
+    showToast(msg, 'check_circle');
+    return;
+  }
+
+  // Sinon → transition vers étape 2 (formulaire)
   setTimeout(() => {
     document.getElementById('step-profile').classList.add('hidden');
     document.getElementById('step-auth').classList.remove('hidden');
@@ -202,6 +216,22 @@ function selectProfile(profile) {
       : 'Espace décideur · Analyses stratégiques';
     setTimeout(() => document.querySelector('#form-register input')?.focus(), 80);
   }, 200);
+}
+
+/* ── Ouvrir uniquement le sélecteur de profil (déjà connecté, profil manquant) ── */
+function _openProfilePicker() {
+  _selectedProfile = null;
+  _forcedAuth = true;
+  document.getElementById('step-profile').classList.remove('hidden');
+  document.getElementById('step-auth').classList.add('hidden');
+  document.getElementById('auth-header-sub').textContent = 'Choisissez votre profil pour continuer';
+
+  const closeBtn = document.getElementById('auth-close-btn');
+  if (closeBtn) closeBtn.classList.add('hidden');
+
+  const overlay = document.getElementById('auth-overlay');
+  overlay.classList.remove('hidden');
+  overlay.classList.add('flex');
 }
 
 /* ── Retour à la sélection du profil ── */
@@ -436,10 +466,9 @@ function _initAuth() {
   refreshAuthNav();
   const session = getSession();
 
-  // Session sans profil (créée avant l'ajout du champ) → forcer reconnexion
+  // Session sans profil → demander le choix de profil sans déconnecter
   if (session?.loggedIn && !session?.profile) {
-    sessionStorage.removeItem('mitcho_session');
-    setTimeout(() => openAuthModal('register', null, true), 400);
+    setTimeout(() => _openProfilePicker(), 400);
     return;
   }
 

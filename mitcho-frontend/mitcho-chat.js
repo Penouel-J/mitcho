@@ -110,7 +110,11 @@ async function callBackendOrGroq(userMessage) {
     const res = await fetch(`${BACKEND_URL}/analysis/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: userMessage, history: historyForApi }),
+      body: JSON.stringify({
+        message: userMessage,
+        history: historyForApi,
+        profile: (typeof getUserProfile === 'function') ? getUserProfile() : 'decideur',
+      }),
     });
     if (!res.ok) throw new Error(`Backend HTTP ${res.status}`);
     const data = await res.json();

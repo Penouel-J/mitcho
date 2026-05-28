@@ -16,7 +16,7 @@ from app.rag.vector_store import collection_count
 logger = logging.getLogger(__name__)
 
 
-async def build_report_data(month_label=None) -> dict:
+async def build_report_data(month_label=None, profile: str = "decideur") -> dict:
     """
     Fast PDF report pipeline:
     1. Fetch latest WFP prices (uses in-memory cache after first load)
@@ -40,9 +40,8 @@ async def build_report_data(month_label=None) -> dict:
     kb_size = collection_count()
     logger.info(f"[Builder] Knowledge base: {kb_size} documents indexed")
 
-    # 3. Generate analysis via LLM (Groq Llama 3.3)
-    #    retrieve_context() short-circuits automatically if KB is empty
-    result = await generate_analysis(prices=prices, month_label=month_label)
+    # 3. Generate analysis via LLM (Groq Llama 3.3) — tone and content differ by profile
+    result = await generate_analysis(prices=prices, month_label=month_label, profile=profile)
 
     return {
         "month_label": month_label,
@@ -53,4 +52,5 @@ async def build_report_data(month_label=None) -> dict:
         "gdelt_articles_count": kb_size,
         "analysis_text": result["analysis"],
         "tokens_used": result["tokens_used"],
+        "profile": profile,
     }

@@ -18,6 +18,7 @@ class RegisterRequest(BaseModel):
     name: str
     password: str
     subscribe: bool = False
+    profile: str = "decideur"  # "agriculteur" | "decideur"
 
 
 class LoginResponse(BaseModel):
@@ -30,6 +31,7 @@ class UserOut(BaseModel):
     id: int
     email: str
     name: str
+    profile: str
     is_subscribed: bool
 
 
@@ -55,10 +57,12 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
     if result.scalar_one_or_none():
         raise HTTPException(status_code=400, detail="Cet email est déjà utilisé")
 
+    profile = body.profile if body.profile in ("agriculteur", "decideur") else "decideur"
     user = User(
         email=body.email,
         name=body.name,
         hashed_password=hash_password(body.password),
+        profile=profile,
         is_subscribed=body.subscribe,
     )
     db.add(user)
@@ -74,7 +78,8 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
     token = create_access_token({"sub": str(user.id)})
     return LoginResponse(
         access_token=token,
-        user={"id": user.id, "email": user.email, "name": user.name, "is_subscribed": user.is_subscribed},
+        user={"id": user.id, "email": user.email, "name": user.name,
+              "profile": user.profile, "is_subscribed": user.is_subscribed},
     )
 
 
@@ -88,7 +93,8 @@ async def login(form: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = 
     token = create_access_token({"sub": str(user.id)})
     return LoginResponse(
         access_token=token,
-        user={"id": user.id, "email": user.email, "name": user.name, "is_subscribed": user.is_subscribed},
+        user={"id": user.id, "email": user.email, "name": user.name,
+              "profile": user.profile, "is_subscribed": user.is_subscribed},
     )
 
 
@@ -98,6 +104,7 @@ async def me(current_user: User = Depends(get_current_user)):
         id=current_user.id,
         email=current_user.email,
         name=current_user.name,
+        profile=current_user.profile,
         is_subscribed=current_user.is_subscribed,
     )
 

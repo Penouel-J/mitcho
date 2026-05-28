@@ -21,7 +21,7 @@ async def generate_report(current_user: User = Depends(get_current_user)):
     Returns JSON with the download path.
     """
     try:
-        data = await build_report_data()
+        data = await build_report_data(profile=getattr(current_user, "profile", "decideur"))
         pdf_bytes = generate_pdf(data)
 
         os.makedirs(REPORTS_DIR, exist_ok=True)
@@ -70,7 +70,7 @@ async def stream_report_pdf(current_user: User = Depends(get_current_user)):
     Useful for immediate download without a prior /generate call.
     """
     try:
-        data = await build_report_data()
+        data = await build_report_data(profile=getattr(current_user, "profile", "decideur"))
         pdf_bytes = generate_pdf(data)
         month_id = data["month_id"]
 

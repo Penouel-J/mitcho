@@ -13,6 +13,7 @@ router = APIRouter(prefix="/analysis", tags=["analysis"])
 class ChatRequest(BaseModel):
     message: str
     history: list[dict] = []
+    profile: str = "decideur"  # "agriculteur" | "decideur"
 
 
 class ChatResponse(BaseModel):
@@ -39,13 +40,15 @@ async def generate_monthly_analysis(current_user: User = Depends(get_current_use
     try:
         price_data = await fetch_latest_prices()
         prices = price_data.get("prices", [])
-        result = await generate_analysis(prices=prices)
+        profile = getattr(current_user, "profile", "decideur")
+        result = await generate_analysis(prices=prices, profile=profile)
         return {
             "month": result["month"],
             "analysis": result["analysis"],
             "tokens_used": result["tokens_used"],
             "prices_count": len(prices),
             "context_docs": collection_count(),
+            "profile": profile,
         }
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Erreur lors de la génération: {str(exc)}")
@@ -58,7 +61,7 @@ async def chat(body: ChatRequest):
     The LLM receives the query + relevant context from the knowledge base.
     """
     try:
-        reply = await generate_chat_reply(body.message, body.history)
+        reply = await generate_chat_reply(body.message, body.history, profile=body.profile)
         return ChatResponse(reply=reply, context_docs=collection_count())
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))

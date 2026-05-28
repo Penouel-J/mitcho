@@ -14,6 +14,8 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True, nullable=False)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    # "agriculteur" | "decideur" — détermine le ton et le contenu du rapport LLM
+    profile: Mapped[str] = mapped_column(String(50), default="decideur", nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     is_subscribed: Mapped[bool] = mapped_column(Boolean, default=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())

@@ -227,16 +227,46 @@ class MitchoReportDecideur(FPDF):
 
 class MitchoGuideAgriculteur(FPDF):
     """
-    Simplified PDF layout for farmers:
-    - Larger fonts (body = 11pt instead of 9pt)
-    - Warm yellow accent on section headers
-    - Cover in plain French with practical framing
-    - Bullet points rendered as bold colored markers
+    Guide pratique PDF (commerçants et citoyens) :
+    - Polices plus grandes (11pt au lieu de 9pt)
+    - Accent jaune doré sur les en-têtes de section
+    - Page de couverture adaptée au profil
+    - Puces avec marqueurs colorés
     """
+    # Textes de couverture selon le profil
+    _COVER_TEXTS = {
+        "commercant": {
+            "tagline": "Votre bulletin mensuel pour bien acheter et bien vendre",
+            "intro_title": "Ce bulletin est fait pour vous !",
+            "intro_body": (
+                "Dans ce bulletin, vous trouverez :\n"
+                "- Les prix actuels sur les marches du Benin\n"
+                "- Les meilleures opportunites d'achat-revente ce mois\n"
+                "- Des conseils clairs : quand acheter, quand vendre\n"
+                "- Les arbitrages entre marches avec marges estimees"
+            ),
+            "footer": "Sources des prix : WFP/PAM -- Programme Alimentaire Mondial",
+        },
+        "citoyen": {
+            "tagline": "Vos infos prix pour bien gerer votre budget alimentation",
+            "intro_title": "Ce guide est fait pour vous !",
+            "intro_body": (
+                "Dans ce guide, vous trouverez :\n"
+                "- Les prix des aliments en FCFA ce mois\n"
+                "- Ou acheter moins cher pres de chez vous\n"
+                "- Les produits qui vont devenir plus chers\n"
+                "- 5 conseils pour bien manger sans trop depenser"
+            ),
+            "footer": "Sources des prix : WFP/PAM -- Programme Alimentaire Mondial",
+        },
+    }
+    _DEFAULT_COVER = _COVER_TEXTS["commercant"]
 
     def __init__(self, data: dict):
         super().__init__(orientation="P", unit="mm", format="A4")
         self.data = data
+        self.profile = data.get("profile", "commercant")
+        self.cover_txt = self._COVER_TEXTS.get(self.profile, self._DEFAULT_COVER)
         self.set_margins(18, 18, 18)
         self.set_auto_page_break(auto=True, margin=28)
 
@@ -248,7 +278,8 @@ class MitchoGuideAgriculteur(FPDF):
         self.set_y(9)
         self.set_font("Helvetica", "B", 9)
         self.set_text_color(*COLOR_MUTED)
-        self.cell(0, 5, _clean(f"MITCHO -- Guide Agriculteur -- {self.data['month_label']}"), align="L")
+        profile_label = "Commercant" if self.profile == "commercant" else "Citoyen"
+        self.cell(0, 5, _clean(f"MITCHO -- Guide {profile_label} -- {self.data['month_label']}"), align="L")
         self.cell(0, 5, f"Page {self.page_no()}", align="R")
         self.ln(7)
         self.set_text_color(*COLOR_TEXT)
@@ -275,7 +306,7 @@ class MitchoGuideAgriculteur(FPDF):
         self.set_xy(18, 28)
         self.set_font("Helvetica", "", 11)
         self.set_text_color(210, 240, 220)
-        self.cell(0, 7, "Votre guide pratique pour bien vendre vos recoltes", align="L")
+        self.cell(0, 7, _clean(self.cover_txt["tagline"]), align="L")
 
         self.set_xy(18, 38)
         self.set_font("Helvetica", "B", 10)
@@ -292,20 +323,12 @@ class MitchoGuideAgriculteur(FPDF):
         self.set_xy(22, 70)
         self.set_font("Helvetica", "B", 11)
         self.set_text_color(*COLOR_PRIMARY)
-        self.cell(0, 7, "Ce guide est fait pour vous !", align="L")
+        self.cell(0, 7, _clean(self.cover_txt["intro_title"]), align="L")
 
         self.set_xy(22, 80)
         self.set_font("Helvetica", "", 10)
         self.set_text_color(*COLOR_TEXT)
-        self.multi_cell(
-            166, 6,
-            "Dans ce document, vous trouverez :\n"
-            "- Les prix actuels sur les marches du Benin\n"
-            "- Les meilleurs marches pour vendre ce mois\n"
-            "- Des conseils clairs : quand vendre et quand attendre\n"
-            "- Ce qui va changer dans les prochaines semaines",
-            align="L",
-        )
+        self.multi_cell(166, 6, _clean(self.cover_txt["intro_body"]), align="L")
 
         # Price summary strip
         prices = self.data.get("prices", [])[:4]
@@ -335,7 +358,7 @@ class MitchoGuideAgriculteur(FPDF):
         self.set_xy(18, 270)
         self.set_font("Helvetica", "", 8)
         self.set_text_color(*COLOR_MUTED)
-        self.cell(0, 5, _clean("Sources des prix : WFP/PAM -- Programme Alimentaire Mondial"), align="L")
+        self.cell(0, 5, _clean(self.cover_txt["footer"]), align="L")
 
     def prices_section(self, prices):
         if not prices:
@@ -494,10 +517,11 @@ class MitchoGuideAgriculteur(FPDF):
 def generate_pdf(report_data: dict) -> bytes:
     profile = report_data.get("profile", "decideur")
 
-    if profile == "agriculteur":
+    if profile in ("commercant", "citoyen", "agriculteur"):
         pdf = MitchoGuideAgriculteur(data=report_data)
-        pdf.set_author("MITCHO - Conseiller Agricole du Benin")
-        pdf.set_title(_clean(f"Guide Agriculteur MITCHO - {report_data['month_label']}"))
+        profile_label = {"commercant": "Commercant", "citoyen": "Citoyen", "agriculteur": "Agriculteur"}.get(profile, profile.capitalize())
+        pdf.set_author(f"MITCHO - Guide {profile_label}")
+        pdf.set_title(_clean(f"Guide {profile_label} MITCHO - {report_data['month_label']}"))
     else:
         pdf = MitchoReportDecideur(data=report_data)
         pdf.set_author("MITCHO - Systeme d'Intelligence Publique")

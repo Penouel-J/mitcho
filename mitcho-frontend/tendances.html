@@ -492,176 +492,185 @@
 
   document.getElementById('auth-nav').classList.remove('hidden');
 
-  /* ── Contenu statique par profil ── */
-  const CONTENT = {
-    decideur: {
-      heroLabel: 'Rapport Mensuel',
-      heroTitle: 'Prévisions Mensuelles<br/><span class="text-primary">Mai 2026</span>',
-      heroSubtitle: 'Analyse des marchés agricoles, signaux détectés et recommandations stratégiques.',
-      syntheseTitre: 'Synthèse du mois',
-      syntheseHTML: `
-        <p>Le mois de mai 2026 s'inscrit dans une <strong class="text-on-surface font-semibold">dynamique de tension persistante</strong> sur les marchés vivriers du Bénin. Le maïs blanc recule légèrement à <strong class="text-on-surface font-semibold">299 FCFA/kg</strong> (-3% vs avril), mais demeure 9% au-dessus de sa moyenne annuelle (275 FCFA), reflétant des stocks sous pression dans les préfectures de Borgou et Alibori.</p>
-        <p>Le riz importé s'établit à <strong class="text-on-surface font-semibold">687 FCFA/kg</strong> (+4% vs avril), soit 13% au-dessus de sa moyenne 12 mois. L'écart de 46 FCFA/kg entre Cotonou et Lomé (641 FCFA) génère des flux d'arbitrage fragilisant l'approvisionnement local.</p>
-        <p>Le gari blanc se stabilise à <strong class="text-on-surface font-semibold">382 FCFA/kg</strong> (+1%). Le niébé blanc recule à <strong class="text-on-surface font-semibold">595 FCFA/kg</strong> (-4%), signalant une amélioration de l'offre en protéines végétales.</p>
-        <p>MITCHÔ identifie <strong class="text-on-surface font-semibold">deux actions prioritaires</strong> : renforcer les stocks régulateurs de maïs dans les zones transfrontalières avec le Niger, et surveiller la trajectoire haussière du riz importé (+7% en 4 mois) qui érode le pouvoir d'achat des ménages urbains.</p>`,
-      recoLabel: 'Pour les décideurs',
-      recoTitre: 'Recommandations stratégiques',
-      recoCards: [
-        { num:'01', color:'tertiary', tag:'Urgent',
-          titre:'Surveiller les stocks de maïs, zone nord',
-          texte:'Le maïs recule à 299 FCFA/kg (-3%) mais reste 9% au-dessus de sa moyenne annuelle. Le marché de Niamey (286 FCFA/kg) exerce une pression transfrontalière sur Borgou-Alibori. Déclencher un audit des stocks régulateurs avant fin mai.' },
-        { num:'02', color:'secondary', tag:'Anticipation',
-          titre:'Contenir la hausse du riz importé',
-          texte:"Le riz importé atteint 687 FCFA/kg (+4% en un mois, +13% vs moyenne). L'écart de 46 FCFA/kg avec Lomé génère des sorties vers le Togo. Envisager une régulation des exportations informelles et négocier des contrats d'importation groupée." },
-        { num:'03', color:'primary', tag:'Opportunité',
-          titre:'Valoriser le recul du niébé',
-          texte:"Le niébé à 595 FCFA/kg (-4% vs avril) signale une amélioration de l'offre. C'est une fenêtre pour renforcer les programmes d'alimentation scolaire et les filets de sécurité ciblant ce produit." },
-      ],
-      pdfLabel: 'Rapport institutionnel',
-      pdfTitle: "Rapport d'analyse complet",
-      pdfDesc: "Le rapport PDF institutionnel de mai 2026 contient l'intégralité de l'analyse : méthodologie, données brutes, prévisions sur 60 jours et recommandations détaillées pour chaque ministère.",
-      pdfItems: [
-        "Analyse narrative complète (8 pages)",
-        "Données brutes et graphiques (12 pages)",
-        "Prévisions sur 60 jours (4 pages)",
-        "Recommandations stratégiques par institution (6 pages)",
-      ],
-      pdfBtn: 'Télécharger le rapport PDF, Mai 2026',
-    },
-
-    commercant: {
-      heroLabel: 'Bulletin Marché · Mai 2026',
-      heroTitle: 'Où acheter, où vendre ?<br/><span class="text-primary">Opportunités du mois</span>',
-      heroSubtitle: 'Prix des marchés, marges, arbitrages et conseils d\'achat-revente pour les commerçants de vivres.',
-      syntheseTitre: 'Situation des marchés ce mois',
-      syntheseHTML: `
-        <p>Ce mois de mai, <strong class="text-on-surface font-semibold">le maïs blanc offre une bonne opportunité d'achat</strong> à Parakou (environ 285 FCFA/kg) pour revente à Cotonou (299 FCFA/kg). Marge brute estimée à <strong class="text-on-surface font-semibold">~14 FCFA/kg</strong> avant transport.</p>
-        <p>Le <strong class="text-on-surface font-semibold">riz importé est à 687 FCFA/kg</strong> — le plus haut depuis le début de l'année. La demande reste soutenue à Cotonou. Si vous avez du stock, c'est le bon moment de vendre. <strong class="text-on-surface font-semibold">Ne rachetez pas maintenant</strong> — le prix risque de corriger dans 4 à 6 semaines.</p>
-        <p>Le <strong class="text-on-surface font-semibold">niébé blanc recule à 595 FCFA/kg</strong> (-4% vs avril). Opportunité d'achat pour stocker en prévision de la période de soudure (juillet-août) où les prix remontent habituellement.</p>`,
-      recoLabel: 'Opportunités du mois',
-      recoTitre: 'Vos décisions d\'achat-revente',
-      recoCards: [
-        { num:'01', color:'primary', tag:'Achetez',
-          titre:'Niébé blanc — stocker pour juillet',
-          texte:'Le niébé est à 595 FCFA/kg (-4%). Les prix de la période de soudure (juillet-août) remontent généralement à 650-680 FCFA/kg. Achetez à Malanville ou Parakou maintenant, revendez à Cotonou dans 6-8 semaines. Marge estimée : 50-80 FCFA/kg.' },
-        { num:'02', color:'tertiary', tag:'Vendez',
-          titre:'Riz importé — liquidez vos stocks',
-          texte:'Le riz est au plus haut (687 FCFA/kg). La pression à la baisse depuis Lomé (641 FCFA/kg) risque de s\'accentuer. Si vous avez du stock, revendez maintenant avant une éventuelle correction. Ne rachetez pas avant 4 semaines.' },
-        { num:'03', color:'secondary', tag:'Arbitrage',
-          titre:'Maïs : Parakou → Cotonou',
-          texte:'Écart de 14 FCFA/kg entre Parakou et Cotonou. Avec un camion de 5 tonnes, marge brute potentielle de 70 000 FCFA. Surveiller la route nationale 2 — des ralentissements logistiques ont été signalés ce mois.' },
-      ],
-      pdfLabel: 'Bulletin commerçant',
-      pdfTitle: 'Rapport d\'analyse marchés',
-      pdfDesc: 'Le bulletin PDF de mai 2026 contient tous les prix par marché, les opportunités d\'arbitrage, les prévisions de prix et les recommandations d\'achat-revente pour le mois.',
-      pdfItems: [
-        "Prix détaillés par marché (Cotonou, Malanville, Parakou, Bohicon)",
-        "Opportunités d'arbitrage avec marges estimées",
-        "Prévisions de prix sur 6 semaines",
-        "Alertes risques et conseils stratégiques",
-      ],
-      pdfBtn: 'Télécharger le bulletin, Mai 2026',
-    },
-
-    citoyen: {
-      heroLabel: 'Infos consommateurs · Mai 2026',
-      heroTitle: 'Les prix du marché<br/><span class="text-primary">Ce mois de mai</span>',
-      heroSubtitle: 'Où acheter pas cher, quels produits vont monter en prix, et comment gérer votre budget alimentation.',
-      syntheseTitre: 'Comment vont les prix ce mois ?',
-      syntheseHTML: `
-        <p>Ce mois de mai 2026, <strong class="text-on-surface font-semibold">les prix des aliments sont un peu hauts</strong>. Le riz importé et le maïs coûtent plus cher que d'habitude. Mais il y a de bonnes nouvelles : <strong class="text-on-surface font-semibold">le niébé a baissé</strong> — c'est le bon moment d'en acheter.</p>
-        <p>Le <strong class="text-on-surface font-semibold">riz importé coûte 687 FCFA le kilo</strong>, soit environ <strong class="text-on-surface font-semibold">17 000 FCFA pour un sac de 25 kg</strong>. C'est cher. Si votre budget est limité, le <strong class="text-on-surface font-semibold">gari blanc à 382 FCFA/kg</strong> est une bonne alternative — nourrissant et moins cher.</p>
-        <p>Le <strong class="text-on-surface font-semibold">niébé blanc est à 595 FCFA/kg</strong> ce mois. Achetez-en un peu de stock maintenant — dans 2 mois, le prix va probablement remonter.</p>`,
-      recoLabel: 'Conseils du mois',
-      recoTitre: 'Comment faire vos courses ce mois',
-      recoCards: [
-        { num:'01', color:'primary', tag:'Bon plan',
-          titre:'Remplacez le riz par du gari',
-          texte:'Le riz est cher ce mois (687 FCFA/kg). Le gari blanc à 382 FCFA/kg est beaucoup moins cher et tout aussi nourrissant. Pour une famille de 5 personnes, vous économisez environ 3 000 FCFA par semaine en mangeant du gari 3 fois par semaine à la place du riz.' },
-        { num:'02', color:'secondary', tag:'Faites des stocks',
-          titre:'Achetez du niébé maintenant',
-          texte:'Le niébé blanc est à 595 FCFA/kg — c\'est moins cher qu\'en mars (630 FCFA/kg). Achetez un sac de 10 kg maintenant (~5 900 FCFA). Dans 2 mois, le prix va probablement remonter à 650-680 FCFA/kg avec la saison de soudure.' },
-        { num:'03', color:'tertiary', tag:'Attention',
-          titre:'Le prix du maïs et du riz peut encore monter',
-          texte:'Le maïs blanc (299 FCFA/kg) et le riz importé (687 FCFA/kg) sont déjà chers. Les experts prévoient que les prix pourraient encore monter en juin-juillet. Si vous pouvez, faites vos stocks de maïs cette semaine avant la hausse.' },
-      ],
-      pdfLabel: 'Guide consommateur',
-      pdfTitle: 'Guide pratique des prix',
-      pdfDesc: 'Téléchargez le guide pratique de mai 2026 : tous les prix des marchés en FCFA, les bons plans du mois, et des conseils simples pour bien gérer votre budget alimentation.',
-      pdfItems: [
-        "Tous les prix en FCFA (kilo et sac)",
-        "Les marchés les moins chers près de chez vous",
-        "Produits qui vont monter — faites vos stocks",
-        "5 conseils pour manger bien à petit budget",
-      ],
-      pdfBtn: 'Télécharger le guide, Mai 2026',
-    },
+  /* ── Labels statiques par profil (hero title/label, titres sections) ── */
+  const PROFILE_LABELS = {
+    decideur:   { heroLabel: 'Rapport Mensuel', heroTitleSuffix: 'Mai 2026', recoLabel: 'Pour les décideurs',      recoTitre: 'Recommandations stratégiques',    syntheseTitre: 'Synthèse du mois',            pdfLabel: 'Rapport institutionnel',  pdfTitle: "Rapport d'analyse complet",   pdfBtn: 'Télécharger le rapport PDF, Mai 2026' },
+    commercant: { heroLabel: 'Bulletin Marché · Mai 2026', heroTitleSuffix: 'Opportunités du mois', recoLabel: 'Opportunités du mois', recoTitre: "Vos décisions d'achat-revente", syntheseTitre: 'Situation des marchés ce mois', pdfLabel: 'Bulletin commerçant',     pdfTitle: "Rapport d'analyse marchés",   pdfBtn: 'Télécharger le bulletin, Mai 2026'    },
+    citoyen:    { heroLabel: 'Infos consommateurs · Mai 2026', heroTitleSuffix: 'Ce mois de mai', recoLabel: 'Conseils du mois',      recoTitre: 'Comment faire vos courses ce mois', syntheseTitre: 'Comment vont les prix ce mois ?', pdfLabel: 'Guide consommateur',     pdfTitle: 'Guide pratique des prix',     pdfBtn: 'Télécharger le guide, Mai 2026'       },
   };
 
-  function applyProfileContent() {
-    const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
-    const profile = session?.profile || 'citoyen';
-    const c = CONTENT[profile] || CONTENT.citoyen;
+  const HERO_TITLES = {
+    decideur:   'Prévisions Mensuelles<br/><span class="text-primary">Mai 2026</span>',
+    commercant: 'Où acheter, où vendre ?<br/><span class="text-primary">Opportunités du mois</span>',
+    citoyen:    'Les prix du marché<br/><span class="text-primary">Ce mois de mai</span>',
+  };
+
+  const PDF_ITEMS = {
+    decideur:   ["Analyse narrative complète (8 pages)", "Données brutes et prévisions (12 pages)", "Recommandations stratégiques par institution"],
+    commercant: ["Prix détaillés par marché (Cotonou, Malanville, Parakou)", "Opportunités d'arbitrage avec marges estimées", "Prévisions de prix sur 6 semaines"],
+    citoyen:    ["Tous les prix en FCFA (kilo et sac)", "Les marchés les moins chers", "5 conseils pour manger bien à petit budget"],
+  };
+
+  const RECO_COLORS = ['primary', 'secondary', 'tertiary'];
+
+  // ── Cache local des sections LLM (sessionStorage, TTL 4h) ───────────────────
+  function _cacheKey(profile) {
+    const month = new Date().toISOString().slice(0, 7);
+    return `mitcho_sections_${profile}_${month}`;
+  }
+
+  function _getCachedSections(profile) {
+    try {
+      const raw = sessionStorage.getItem(_cacheKey(profile));
+      if (!raw) return null;
+      const { data, ts } = JSON.parse(raw);
+      if (Date.now() - ts > 4 * 3600 * 1000) return null; // TTL 4h
+      return data;
+    } catch { return null; }
+  }
+
+  function _setCachedSections(profile, data) {
+    try {
+      sessionStorage.setItem(_cacheKey(profile), JSON.stringify({ data, ts: Date.now() }));
+    } catch {}
+  }
+
+  // ── Squelette de chargement ──────────────────────────────────────────────────
+  function _showSkeleton() {
+    const shimmer = 'bg-surface-container animate-pulse rounded-xl';
+    document.getElementById('hero-subtitle').innerHTML = `<span class="${shimmer} inline-block h-4 w-3/4">&nbsp;</span>`;
+    document.getElementById('synthese-content').innerHTML = `
+      <div class="${shimmer} h-4 w-full mb-2"></div>
+      <div class="${shimmer} h-4 w-5/6 mb-2"></div>
+      <div class="${shimmer} h-4 w-4/5 mb-4"></div>
+      <div class="${shimmer} h-4 w-full mb-2"></div>
+      <div class="${shimmer} h-4 w-3/4"></div>`;
+    document.getElementById('reco-cards').innerHTML = [0,1,2].map(i => `
+      <div class="bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:${i*0.1}s">
+        <div class="${shimmer} h-6 w-1/3 mb-4"></div>
+        <div class="${shimmer} h-5 w-2/3 mb-3"></div>
+        <div class="${shimmer} h-4 w-full mb-2"></div>
+        <div class="${shimmer} h-4 w-5/6"></div>
+      </div>`).join('');
+  }
+
+  // ── Application du contenu LLM dans la page ──────────────────────────────────
+  function _applyLLMSections(profile, data) {
+    const lbl = PROFILE_LABELS[profile] || PROFILE_LABELS.citoyen;
 
     // Hero
-    document.getElementById('hero-label').textContent = c.heroLabel;
-    document.getElementById('hero-title').innerHTML   = c.heroTitle;
-    document.getElementById('hero-subtitle').textContent = c.heroSubtitle;
+    document.getElementById('hero-subtitle').textContent = data.hero_subtitle || lbl.heroTitleSuffix;
 
     // Synthèse
-    document.getElementById('synthese-titre').textContent = c.syntheseTitre;
-    document.getElementById('synthese-content').innerHTML  = c.syntheseHTML;
+    document.getElementById('synthese-titre').textContent = lbl.syntheseTitre;
+    document.getElementById('synthese-content').innerHTML = data.situation_summary_html || '';
+
+    // Niveau de risque
+    const riskScore = data.risk_score || 50;
+    const riskLabel = data.risk_label || 'MODÉRÉ';
+    const riskColor = riskScore >= 75 ? 'tertiary' : riskScore >= 45 ? 'secondary' : 'primary';
+    document.querySelector('.text-secondary.font-semibold')?.textContent && (document.querySelector('[class*="text-secondary"][class*="font-semibold"]').textContent = riskLabel);
+    const riskBar = document.querySelector('.h-2.rounded-full.bg-secondary');
+    if (riskBar) riskBar.style.width = riskScore + '%';
+    const riskScoreEl = document.querySelector('[class*="Score de risque"]');
+    if (riskScoreEl) riskScoreEl.textContent = `Score de risque : ${riskScore} / 100`;
+
+    // Alert tags (signaux actifs)
+    const tagsContainer = document.querySelector('.flex.flex-wrap.gap-2');
+    if (tagsContainer && data.alert_tags?.length) {
+      const tagColors = ['tertiary', 'secondary', 'primary', 'on-surface-variant'];
+      tagsContainer.innerHTML = data.alert_tags.slice(0, 4).map((tag, i) => {
+        const c = tagColors[i % tagColors.length];
+        return `<span class="bg-${c}/10 text-${c} text-[11px] font-semibold px-3 py-1.5 rounded-full">${tag}</span>`;
+      }).join('');
+    }
 
     // Recommandations
-    document.getElementById('reco-label').textContent = c.recoLabel;
-    document.getElementById('reco-titre').textContent  = c.recoTitre;
-
-    const delays = [0, 0.1, 0.2];
-    document.getElementById('reco-cards').innerHTML = c.recoCards.map((r, i) => `
-      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:${delays[i]}s">
+    document.getElementById('reco-label').textContent = lbl.recoLabel;
+    document.getElementById('reco-titre').textContent  = lbl.recoTitre;
+    const recos = data.recommendations || [];
+    document.getElementById('reco-cards').innerHTML = recos.slice(0, 3).map((r, i) => `
+      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:${i*0.1}s">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-9 h-9 bg-${r.color} rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">${r.num}</div>
-          <span class="font-label-sm text-label-sm text-${r.color} uppercase tracking-wide">${r.tag}</span>
+          <div class="w-9 h-9 bg-${RECO_COLORS[i]} rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">0${i+1}</div>
+          <span class="font-label-sm text-label-sm text-${RECO_COLORS[i]} uppercase tracking-wide">${r.tag || ''}</span>
         </div>
-        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">${r.titre}</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">${r.texte}</p>
+        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">${r.title || ''}</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">${r.description || ''}</p>
       </div>`).join('');
-
-    // Re-observe les nouvelles cartes pour fade-in
     document.querySelectorAll('#reco-cards .fade-in').forEach(el => obs.observe(el));
 
     // Section PDF
-    document.getElementById('pdf-section-label').textContent = c.pdfLabel;
-    document.getElementById('pdf-section-title').textContent  = c.pdfTitle;
-    document.getElementById('pdf-section-desc').textContent   = c.pdfDesc;
-    document.getElementById('btn-pdf-label').textContent      = c.pdfBtn;
-    document.getElementById('pdf-checklist').innerHTML = c.pdfItems.map(item => `
+    document.getElementById('pdf-section-label').textContent = lbl.pdfLabel;
+    document.getElementById('pdf-section-title').textContent  = lbl.pdfTitle;
+    document.getElementById('btn-pdf-label').textContent      = lbl.pdfBtn;
+    const items = PDF_ITEMS[profile] || PDF_ITEMS.citoyen;
+    document.getElementById('pdf-checklist').innerHTML = items.map(item => `
       <div class="flex items-center gap-3">
         <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
         <span class="font-body-md text-body-md text-on-primary/80">${item}</span>
       </div>`).join('');
+
+    // PDF desc dynamique
+    document.getElementById('pdf-section-desc').textContent = data.hero_subtitle || '';
+  }
+
+  // ── Chargement principal ──────────────────────────────────────────────────────
+  async function applyProfileContent() {
+    const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
+    const profile = session?.profile || 'citoyen';
+    const lbl     = PROFILE_LABELS[profile] || PROFILE_LABELS.citoyen;
+
+    // Titres statiques immédiats
+    document.getElementById('hero-label').textContent  = lbl.heroLabel;
+    document.getElementById('hero-title').innerHTML    = HERO_TITLES[profile] || HERO_TITLES.citoyen;
+
+    // Cache disponible → affichage immédiat
+    const cached = _getCachedSections(profile);
+    if (cached) {
+      _applyLLMSections(profile, cached);
+      return;
+    }
+
+    // Pas de cache → squelette + appel API
+    _showSkeleton();
+    try {
+      const token = session?.token || '';
+      const res = await fetch('http://localhost:8000/analysis/sections', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+        body: JSON.stringify({ profile }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      _setCachedSections(profile, data);
+      _applyLLMSections(profile, data);
+    } catch (err) {
+      console.warn('[MITCHÔ] Sections API error, affichage fallback:', err);
+      // Fallback minimal en cas d'erreur backend (hors ligne, etc.)
+      document.getElementById('hero-subtitle').textContent = lbl.heroTitleSuffix;
+      document.getElementById('synthese-content').innerHTML = '<p>Analyse en cours de chargement. Revenez dans quelques instants ou téléchargez le rapport PDF complet.</p>';
+      document.getElementById('reco-cards').innerHTML = '';
+    }
   }
 
   // Exposée globalement pour que mitcho-auth.js puisse l'appeler directement
   window.applyProfileContent = applyProfileContent;
 
-  // Premier appel immédiat (peut montrer "decideur" si session absente, sera corrigé après login)
+  // Premier appel immédiat
   applyProfileContent();
 
-  // Polling de sécurité : vérifie le profil toutes les 500ms pendant 10s après chargement
-  // (couvre tous les cas de timing où l'événement ne suffit pas)
-  let _pollCount = 0;
+  // Polling de sécurité : si le profil change (connexion en cours), relancer
   let _lastProfile = null;
   const _profilePoller = setInterval(() => {
-    _pollCount++;
     const s = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
-    const current = s?.profile || null;
+    const current = s?.profile || 'citoyen';
     if (current !== _lastProfile) {
       _lastProfile = current;
-      applyProfileContent();
+      if (_lastProfile) applyProfileContent();
     }
-    if (_pollCount > 20) clearInterval(_profilePoller);
-  }, 500);
+  }, 800);
+  setTimeout(() => clearInterval(_profilePoller), 15000);
 
   function handleDownloadPDF() {
     const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');

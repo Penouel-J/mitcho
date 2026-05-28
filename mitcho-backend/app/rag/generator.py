@@ -223,6 +223,101 @@ async def generate_analysis(prices, month_label=None, profile: str = "decideur")
     }
 
 
+async def generate_page_sections(prices, month_label=None, profile: str = "decideur") -> dict:
+    """
+    Génère le contenu structuré de la page tendances.html via le LLM.
+    Retourne un dict JSON avec : situation_summary_html, recommendations (3 items),
+    alert_tags, risk_score, risk_label, hero_subtitle.
+
+    Les recommandations et la synthèse sont adaptées au profil.
+    """
+    import json as _json
+
+    month_label = month_label or datetime.now().strftime("%B %Y")
+    context      = retrieve_context()
+    prices_text  = format_prices_text(prices)
+    system_prompt, _ = _get_prompts(profile)
+
+    profile_labels = {
+        "decideur":   "décideur public (MAEP, ONASA, Ministère du Commerce)",
+        "commercant": "commerçant ou revendeur de vivres",
+        "citoyen":    "citoyen / ménage ordinaire",
+    }
+    profile_label = profile_labels.get(profile, profile)
+
+    user_prompt = f"""
+Données de prix actuelles (WFP) pour {month_label} :
+{prices_text}
+
+Contexte récent (événements, signaux) :
+{context}
+
+---
+Génère le contenu JSON de la page mensuelle MITCHÔ pour un utilisateur : {profile_label}.
+
+Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ou après. Voici le format EXACT à respecter :
+
+{{
+  "hero_subtitle": "...",
+  "situation_summary_html": "<p>...</p><p>...</p>",
+  "recommendations": [
+    {{"tag": "...", "title": "...", "description": "..."}},
+    {{"tag": "...", "title": "...", "description": "..."}},
+    {{"tag": "...", "title": "...", "description": "..."}}
+  ],
+  "alert_tags": ["...", "...", "...", "..."],
+  "risk_score": 58,
+  "risk_label": "MODÉRÉ"
+}}
+
+Règles impératives :
+- hero_subtitle : 1-2 phrases décrivant la valeur de la page pour ce profil.
+- situation_summary_html : 3 paragraphes HTML avec <strong> pour les chiffres clés en FCFA. Basé sur les données ci-dessus.
+- recommendations : exactement 3 objets. tag = mot-clé court (Urgent / Achetez / Bon plan / etc). title = 6-9 mots max. description = 2-3 phrases concrètes avec prix en FCFA.
+- alert_tags : 4 signaux courts (2-3 mots chacun), extraits des données.
+- risk_score : entier 0-100 basé sur les données.
+- risk_label : "FAIBLE" | "MODÉRÉ" | "ÉLEVÉ" | "CRITIQUE"
+"""
+
+    client = Groq(api_key=settings.GROQ_API_KEY)
+    logger.info(f"[Generator] Page sections — profile={profile}, month={month_label}")
+
+    response = client.chat.completions.create(
+        model=settings.GROQ_MODEL,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user",   "content": user_prompt},
+        ],
+        temperature=0.25,
+        max_tokens=2000,
+        response_format={"type": "json_object"},
+    )
+
+    raw = response.choices[0].message.content
+    tokens_used = response.usage.total_tokens if response.usage else 0
+    logger.info(f"[Generator] Page sections done — {tokens_used} tokens")
+
+    try:
+        data = _json.loads(raw)
+    except _json.JSONDecodeError:
+        # Fallback : extraire le premier { ... }
+        import re as _re
+        match = _re.search(r'\{.*\}', raw, _re.DOTALL)
+        data = _json.loads(match.group(0)) if match else {}
+
+    # Valeurs par défaut si le LLM omet un champ
+    data.setdefault("hero_subtitle", "Analyse mensuelle des marchés vivriers au Bénin.")
+    data.setdefault("situation_summary_html", "<p>Analyse en cours de chargement.</p>")
+    data.setdefault("recommendations", [])
+    data.setdefault("alert_tags", [])
+    data.setdefault("risk_score", 50)
+    data.setdefault("risk_label", "MODÉRÉ")
+    data["profile"] = profile
+    data["month_label"] = month_label
+
+    return data
+
+
 async def generate_chat_reply(user_message: str, history=None, profile: str = "decideur") -> str:
     """RAG-powered chatbot reply. profile: "decideur" | "commercant" | "citoyen" """
     context = retrieve_context(query=user_message, n_results=5)

@@ -30,20 +30,50 @@ def _sync_upsert(chunks):
 
 
 async def _ingest_gdelt():
-    """Fetch GDELT articles and index them into ChromaDB (indexing in thread)."""
-    try:
-        from app.data.gdelt_loader import fetch_gdelt_articles, articles_to_rag_chunks
-        from app.rag.vector_store import collection_count
+    """
+    Fetch GDELT articles and index them into ChromaDB.
 
-        logger.info("[Scheduler] GDELT ingestion started")
-        articles = await fetch_gdelt_articles(timespan="7d")
-        chunks = articles_to_rag_chunks(articles)
+    Strategy:
+      1. If GOOGLE_CLOUD_PROJECT is configured → use BigQuery (full history, no rate limit)
+      2. Otherwise → fallback to DOC API (last 7 days, may be rate-limited)
+    """
+    from app.core.config import settings
+    from app.rag.vector_store import collection_count
+
+    logger.info("[Scheduler] GDELT ingestion started")
+
+    try:
+        if settings.GOOGLE_CLOUD_PROJECT:
+            # ── BigQuery path (preferred) ──────────────────────────────────────
+            from app.data.gdelt_bq_loader import (
+                fetch_gdelt_bq_articles,
+                bq_articles_to_rag_chunks,
+            )
+            target_month = datetime.now().strftime("%Y-%m")
+            articles = await fetch_gdelt_bq_articles(
+                project_id=settings.GOOGLE_CLOUD_PROJECT,
+                target_month=target_month,
+                max_rows=500,
+            )
+            chunks = bq_articles_to_rag_chunks(articles)
+            source_label = f"BigQuery [{target_month}]"
+        else:
+            # ── DOC API fallback ───────────────────────────────────────────────
+            from app.data.gdelt_loader import fetch_gdelt_articles, articles_to_rag_chunks
+            articles = await fetch_gdelt_articles(timespan="7d")
+            chunks = articles_to_rag_chunks(articles)
+            source_label = "DOC API [7d]"
+
         if chunks:
             loop = asyncio.get_event_loop()
             n = await loop.run_in_executor(_index_executor, _sync_upsert, chunks)
-            logger.info(f"[Scheduler] GDELT ingestion complete: {n} chunks. Total: {collection_count()}")
+            logger.info(
+                f"[Scheduler] GDELT ingestion complete ({source_label}): "
+                f"{n} chunks indexed. Total KB: {collection_count()}"
+            )
         else:
-            logger.info("[Scheduler] GDELT ingestion complete: 0 articles found")
+            logger.info(f"[Scheduler] GDELT ingestion: 0 articles ({source_label})")
+
     except Exception as exc:
         logger.error(f"[Scheduler] GDELT ingestion failed: {exc}")
 

@@ -40,5 +40,9 @@ resend==2.4.0
 # Scheduler
 apscheduler==3.10.4
 
+# Google BigQuery (GDELT historique)
+google-cloud-bigquery==3.27.0
+db-dtypes==1.3.1
+
 # Templates
 markupsafe==3.0.2

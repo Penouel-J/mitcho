@@ -1,7 +1,9 @@
+import re
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
 from app.api.auth import get_current_user
+from app.core.config import settings
 from app.data.wfp_loader import fetch_latest_prices
 from app.rag.generator import generate_analysis, generate_chat_reply
 from app.rag.vector_store import collection_count
@@ -65,3 +67,60 @@ async def chat(body: ChatRequest):
         return ChatResponse(reply=reply, context_docs=collection_count())
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
+
+
+# ── GDELT BigQuery ingestion endpoints ────────────────────────────────────────
+
+class GdeltIngestRequest(BaseModel):
+    target_month: str  # "YYYY-MM"
+
+
+class GdeltIngestResponse(BaseModel):
+    chunks_indexed: int
+    target_month: str
+    source: str
+
+
+@router.post("/gdelt/ingest", response_model=GdeltIngestResponse)
+async def ingest_gdelt_month(
+    body: GdeltIngestRequest,
+    current_user: User = Depends(get_current_user),
+):
+    """
+    Déclenche l'ingestion GDELT pour un mois spécifique (admin/authenticated uniquement).
+    Utilise BigQuery si GOOGLE_CLOUD_PROJECT est configuré, sinon le DOC API.
+
+    body.target_month : "YYYY-MM" (ex: "2026-05")
+    """
+    if not re.match(r"^\d{4}-\d{2}$", body.target_month):
+        raise HTTPException(status_code=400, detail="Format invalide. Attendu: YYYY-MM (ex: 2026-05)")
+
+    if settings.GOOGLE_CLOUD_PROJECT:
+        try:
+            from app.data.gdelt_bq_loader import ingest_month
+            n = await ingest_month(
+                project_id=settings.GOOGLE_CLOUD_PROJECT,
+                target_month=body.target_month,
+            )
+            return GdeltIngestResponse(
+                chunks_indexed=n,
+                target_month=body.target_month,
+                source="bigquery",
+            )
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"BigQuery ingestion failed: {exc}")
+    else:
+        # DOC API fallback — ignore target_month, fetch last 7 days
+        try:
+            from app.data.gdelt_loader import fetch_gdelt_articles, articles_to_rag_chunks
+            from app.rag.vector_store import upsert_chunks
+            articles = await fetch_gdelt_articles(timespan="7d")
+            chunks   = articles_to_rag_chunks(articles)
+            n = upsert_chunks(chunks) if chunks else 0
+            return GdeltIngestResponse(
+                chunks_indexed=n,
+                target_month=body.target_month,
+                source="doc_api_fallback",
+            )
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"DOC API ingestion failed: {exc}")

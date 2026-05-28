@@ -36,9 +36,23 @@ class Settings(BaseSettings):
     # CORS — includes "null" for file:// origins and common dev ports
     ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:5500,http://localhost:5500,http://localhost:8080,null"
 
+    # ── Déploiement ──────────────────────────────────────────────────────────
+    # Render free tier : 512MB RAM — mettre à "false" pour éviter OOM PyTorch
+    USE_SENTENCE_TRANSFORMERS: str = "true"
+    # Désactiver l'ingestion CSV au démarrage sur Render (lent + mémoire)
+    AUTO_INGEST: str = "true"
+
     @property
     def origins_list(self):
         return [o.strip() for o in self.ALLOWED_ORIGINS.split(",")]
+
+    @property
+    def use_sentence_transformers(self) -> bool:
+        return self.USE_SENTENCE_TRANSFORMERS.lower() == "true"
+
+    @property
+    def auto_ingest(self) -> bool:
+        return self.AUTO_INGEST.lower() == "true"
 
 
 settings = Settings()

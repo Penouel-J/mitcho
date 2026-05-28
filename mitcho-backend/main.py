@@ -37,18 +37,19 @@ async def lifespan(app: FastAPI):
     from app.data.scheduler import start_scheduler
     start_scheduler()
 
-    # Kick off initial ingestion on first run
-    from app.rag.vector_store import collection_count
-    from app.data.scheduler import ingest_wfp, ingest_gdelt, ingest_gdelt_csv
-    if collection_count() == 0:
-        logger.info("Knowledge base vide — ingestion historique CSV GDELT + WFP en cours...")
-        import asyncio
-        # CSV historique GDELT (2020-2026) — prioritaire, ~336k événements
-        asyncio.create_task(ingest_gdelt_csv())
-        # Prix WFP récents
-        asyncio.create_task(ingest_wfp())
+    # Ingestion initiale — désactivable via AUTO_INGEST=false (Render free tier)
+    if settings.auto_ingest:
+        from app.rag.vector_store import collection_count
+        from app.data.scheduler import ingest_wfp, ingest_gdelt, ingest_gdelt_csv
+        if collection_count() == 0:
+            logger.info("Knowledge base vide — ingestion CSV GDELT + WFP en arrière-plan...")
+            import asyncio
+            asyncio.create_task(ingest_gdelt_csv())
+            asyncio.create_task(ingest_wfp())
+        else:
+            logger.info(f"Knowledge base existante : {collection_count()} chunks")
     else:
-        logger.info(f"Knowledge base existante : {collection_count()} chunks")
+        logger.info("AUTO_INGEST=false — ingestion désactivée (mode déploiement léger)")
 
     yield
 

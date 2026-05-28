@@ -9,7 +9,7 @@
  *  3. En cas d'échec total, conserve les valeurs statiques HTML
  */
 
-const BACKEND_PRICES_URL = 'http://localhost:8000/prices';
+const BACKEND_PRICES_URL = (window.MITCHO_API || 'http://localhost:8000') + '/prices';
 const HDX_DATASET_ID     = 'wfp-food-prices-for-benin';
 const HDX_API_BASE       = 'https://data.humdata.org/api/3/action';
 const CORS_PROXY         = 'https://corsproxy.io/?';

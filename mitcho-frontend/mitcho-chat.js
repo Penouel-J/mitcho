@@ -4,7 +4,7 @@
    Mode fallback : Groq direct (si le backend n'est pas démarré)
    ============================================================ */
 
-const BACKEND_URL = 'http://localhost:8000';
+const BACKEND_URL = window.MITCHO_API || 'http://localhost:8000';
 const GROQ_URL    = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_KEY    = window.MITCHO_GROQ_KEY || ''; // Définie via config.js (non committé)
 const GROQ_MODEL  = 'llama-3.3-70b-versatile';

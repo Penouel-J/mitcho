@@ -17,15 +17,18 @@ _USE_SENTENCE_TRANSFORMERS = None  # type: ignore[assignment]
 def _check_sentence_transformers() -> bool:
     global _USE_SENTENCE_TRANSFORMERS
     if _USE_SENTENCE_TRANSFORMERS is None:
+        # Respect de la variable d'environnement (Render free tier = false)
+        from app.core.config import settings
+        if not settings.use_sentence_transformers:
+            logger.info("[Embedder] USE_SENTENCE_TRANSFORMERS=false — using ChromaDB ONNX embeddings")
+            _USE_SENTENCE_TRANSFORMERS = False
+            return False
         try:
             import sentence_transformers  # noqa: F401
             _USE_SENTENCE_TRANSFORMERS = True
         except ImportError:
             _USE_SENTENCE_TRANSFORMERS = False
-            logger.warning(
-                "[Embedder] sentence-transformers not installed — using ChromaDB default embeddings. "
-                "Run: pip install sentence-transformers"
-            )
+            logger.warning("[Embedder] sentence-transformers non disponible — fallback ChromaDB ONNX")
     return _USE_SENTENCE_TRANSFORMERS
 
 

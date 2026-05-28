@@ -636,7 +636,7 @@
     _showSkeleton();
     try {
       const token = session?.token || '';
-      const res = await fetch('http://localhost:8000/analysis/sections', {
+      const res = await fetch((window.MITCHO_API || 'http://localhost:8000') + '/analysis/sections', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
         body: JSON.stringify({ profile }),
@@ -725,7 +725,7 @@
       const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
       const token   = session?.token || '';
 
-      const response = await fetch('http://localhost:8000/report/pdf/stream', {
+      const response = await fetch((window.MITCHO_API || 'http://localhost:8000') + '/report/pdf/stream', {
         method: 'GET',
         headers: { 'Authorization': `Bearer ${token}` },
       });
@@ -787,6 +787,7 @@
     }
   }
 </script>
+<script src="config.js"></script>
 <script src="mitcho-chat.js"></script>
 <script src="mitcho-auth.js"></script>
 <script src="prices-loader.js"></script>

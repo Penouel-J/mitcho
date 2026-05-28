@@ -5,7 +5,7 @@
    Mode fallback : localStorage (si le backend n'est pas démarré)
    ============================================================ */
 
-const AUTH_BACKEND = 'http://localhost:8000';
+const AUTH_BACKEND = window.MITCHO_API || 'http://localhost:8000';
 let _afterAuthCallback = null;
 let _forcedAuth = false;       // true = modal obligatoire (pas de fermeture)
 let _selectedProfile = null;   // profil choisi à l'étape 1

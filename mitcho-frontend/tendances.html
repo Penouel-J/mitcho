@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MITCHÔ | Prévisions Mensuelles Mai 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-primary": "#ffffff","primary": "#006b3f","primary-container": "#008751",
+          "on-primary-container": "#fdfff9","secondary": "#745b22","secondary-container": "#fedb95",
+          "on-secondary-container": "#785f25","surface": "#f5fbf3","surface-dim": "#d6dcd4",
+          "surface-variant": "#dee4dd","surface-container-low": "#f0f5ee","surface-container": "#eaefe8",
+          "surface-container-high": "#e4eae2","surface-container-highest": "#dee4dd",
+          "on-surface": "#171d19","on-surface-variant": "#3e4a41","outline": "#6e7a70",
+          "outline-variant": "#bdcabe","background": "#f5fbf3","on-background": "#171d19",
+          "inverse-primary": "#70db9d","inverse-surface": "#2c322d","tertiary": "#9d3d43",
+          "tertiary-container": "#bd555a","on-tertiary": "#ffffff","error": "#ba1a1a"
+        },
+        borderRadius: {"DEFAULT": "0.125rem","lg": "0.25rem","xl": "0.5rem","2xl": "1rem","3xl": "1.5rem","full": "9999px"},
+        spacing: {"stack-sm": "8px","stack-md": "16px","stack-lg": "32px","margin-mobile": "20px","section-gap": "96px","container-max": "1200px","gutter": "24px"},
+        fontFamily: {"label-sm": ["Poppins"],"headline-lg-mobile": ["Poppins"],"headline-md": ["Poppins"],"body-md": ["Poppins"],"headline-lg": ["Poppins"],"display-lg": ["Poppins"],"body-lg": ["Poppins"],"caption": ["Poppins"]},
+        fontSize: {
+          "label-sm":          ["13px", {"lineHeight": "1.2", "letterSpacing": "0.06em", "fontWeight": "600"}],
+          "headline-lg-mobile":["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "headline-md":       ["22px", {"lineHeight": "1.3", "fontWeight": "600"}],
+          "body-md":           ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-lg":       ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "display-lg":        ["52px", {"lineHeight": "1.05", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+          "body-lg":           ["17px", {"lineHeight": "1.65", "fontWeight": "400"}],
+          "caption":           ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .65s ease-out,transform .65s ease-out}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+  ::-webkit-scrollbar{width:5px}
+  ::-webkit-scrollbar-thumb{background:#006b3f;border-radius:10px}
+  .bar-fill{width:0%;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+  .bar-fill.animated{width:var(--w,0%)}
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+<nav class="bg-surface/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 transition-shadow duration-300" id="navbar">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-[1200px] mx-auto h-[72px]">
+    <a href="index.html" class="font-display-lg text-[20px] font-bold tracking-tight text-on-surface">MITCHÔ</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">Accueil</a>
+      <a href="tendances.html" class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-0.5">Prévisions Mensuelles</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div id="auth-nav" class="hidden md:flex items-center gap-3">
+        <span id="nav-username" class="font-label-sm text-label-sm text-on-surface-variant hidden"></span>
+        <button onclick="openAuthModal('login')" id="btn-login" class="font-label-sm text-label-sm text-primary border border-primary px-5 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-all">Connexion</button>
+        <button onclick="logout()" id="btn-logout" class="hidden font-label-sm text-label-sm text-on-surface-variant border border-outline-variant px-5 py-2 rounded-full hover:border-primary hover:text-primary transition-all">Déconnexion</button>
+      </div>
+      <button class="md:hidden p-2 rounded-lg hover:bg-surface-container" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-on-surface">menu</span>
+      </button>
+    </div>
+  </div>
+  <div class="hidden md:hidden bg-surface border-t border-outline-variant/30 px-margin-mobile py-4 space-y-3" id="mobile-menu">
+    <a href="index.html" class="block font-label-sm text-label-sm text-on-surface-variant">Accueil</a>
+    <a href="tendances.html" class="block font-label-sm text-label-sm text-primary">Prévisions Mensuelles</a>
+    <button onclick="openAuthModal('login')" class="block font-label-sm text-label-sm text-primary">Connexion / Créer un compte</button>
+  </div>
+</nav>
+
+<section class="pt-[72px] bg-gradient-to-br from-[#f5fbf3] via-[#e8f5ee] to-[#d0ead9] border-b border-outline-variant/30">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter py-16 grid md:grid-cols-12 gap-10 items-start">
+    <div class="md:col-span-8 fade-in">
+      <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-label-sm text-label-sm mb-6">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        Rapport mensuel · Mai 2026
+      </div>
+      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-3">Rapport Mensuel</p>
+      <h1 class="font-display-lg text-headline-lg-mobile md:text-[42px] text-on-surface mb-3 leading-tight">Prévisions Mensuelles<br/><span class="text-primary">Mai 2026</span></h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">Analyse des marchés agricoles, signaux détectés et recommandations stratégiques.</p>
+    </div>
+    <div class="fade-in flex-shrink-0 md:col-span-4" style="transition-delay:.15s">
+      <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 shadow-sm">
+        <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Niveau de risque global</p>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-[26px]" style="font-variation-settings:'FILL' 1;">warning</span>
+          </div>
+          <div>
+            <p class="font-semibold text-[18px] text-secondary">MODÉRÉ</p>
+            <p class="font-caption text-caption text-on-surface-variant">Surveillance renforcée</p>
+          </div>
+        </div>
+        <div class="w-full bg-surface-container-low rounded-full h-2">
+          <div class="h-2 rounded-full bg-secondary" style="width:58%"></div>
+        </div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">Score de risque : 58 / 100</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white border-b border-outline-variant/30">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-8 fade-in">
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Synthèse du mois</h2>
+      <div class="prose max-w-none space-y-5 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        <p>Le mois de mai 2026 s'inscrit dans une <strong class="text-on-surface font-semibold">dynamique de tension persistante</strong> sur les marchés vivriers du Bénin. Le maïs blanc recule légèrement à <strong class="text-on-surface font-semibold">299 FCFA/kg</strong> (-3% vs avril), mais demeure 9% au-dessus de sa moyenne annuelle des 12 derniers mois (275 FCFA), reflétant des stocks encore sous pression dans les préfectures de Borgou et Alibori.</p>
+        <p>Le riz importé s'établit à <strong class="text-on-surface font-semibold">687 FCFA/kg</strong> (+4% vs avril), soit 13% au-dessus de sa moyenne 12 mois (606 FCFA). Cette hausse structurelle est portée par la dépréciation du franc CFA, les coûts de fret en mer Rouge et une demande régionale soutenue. L'écart de 46 FCFA/kg constaté entre Cotonou et Lomé (641 FCFA) génère des flux d'arbitrage qui fragilisent l'approvisionnement local.</p>
+        <p>Le gari blanc se stabilise à <strong class="text-on-surface font-semibold">382 FCFA/kg</strong> (+1% vs avril), indicateur de la résilience de la filière manioc locale. Le niébé blanc recule à <strong class="text-on-surface font-semibold">595 FCFA/kg</strong> (-4% vs avril), signalant une amélioration de l'offre pour cette protéine végétale stratégique. Ces deux produits restent néanmoins 10 à 12% au-dessus de leurs moyennes annuelles.</p>
+        <p>MITCHÔ identifie <strong class="text-on-surface font-semibold">deux actions prioritaires ce mois</strong> : renforcer les stocks régulateurs de maïs dans les zones transfrontalières avec le Niger, où la demande extérieure soutient les prix locaux ; et surveiller l'évolution du riz importé, dont la trajectoire haussière depuis janvier 2026 (+7% en 4 mois) expose les ménages urbains à faibles revenus à une érosion de leur pouvoir d'achat alimentaire.</p>
+      </div>
+    </div>
+    <div class="md:col-span-4 fade-in space-y-4" style="transition-delay:.15s">
+      <div class="bg-primary rounded-2xl p-6">
+        <p class="font-label-sm text-label-sm text-on-primary/70 mb-2">Sources analysées ce mois</p>
+        <p class="font-display-lg text-[40px] text-on-primary font-bold mb-1">1 247</p>
+        <p class="font-body-md text-body-md text-on-primary/70">articles, rapports et flux de données</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 shadow-sm">
+        <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Signaux actifs</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-tertiary/10 text-tertiary text-[11px] font-semibold px-3 py-1.5 rounded-full">Hausse riz importé</span>
+          <span class="bg-secondary/10 text-secondary text-[11px] font-semibold px-3 py-1.5 rounded-full">Tension corridor nord</span>
+          <span class="bg-primary/10 text-primary text-[11px] font-semibold px-3 py-1.5 rounded-full">Baisse niébé</span>
+          <span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-3 py-1.5 rounded-full">Pluies Djougou</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-surface-container-low border-b border-outline-variant/30">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
+    <div class="flex items-end justify-between mb-10 fade-in">
+      <div>
+        <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Marchés agricoles</p>
+        <h2 class="font-headline-md text-headline-md text-on-surface">Indicateurs de prix, Mai 2026</h2>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <p class="font-caption text-caption text-on-surface-variant">Prix observés sur les marchés de Cotonou et Malanville</p>
+        <button id="btn-refresh-prices" onclick="loadLivePrices()" title="Actualiser les prix" class="flex items-center gap-1.5 text-[11px] font-semibold text-primary bg-primary/10 px-3 py-1.5 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+          <span class="material-symbols-outlined text-[14px]">sync</span>
+          Actualiser
+        </button>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="fade-in bg-white rounded-2xl p-6 border border-outline-variant/20 shadow-sm" data-product>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings:'FILL' 1;">eco</span>
+            <div>
+              <p class="font-headline-md text-[15px] font-semibold text-on-surface">Maïs blanc</p>
+              <p class="font-caption text-caption text-on-surface-variant">Grain sec · Cotonou, Malanville</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-semibold text-on-surface">299 FCFA/kg</p>
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">-3% vs avril</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-full h-2 overflow-hidden"><div class="h-full bg-primary rounded-full bar-fill" style="--w:85%"></div></div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">9% au-dessus de la moyenne sur 12 mois (275 FCFA)</p>
+      </div>
+
+      <div class="fade-in bg-white rounded-2xl p-6 border border-outline-variant/20 shadow-sm" style="transition-delay:.05s" data-product>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-tertiary text-[22px]" style="font-variation-settings:'FILL' 1;">grain</span>
+            <div>
+              <p class="font-headline-md text-[15px] font-semibold text-on-surface">Riz importé</p>
+              <p class="font-caption text-caption text-on-surface-variant">Marchés nationaux · Cotonou, Malanville</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-semibold text-on-surface">687 FCFA/kg</p>
+            <span class="text-[11px] font-semibold text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full">+4% vs avril</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-full h-2 overflow-hidden"><div class="h-full bg-tertiary rounded-full bar-fill" style="--w:93%"></div></div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">13% au-dessus de la moyenne sur 12 mois (606 FCFA)</p>
+      </div>
+
+      <div class="fade-in bg-white rounded-2xl p-6 border border-outline-variant/20 shadow-sm" style="transition-delay:.1s" data-product>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings:'FILL' 1;">set_meal</span>
+            <div>
+              <p class="font-headline-md text-[15px] font-semibold text-on-surface">Gari blanc</p>
+              <p class="font-caption text-caption text-on-surface-variant">Farine de manioc · Cotonou, Malanville</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-semibold text-on-surface">382 FCFA/kg</p>
+            <span class="text-[11px] font-semibold text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">+1% vs avril</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-full h-2 overflow-hidden"><div class="h-full bg-secondary rounded-full bar-fill" style="--w:89%"></div></div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">12% au-dessus de la moyenne sur 12 mois (342 FCFA)</p>
+      </div>
+
+      <div class="fade-in bg-white rounded-2xl p-6 border border-outline-variant/20 shadow-sm" style="transition-delay:.15s" data-product>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings:'FILL' 1;">spa</span>
+            <div>
+              <p class="font-headline-md text-[15px] font-semibold text-on-surface">Niébé blanc</p>
+              <p class="font-caption text-caption text-on-surface-variant">Légumineuse · Cotonou, Malanville</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-semibold text-on-surface">595 FCFA/kg</p>
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">-4% vs avril</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-full h-2 overflow-hidden"><div class="h-full bg-primary rounded-full bar-fill" style="--w:87%"></div></div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">9% au-dessus de la moyenne sur 12 mois (545 FCFA)</p>
+      </div>
+
+      <div class="fade-in bg-white rounded-2xl p-6 border border-outline-variant/20 shadow-sm" style="transition-delay:.2s" data-product>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-tertiary text-[22px]" style="font-variation-settings:'FILL' 1;">public</span>
+            <div>
+              <p class="font-headline-md text-[15px] font-semibold text-on-surface">Maïs blanc, Niger</p>
+              <p class="font-caption text-caption text-on-surface-variant">Marché de Niamey · pression transfrontalière</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-semibold text-on-surface">286 FCFA/kg</p>
+            <span class="text-[11px] font-semibold text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full">-6% vs avril</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-full h-2 overflow-hidden"><div class="h-full bg-tertiary rounded-full bar-fill" style="--w:80%"></div></div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">Pression sur les stocks de Borgou et Alibori</p>
+      </div>
+
+      <div class="fade-in bg-white rounded-2xl p-6 border border-outline-variant/20 shadow-sm" style="transition-delay:.25s" data-product>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings:'FILL' 1;">compare_arrows</span>
+            <div>
+              <p class="font-headline-md text-[15px] font-semibold text-on-surface">Riz importé, Togo</p>
+              <p class="font-caption text-caption text-on-surface-variant">Marché de Lomé · comparaison régionale</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-semibold text-on-surface">641 FCFA/kg</p>
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">-9% vs avril</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-full h-2 overflow-hidden"><div class="h-full bg-primary rounded-full bar-fill" style="--w:78%"></div></div>
+        <p class="font-caption text-caption text-on-surface-variant mt-2">Ecart Cotonou / Lomé : +46 FCFA/kg</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white border-b border-outline-variant/30">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
+    <div class="mb-10 fade-in">
+      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Analyse GDELT + terrain</p>
+      <h2 class="font-headline-md text-headline-md text-on-surface">Signaux détectés ce mois</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="fade-in bg-surface-container-low rounded-2xl p-7 border border-outline-variant/20">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings:'FILL' 1;">warning</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wide">Tension logistique</span>
+              <span class="text-[10px] bg-secondary/10 text-secondary px-2 py-0.5 rounded-full font-semibold">Actif</span>
+            </div>
+            <p class="font-headline-md text-[15px] font-semibold text-on-surface mb-2">Corridor Parakou et Malanville</p>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Ralentissements constatés sur la route nationale 2. Délais de livraison en hausse de 18% par rapport à la normale saisonnière. Impact attendu sur les prix dans les 2 prochaines semaines.</p>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in bg-surface-container-low rounded-2xl p-7 border border-outline-variant/20" style="transition-delay:.1s">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">water_drop</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Pluviométrie favorable</span>
+              <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold">Positif</span>
+            </div>
+            <p class="font-headline-md text-[15px] font-semibold text-on-surface mb-2">Zones de production, Djougou et Natitingou</p>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Les précipitations de mai sont conformes aux normales saisonnières dans le nord-ouest. Les conditions sont favorables pour les cultures de mil et de sorgho. Récolte attendue en bonne quantité.</p>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in bg-surface-container-low rounded-2xl p-7 border border-outline-variant/20" style="transition-delay:.2s">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-tertiary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings:'FILL' 1;">trending_up</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Pression régionale</span>
+              <span class="text-[10px] bg-tertiary/10 text-tertiary px-2 py-0.5 rounded-full font-semibold">Surveillance</span>
+            </div>
+            <p class="font-headline-md text-[15px] font-semibold text-on-surface mb-2">Demande transfrontalière, Niger et Burkina</p>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Une pression d'achat accrue en provenance du Niger (+12% de transactions au poste de Malanville) tire les prix locaux vers le haut malgré une production nationale correcte.</p>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in bg-surface-container-low rounded-2xl p-7 border border-outline-variant/20" style="transition-delay:.3s">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">currency_exchange</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Signal macroéconomique</span>
+              <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold">Structurel</span>
+            </div>
+            <p class="font-headline-md text-[15px] font-semibold text-on-surface mb-2">Fret maritime et parité CFA/USD</p>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Le coût du fret en mer Rouge reste élevé. La parité CFA/USD défavorable renchérit les importations de riz de 6 à 9% par rapport à 2024. Cette pression est structurelle et devrait se maintenir au troisième trimestre.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-surface-container-low border-b border-outline-variant/30">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
+    <div class="mb-10 fade-in">
+      <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Pour les décideurs</p>
+      <h2 class="font-headline-md text-headline-md text-on-surface">Recommandations stratégiques</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-tertiary rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">01</div>
+          <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Urgent</span>
+        </div>
+        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">Surveiller les stocks de maïs, zone nord</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Bien que le maïs recule à 299 FCFA/kg (-3%), il reste 9% au-dessus de sa moyenne annuelle. Le marché de Niamey (286 FCFA/kg) exerce une pression transfrontalière sur Borgou-Alibori. Déclencher un audit des stocks régulateurs avant fin mai.</p>
+      </div>
+      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:.1s">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-secondary rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">02</div>
+          <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wide">Anticipation</span>
+        </div>
+        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">Contenir la hausse du riz importé</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Le riz importé atteint 687 FCFA/kg (+4% en un mois, +13% vs moyenne annuelle). L'écart de 46 FCFA/kg avec Lomé génère des sorties de stocks vers le Togo. Envisager une régulation des exportations informelles et négocier des contrats d'importation groupée.</p>
+      </div>
+      <div class="fade-in bg-white rounded-2xl p-7 border border-outline-variant/20 shadow-sm" style="transition-delay:.2s">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">03</div>
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Opportunité</span>
+        </div>
+        <h3 class="font-headline-md text-[16px] font-semibold text-on-surface mb-3">Valoriser le recul du niébé</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Le niébé à 595 FCFA/kg (-4% vs avril) signale une amélioration de l'offre en protéines végétales. C'est une opportunité pour renforcer les programmes d'alimentation scolaire et les filets de sécurité en ciblant ce produit pendant la fenêtre de prix favorable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-on-surface" id="rapport">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="fade-in">
+        <p class="font-label-sm text-label-sm text-inverse-primary uppercase tracking-widest mb-4">Rapport institutionnel</p>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4">Rapport d'analyse complet</h2>
+        <p class="font-body-lg text-body-lg text-on-primary/70 mb-8 leading-relaxed">Le rapport PDF institutionnel de mai 2026 contient l'intégralité de l'analyse : méthodologie, données brutes, graphiques de tendances, prévisions sur 60 jours et recommandations détaillées pour chaque ministère concerné.</p>
+        <div class="space-y-3 mb-10">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            <span class="font-body-md text-body-md text-on-primary/80">Analyse narrative complète (8 pages)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            <span class="font-body-md text-body-md text-on-primary/80">Données brutes et graphiques (12 pages)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            <span class="font-body-md text-body-md text-on-primary/80">Prévisions sur 60 jours (4 pages)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-inverse-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            <span class="font-body-md text-body-md text-on-primary/80">Recommandations stratégiques par institution (6 pages)</span>
+          </div>
+        </div>
+        <button id="btn-download-pdf" onclick="handleDownloadPDF()" class="inline-flex items-center gap-3 bg-inverse-primary text-on-surface px-8 py-4 rounded-xl font-label-sm text-label-sm hover:opacity-90 active:scale-[0.98] transition-all shadow-lg">
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;">download</span>
+          Télécharger le rapport PDF, Mai 2026
+        </button>
+        <div id="pdf-progress-container" class="hidden mt-6">
+          <div class="flex items-center justify-between mb-2">
+            <p class="font-label-sm text-label-sm text-on-primary/70" id="pdf-progress-label">Génération en cours...</p>
+            <p class="font-label-sm text-label-sm text-inverse-primary" id="pdf-progress-pct">0%</p>
+          </div>
+          <div class="w-full bg-on-primary/10 rounded-full h-2">
+            <div id="pdf-progress-bar" class="h-2 bg-inverse-primary rounded-full transition-all duration-500" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in" style="transition-delay:.15s">
+        <div class="bg-white/5 border border-on-primary/20 rounded-3xl p-8 space-y-4">
+          <div class="flex items-center gap-3 pb-4 border-b border-on-primary/10">
+            <span class="material-symbols-outlined text-inverse-primary text-[28px]" style="font-variation-settings:'FILL' 1;">picture_as_pdf</span>
+            <div>
+              <p class="font-semibold text-on-primary">MITCHÔ_Previsions_Mai2026.pdf</p>
+              <p class="font-caption text-caption text-on-primary/50">30 pages · Format institutionnel</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+              <span class="w-2 h-2 bg-inverse-primary rounded-full flex-shrink-0"></span>
+              <span class="font-body-md text-body-md text-on-primary/70 text-sm">Synthèse exécutive (2 pages)</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+              <span class="w-2 h-2 bg-inverse-primary rounded-full flex-shrink-0"></span>
+              <span class="font-body-md text-body-md text-on-primary/70 text-sm">Indicateurs de prix détaillés par marché</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+              <span class="w-2 h-2 bg-inverse-primary rounded-full flex-shrink-0"></span>
+              <span class="font-body-md text-body-md text-on-primary/70 text-sm">Signaux GDELT et analyse médiatique</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+              <span class="w-2 h-2 bg-inverse-primary rounded-full flex-shrink-0"></span>
+              <span class="font-body-md text-body-md text-on-primary/70 text-sm">Prévisions sur 60 jours par culture</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+              <span class="w-2 h-2 bg-secondary rounded-full flex-shrink-0"></span>
+              <span class="font-body-md text-body-md text-on-primary/70 text-sm">Recommandations par ministère</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-inverse-surface py-12 px-margin-mobile md:px-gutter">
+  <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+    <div>
+      <p class="font-display-lg text-[18px] font-bold text-on-primary mb-2">MITCHÔ</p>
+      <p class="font-body-md text-body-md text-on-primary/60 max-w-xs">Intelligence publique pour la sécurité alimentaire au Bénin.</p>
+    </div>
+    <div class="flex gap-12">
+      <div>
+        <p class="font-label-sm text-label-sm text-on-primary/40 uppercase tracking-widest mb-3">Navigation</p>
+        <div class="space-y-2">
+          <a href="index.html" class="block font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors">Accueil</a>
+          <a href="tendances.html" class="block font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors">Prévisions Mensuelles</a>
+        </div>
+      </div>
+      <div>
+        <p class="font-label-sm text-label-sm text-on-primary/40 uppercase tracking-widest mb-3">Contact</p>
+        <div class="space-y-2">
+          <a href="#" class="block font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors">Partenariats</a>
+          <a href="#" class="block font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors">Presse</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1200px] mx-auto mt-10 pt-6 border-t border-on-primary/10">
+    <p class="font-caption text-caption text-on-primary/40">© 2026 MITCHÔ · Plateforme d'Intelligence Stratégique Alimentaire. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<div class="fixed bottom-8 right-8 z-[100] flex flex-col items-end" id="ai-chat-container">
+  <div class="hidden w-80 md:w-[22rem] bg-white rounded-3xl shadow-2xl mb-4 border border-outline-variant overflow-hidden flex-col transform origin-bottom-right transition-all duration-300 scale-90 opacity-0" id="ai-chat-window">
+    <div class="bg-primary px-5 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-on-primary text-xl" style="font-variation-settings:'FILL' 1;">smart_toy</span>
+        <div>
+          <p class="font-label-sm text-label-sm text-on-primary font-semibold leading-none">Assistant MITCHÔ</p>
+          <p class="text-on-primary/70 text-[11px] mt-0.5">Intelligence Stratégique</p>
+        </div>
+      </div>
+      <button class="hover:bg-white/10 p-1 rounded-full transition-colors" onclick="toggleChat()">
+        <span class="material-symbols-outlined text-on-primary">close</span>
+      </button>
+    </div>
+    <div class="h-72 p-4 overflow-y-auto space-y-3 bg-[#f5fbf3]/60" id="chat-messages">
+      <div class="bg-white p-4 rounded-2xl rounded-tl-none border border-outline-variant/20 shadow-sm max-w-[90%] text-sm text-on-surface-variant leading-relaxed">
+        Bonjour. Je suis l'assistant MITCHÔ. Posez-moi vos questions sur la sécurité alimentaire ou sur la plateforme.
+      </div>
+    </div>
+    <div class="px-4 py-2 flex gap-2 flex-wrap border-t border-outline-variant/10 bg-white/80">
+      <button onclick="askQuestion(this)" class="bg-white border border-outline-variant/40 px-3 py-1.5 rounded-full text-[11px] text-primary hover:bg-primary hover:text-on-primary transition-all">Prix du maïs</button>
+      <button onclick="askQuestion(this)" class="bg-white border border-outline-variant/40 px-3 py-1.5 rounded-full text-[11px] text-primary hover:bg-primary hover:text-on-primary transition-all">Signaux détectés</button>
+      <button onclick="askQuestion(this)" class="bg-white border border-outline-variant/40 px-3 py-1.5 rounded-full text-[11px] text-primary hover:bg-primary hover:text-on-primary transition-all">Recommandations</button>
+    </div>
+    <div class="p-4 border-t border-outline-variant/20 bg-white">
+      <div class="relative flex items-center">
+        <input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 pr-12 focus:ring-1 focus:ring-primary font-body-md text-sm placeholder:text-on-surface-variant/50" placeholder="Posez votre question..." type="text" id="chat-input" onkeydown="if(event.key==='Enter') sendMessage()"/>
+        <button onclick="sendMessage()" class="absolute right-3 text-primary hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <button class="bg-primary text-on-primary w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300" id="chat-fab" onclick="toggleChat()">
+    <span class="material-symbols-outlined text-3xl" id="fab-icon">smart_toy</span>
+  </button>
+</div>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => {
+    if (x.isIntersecting) {
+      x.target.classList.add('visible');
+      x.target.querySelectorAll('.bar-fill').forEach(b => b.classList.add('animated'));
+    }
+  }), {threshold: 0.08});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('shadow-md', window.scrollY > 40);
+  });
+
+  function refreshAuthNav() {
+    const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
+    const btnLogin  = document.getElementById('btn-login');
+    const btnLogout = document.getElementById('btn-logout');
+    const navUser   = document.getElementById('nav-username');
+    if (session?.loggedIn) {
+      btnLogin.classList.add('hidden');
+      btnLogout.classList.remove('hidden');
+      navUser.textContent = session.name.split(' ')[0];
+      navUser.classList.remove('hidden');
+    } else {
+      btnLogin.classList.remove('hidden');
+      btnLogout.classList.add('hidden');
+      navUser.classList.add('hidden');
+    }
+  }
+  document.getElementById('auth-nav').classList.remove('hidden');
+  refreshAuthNav();
+
+  function handleDownloadPDF() {
+    const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
+    if (!session?.loggedIn) {
+      // Pass startPDFGeneration as callback — auto-triggered after login/register
+      openAuthModal('register', startPDFGeneration);
+      return;
+    }
+    startPDFGeneration();
+  }
+
+  async function startPDFGeneration() {
+    const btn = document.getElementById('btn-download-pdf');
+    const container = document.getElementById('pdf-progress-container');
+    const bar = document.getElementById('pdf-progress-bar');
+    const pct = document.getElementById('pdf-progress-pct');
+    const label = document.getElementById('pdf-progress-label');
+
+    btn.disabled = true;
+    btn.classList.add('opacity-50', 'cursor-not-allowed');
+    container.classList.remove('hidden');
+
+    // Fake progress animation while the backend generates
+    const fakeSteps = [
+      [15,  'Collecte des données de marché...'],
+      [35,  'Analyse des prix vivriers...'],
+      [55,  'Génération de l\'analyse IA...'],
+      [75,  'Rédaction des recommandations...'],
+      [90,  'Composition du PDF...'],
+    ];
+    let stepIdx = 0;
+    const fakeInterval = setInterval(() => {
+      if (stepIdx < fakeSteps.length) {
+        const [p, msg] = fakeSteps[stepIdx++];
+        bar.style.width = p + '%';
+        pct.textContent = p + '%';
+        label.textContent = msg;
+      }
+    }, 900);
+
+    try {
+      // Get auth token
+      const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
+      const token = session?.token || '';
+
+      const response = await fetch('http://localhost:8000/report/pdf/stream', {
+        method: 'GET',
+        headers: token ? { 'Authorization': `Bearer ${token}` } : {},
+      });
+
+      clearInterval(fakeInterval);
+
+      if (!response.ok) {
+        const err = await response.text();
+        throw new Error(`Erreur serveur ${response.status}: ${err}`);
+      }
+
+      // Get the PDF blob and trigger download
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `MITCHO_Rapport_Mai2026.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      // Success state
+      bar.style.width = '100%';
+      pct.textContent = '100%';
+      label.textContent = 'Rapport prêt !';
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+        btn.innerHTML = '<span class="material-symbols-outlined text-[22px]" style="font-variation-settings:\'FILL\' 1;">check_circle</span> Rapport téléchargé';
+        container.classList.add('hidden');
+      }, 1200);
+
+    } catch (err) {
+      clearInterval(fakeInterval);
+      bar.style.width = '100%';
+      bar.classList.replace('bg-inverse-primary', 'bg-red-400');
+      pct.textContent = '';
+      label.textContent = 'Erreur : ' + err.message;
+      console.error('[MITCHÔ PDF]', err);
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+        bar.classList.replace('bg-red-400', 'bg-inverse-primary');
+        container.classList.add('hidden');
+      }, 3000);
+    }
+  }
+</script>
+<script src="mitcho-chat.js"></script>
+<script src="mitcho-auth.js"></script>
+<script src="prices-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rapport d'Analyse MITCHÔ | Intelligence Stratégique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#006d40",
+                        "surface-container-low": "#f0f5ee",
+                        "on-primary-container": "#fdfff9",
+                        "primary-fixed": "#8df8b7",
+                        "inverse-on-surface": "#edf2eb",
+                        "on-tertiary-fixed": "#40000a",
+                        "inverse-surface": "#2c322d",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#dee4dd",
+                        "inverse-primary": "#70db9d",
+                        "error": "#ba1a1a",
+                        "background": "#f5fbf3",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#00522f",
+                        "surface-dim": "#d6dcd4",
+                        "primary-fixed-dim": "#70db9d",
+                        "surface-container-high": "#e4eae2",
+                        "on-surface-variant": "#3e4a41",
+                        "on-secondary-container": "#785f25",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-fixed": "#ffdf9e",
+                        "secondary-container": "#fedb95",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdad9",
+                        "surface": "#f5fbf3",
+                        "secondary": "#745b22",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f5fbf3",
+                        "on-tertiary-container": "#fffeff",
+                        "primary-container": "#008751",
+                        "outline": "#6e7a70",
+                        "on-background": "#171d19",
+                        "secondary-fixed-dim": "#e4c27e",
+                        "on-secondary-fixed-variant": "#5a430b",
+                        "outline-variant": "#bdcabe",
+                        "primary": "#006b3f",
+                        "on-tertiary-fixed-variant": "#80272e",
+                        "on-primary-fixed": "#002110",
+                        "surface-variant": "#dee4dd",
+                        "surface-container": "#eaefe8",
+                        "tertiary-fixed-dim": "#ffb3b3",
+                        "on-surface": "#171d19",
+                        "tertiary-container": "#bd555a",
+                        "tertiary": "#9d3d43"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "caption": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f5fbf3;
+            color: #171d19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .backdrop-blur-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .custom-shadow-soft {
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary/20">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-display-lg font-bold tracking-tighter text-on-surface">MITCHÔ</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Accueil</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Problème</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Solution</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Tendances</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Publications</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Abonnement</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded hover:opacity-90 active:scale-[0.98] transition-all font-label-sm text-label-sm">Contact</button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+<div class="absolute inset-0 z-[-1] opacity-5">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
+<span class="inline-block font-label-sm text-label-sm text-secondary tracking-widest uppercase mb-4">Intelligence Stratégique</span>
+<h1 class="font-display-lg text-display-lg md:text-[56px] text-on-surface max-w-3xl mx-auto mb-6 leading-tight">
+                    Rapport d'Analyse MITCHÔ
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Synthèse exhaustive des tendances et recommandations prospectives sur la sécurité alimentaire en République du Bénin.
+                </p>
+</div>
+</section>
+<!-- Description Section -->
+<section class="pb-section-gap">
+<div class="max-w-[800px] mx-auto px-margin-mobile md:px-gutter">
+<div class="bg-surface-container-low p-8 md:p-12 border border-outline-variant/30 rounded-xl">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[48px] text-primary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Méthodologie &amp; Objectif</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                                Ce rapport synthétise une analyse multidimensionnelle des marchés agro-pastoraux. En intégrant des signaux économiques, des données climatiques de précision et des alertes médiatiques via le système GDELT, nous produisons une vision à 360° de la souveraineté alimentaire nationale. L'objectif est de transformer la donnée brute en leviers d'action pour les décideurs institutionnels.
+                            </p>
+<div class="flex flex-wrap gap-4">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[12px] font-medium text-secondary border border-outline-variant/50">DATA DRIVEN</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[12px] font-medium text-secondary border border-outline-variant/50">GDELT INTEGRATION</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[12px] font-medium text-secondary border border-outline-variant/50">STRATEGIC ALERT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Report Content Overview -->
+<section class="bg-surface-container-lowest py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- A. Résumé des tendances -->
+<div class="space-y-6">
+<div class="w-12 h-12 flex items-center justify-center rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant/30 pb-4">Résumé des tendances</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Analyse détaillée de l'évolution des prix des denrées de base (maïs, riz, manioc) sur les marchés secondaires et urbains. Identification des signaux faibles de tension inflationniste ou de stabilité saisonnière, permettant une lecture claire de la conjoncture actuelle.
+                        </p>
+</div>
+<!-- B. Analyse des facteurs -->
+<div class="space-y-6">
+<div class="w-12 h-12 flex items-center justify-center rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant/30 pb-4">Analyse des facteurs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Corrélation systémique entre les anomalies climatiques (précipitations, stress hydrique), la volatilité des marchés régionaux et l'indice de sentiment médiatique. Cette section isole les causes racines des perturbations pour une compréhension profonde de l'écosystème.
+                        </p>
+</div>
+<!-- C. Recommandations stratégiques -->
+<div class="space-y-6">
+<div class="w-12 h-12 flex items-center justify-center rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant/30 pb-4">Recommandations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Prescriptions concrètes pour l'ajustement des politiques publiques : déclenchement d'alertes préventives, suggestions de stabilisation des stocks de sécurité et leviers de régulation du marché pour protéger le pouvoir d'achat des citoyens.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary Action -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="relative bg-inverse-surface rounded-2xl overflow-hidden p-12 md:p-20 text-center">
+<!-- Background Decoration -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Background" class="w-full h-full object-cover grayscale" data-alt="A professional close-up of a high-end textured paper document with subtle gold leaf accents and minimalist typography. The scene is lit by soft, natural morning light coming through a large window, highlighting the fine grain of the paper. The overall aesthetic is one of institutional authority, prestige, and meticulous detail, reflecting a premium editorial and strategic consulting brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6WeaddoymwYf28cQDQvZpDpDfFPMM-cW4wLp1YuEf4ujV6j5yhp5vQxqc09RS31anACXwsiX53p2HsTNrd6jRxS0elmPhSFlkJefSGGcDNmUMBvzxczLVOuGGDPRBtXdlcekFHj_dHtI2ET4KE78HNIdIZSvvSYLp4VWijmkyl8n5ftYYfyXRxVa2Ak0umI3fy9jXkwpRRBfEuzb5zZLTFb-NegVMNPq8PqoVH6CAYfwl_KESvY5ioMNbvzZzHuLulio4knm4_s0"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg text-on-primary-container mb-4">Accéder à l'Intelligence Stratégique</h2>
+<p class="text-surface-variant font-body-lg text-body-lg mb-10 max-w-xl mx-auto">
+                            Prêt pour une prise de décision éclairée ? Générez votre exemplaire unique du rapport MITCHÔ.
+                        </p>
+<button class="inline-flex items-center gap-4 bg-primary text-on-primary px-10 py-5 rounded-lg hover:bg-primary/90 transition-all active:scale-95 group custom-shadow-soft" id="download-btn" onclick="simulateDownload()">
+<span class="font-label-sm text-label-sm tracking-widest uppercase font-bold">Générer le rapport PDF</span>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">download</span>
+</button>
+<div class="hidden mt-8 max-w-xs mx-auto" id="progress-container">
+<div class="w-full bg-white/20 h-1 rounded-full overflow-hidden">
+<div class="w-0 h-full bg-primary-fixed transition-all duration-500 ease-out" id="progress-bar"></div>
+</div>
+<p class="text-surface-variant text-[12px] mt-2 italic">Compilation des données GDELT en cours...</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="w-full py-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">MITCHÔ</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Mentions Légales</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Confidentialité</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Contact Presse</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Partenariats</a>
+</div>
+</div>
+<div class="text-on-surface-variant font-body-md text-[14px]">
+                © 2024 MITCHÔ. Intelligence Stratégique au service du Bénin.
+            </div>
+</div>
+</footer>
+<!-- AI Chat Bubble -->
+<div class="fixed bottom-8 right-8 z-[100]">
+<button class="w-14 h-14 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center hover:scale-110 active:scale-90 transition-all group relative">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="absolute right-full mr-4 bg-on-background text-on-primary px-3 py-1.5 rounded-lg text-[12px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Expert IA MITCHÔ</span>
+</button>
+</div>
+<script>
+        function simulateDownload() {
+            const btn = document.getElementById('download-btn');
+            const progress = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+
+            btn.classList.add('opacity-50', 'pointer-events-none');
+            progress.classList.remove('hidden');
+
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        alert("Le rapport stratégique a été généré avec succès.");
+                        btn.classList.remove('opacity-50', 'pointer-events-none');
+                        progress.classList.add('hidden');
+                        progressBar.style.width = '0%';
+                    }, 500);
+                } else {
+                    width += Math.random() * 15;
+                    if (width > 100) width = 100;
+                    progressBar.style.width = width + '%';
+                }
+            }, 300);
+        }
+
+        // Simple scroll reveal for cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

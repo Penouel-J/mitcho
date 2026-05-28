@@ -1,0 +1,44 @@
+# Web framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# Config & env
+python-dotenv==1.0.1
+pydantic-settings==2.6.1
+
+# HTTP client (async)
+httpx==0.28.0
+
+# Data processing
+pandas==2.2.3
+
+# Database
+sqlalchemy==2.0.36
+aiosqlite==0.20.0
+
+# Auth & security
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.1
+python-multipart==0.0.17
+
+# RAG — embeddings
+sentence-transformers==3.3.1
+
+# RAG — vector store
+chromadb==0.5.23
+
+# LLM
+groq==0.12.0
+
+# PDF generation
+fpdf2==2.8.1
+jinja2==3.1.4
+
+# Email
+resend==2.4.0
+
+# Scheduler
+apscheduler==3.10.4
+
+# Templates
+markupsafe==3.0.2

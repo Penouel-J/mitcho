@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MITCHÔ | Tendances &amp; Prévisions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006d40",
+                        "surface-container-highest": "#dee4dd",
+                        "inverse-on-surface": "#edf2eb",
+                        "tertiary": "#9d3d43",
+                        "primary-fixed-dim": "#70db9d",
+                        "on-tertiary-fixed": "#40000a",
+                        "outline": "#6e7a70",
+                        "inverse-primary": "#70db9d",
+                        "on-primary-container": "#fdfff9",
+                        "error": "#ba1a1a",
+                        "secondary": "#745b22",
+                        "on-tertiary-fixed-variant": "#80272e",
+                        "tertiary-container": "#bd555a",
+                        "surface-bright": "#f5fbf3",
+                        "on-surface": "#171d19",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-variant": "#dee4dd",
+                        "surface-container-high": "#e4eae2",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eaefe8",
+                        "secondary-fixed-dim": "#e4c27e",
+                        "primary-container": "#008751",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#5a430b",
+                        "outline-variant": "#bdcabe",
+                        "primary": "#006b3f",
+                        "on-surface-variant": "#3e4a41",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#00522f",
+                        "background": "#f5fbf3",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f0f5ee",
+                        "tertiary-fixed-dim": "#ffb3b3",
+                        "secondary-container": "#fedb95",
+                        "on-primary-fixed": "#002110",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-secondary-container": "#785f25",
+                        "secondary-fixed": "#ffdf9e",
+                        "surface": "#f5fbf3",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#8df8b7",
+                        "on-tertiary-container": "#fffeff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2c322d",
+                        "surface-dim": "#d6dcd4",
+                        "on-background": "#171d19"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "caption": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #f5fbf3; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(245, 251, 243, 0.4), rgba(245, 251, 243, 1));
+        }
+        .text-balance { text-wrap: balance; }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-display-lg font-bold tracking-tighter text-on-surface dark:text-on-surface">
+                MITCHÔ
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Accueil</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Problème</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Solution</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 transition-colors duration-300" href="#">Tendances</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Publications</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Abonnement</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-sm text-label-sm hover:opacity-90 active:scale-[0.98] transition-all">
+                Contact
+            </button>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-[600px] object-cover object-center" data-alt="A cinematic and serene aerial view of vast green rice paddies in Benin at sunrise. The soft morning light bathes the lush agricultural landscape in a golden glow, reflecting off a narrow irrigation canal that winds through the fields. In the distance, silhouetted palm trees rise from the morning mist. The overall aesthetic is one of institutional prestige, prosperity, and technological harmony with nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGtUpFDssKqT9i2_H-wEDX6Y2Nj4vz7BIFXplvYAJAvicDr0uMZXkur3Q-l-GtE4VIVFBjw_ixXk9rUqzKbq_eeoqqe0Nb3PH1bYqkUWQ36lWeB7rIqYJKJoky46n2gHm2kubeeyIfm2Qzy4Kwj0SnwUDRTECZui-PXOENHawcmejpXilGsbNUwUKJcbOhVAkyrj7Pc2teojJnf_ac9cNGP0eCS8NlM5ypssBpOFwaYTtkAr2trVZt4sGyxR31b4XQVw6oGIzgBq4"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-32 pb-20">
+<div class="max-w-3xl">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-widest rounded-sm mb-6">Note de Conjoncture</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-surface mb-6 text-balance">Tendances &amp; Prévisions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed text-balance">
+                        L'intelligence anticipatoire au service de la sécurité alimentaire et de la souveraineté économique du Bénin. Analyse multidimensionnelle des flux et signaux faibles.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Narrative Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-8 space-y-8">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Comprendre les Tendances</h2>
+<div class="w-20 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="prose prose-lg max-w-none text-on-surface-variant leading-relaxed space-y-6 font-body-md text-body-md">
+<p>
+                        La dynamique agricole actuelle au Bénin s'inscrit dans un contexte de mutation profonde. Sous l'impulsion de politiques structurelles audacieuses, les chaînes de valeur locales connaissent une résilience accrue face aux chocs exogènes. Notre analyse synthétise les variables climatiques, les données de marché transfrontalier et les flux logistiques internes pour dresser un panorama exhaustif.
+                    </p>
+<p>
+                        L'intégration de l'intelligence artificielle dans nos modèles de prévision permet de transformer des masses de données brutes en informations stratégiques actionnables. En identifiant les corrélations invisibles entre les régimes pluviométriques et les fluctuations de prix sur les marchés urbains, MITCHÔ offre aux décideurs une visibilité sans précédent à un horizon de 12 à 18 mois.
+                    </p>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-low p-stack-lg border border-outline-variant/30 rounded-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Méthodologie</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Nos prévisions s'appuient sur l'agrégation de 48 sources de données distinctes, incluant l'imagerie satellitaire et les relevés de prix en temps réel.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Données climatiques historiques</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Indices de prix mondiaux</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Dynamiques régionales de l'UEMOA</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Strategic Signals -->
+<section class="bg-surface-container py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Signaux Stratégiques</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Points de vigilance et opportunités identifiés par nos modèles.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Signal 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 group-hover:text-primary transition-colors">Pression à la hausse sur le riz importé</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Les restrictions à l'exportation sur les marchés asiatiques et l'ajustement des taux de fret suggèrent une augmentation sensible des prix au détail pour le prochain trimestre.
+                        </p>
+</div>
+<!-- Signal 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined">video_stable</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 group-hover:text-primary transition-colors">Stabilité du maïs à court terme</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Les récoltes locales satisfaisantes et le bon état des stocks de sécurité garantissent une relative stabilité des cours sur les marchés de Cotonou et Parakou.
+                        </p>
+</div>
+<!-- Signal 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 group-hover:text-primary transition-colors">Tensions régionales possibles</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            L'instabilité diplomatique dans l'hinterland pourrait perturber les circuits de transit traditionnels, nécessitant une réorganisation préventive des corridors.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap text-center">
+<div class="max-w-2xl mx-auto space-y-10">
+<h3 class="font-headline-md text-headline-md text-on-surface">Approfondir l'Analyse</h3>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto flex items-center justify-center gap-3 bg-primary text-on-primary px-10 py-4 rounded-lg font-label-sm text-label-sm hover:shadow-lg transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                        GÉNÉRER RAPPORT PDF
+                    </button>
+<button class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white border border-on-surface text-on-surface px-10 py-4 rounded-lg font-label-sm text-label-sm hover:bg-surface-container-low transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">download</span>
+                        TÉLÉCHARGER ANALYSE
+                    </button>
+</div>
+<p class="font-caption text-caption text-on-surface-variant italic">
+                    Note institutionnelle : Les prévisions sont basées sur des données historiques et des modèles climatiques probabilistes. Elles constituent un outil d'aide à la décision et non une garantie contractuelle.
+                </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full py-stack-lg px-margin-mobile md:px-gutter border-t border-outline-variant">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">MITCHÔ</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-sm">© 2024 MITCHÔ. Intelligence Stratégique au service du Bénin.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Mentions Légales</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Presse</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Partenariats</a>
+</div>
+</div>
+</footer>
+<!-- AI Chat Bubble -->
+<button class="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-primary text-on-primary shadow-2xl flex items-center justify-center z-[100] hover:scale-105 active:scale-95 transition-all group overflow-hidden" id="ai-chat-trigger">
+<img alt="AI" class="absolute inset-0 w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida/ADBb0uhVFycSE_DamcRE-TSbadfJVOZ0CiHgYtHwEpufGGYMByQiGohaful3TskDnQfRwi4d05F6KrhE5kFW-bM2rEwL-qYcNQzhOFkXhs6B8kaJCgy9j9ZN-wfqvMA7Dp1gi6Ed5XjZgQAlrn0lM2QQ5M_WrqdDM1WGAfMlatNNqv583QVxThU_9kWAdVcj7SyPjVsaJLwSOz-niz2ysPpbwYTfFvyWrgNhVq2roYTo3uUcSz3H4rp6_th5Zg"/>
+<span class="material-symbols-outlined text-3xl relative z-10" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</button>
+<script>
+        // Simple scroll behavior for the navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('py-2', 'shadow-md');
+                header.classList.add('h-20');
+            }
+        });
+
+        // Simple interaction for AI bubble
+        const aiBubble = document.getElementById('ai-chat-trigger');
+        aiBubble.addEventListener('click', () => {
+            alert("L'assistant MITCHÔ est prêt à analyser vos requêtes spécifiques sur les prévisions agricoles.");
+        });
+    </script>
+</body></html>

@@ -1,0 +1,1541 @@
+Date,Pays,Marché,Latitude,Longitude,Produit,Unité,Prix_Local,Monnaie
+2020-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,215,XOF
+2020-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,469,XOF
+2020-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,271,XOF
+2020-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,452,XOF
+2020-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,208,XOF
+2020-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,467,XOF
+2020-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,283,XOF
+2020-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,436,XOF
+2020-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,205,XOF
+2020-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,485,XOF
+2020-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,256,XOF
+2020-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,410,XOF
+2020-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,213,NGN
+2020-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,427,NGN
+2020-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,240,NGN
+2020-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,408,NGN
+2020-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,199,XOF
+2020-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,480,XOF
+2020-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,251,XOF
+2020-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,390,XOF
+2020-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,234,XOF
+2020-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,486,XOF
+2020-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,274,XOF
+2020-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,406,XOF
+2020-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,213,XOF
+2020-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,494,XOF
+2020-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,257,XOF
+2020-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,445,XOF
+2020-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,212,XOF
+2020-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,484,XOF
+2020-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,265,XOF
+2020-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,477,XOF
+2020-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,218,NGN
+2020-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,466,NGN
+2020-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,284,NGN
+2020-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,410,NGN
+2020-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,221,XOF
+2020-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,443,XOF
+2020-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,255,XOF
+2020-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,441,XOF
+2020-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,230,XOF
+2020-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,504,XOF
+2020-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,276,XOF
+2020-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,438,XOF
+2020-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,206,XOF
+2020-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,482,XOF
+2020-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,271,XOF
+2020-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,468,XOF
+2020-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,226,XOF
+2020-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,456,XOF
+2020-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,282,XOF
+2020-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,436,XOF
+2020-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,215,NGN
+2020-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,515,NGN
+2020-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,292,NGN
+2020-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,465,NGN
+2020-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,213,XOF
+2020-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,492,XOF
+2020-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,282,XOF
+2020-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,466,XOF
+2020-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,215,XOF
+2020-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,492,XOF
+2020-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,261,XOF
+2020-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,415,XOF
+2020-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,230,XOF
+2020-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,530,XOF
+2020-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,275,XOF
+2020-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,464,XOF
+2020-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,225,XOF
+2020-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,481,XOF
+2020-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,281,XOF
+2020-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,475,XOF
+2020-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,220,NGN
+2020-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,535,NGN
+2020-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,240,NGN
+2020-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,460,NGN
+2020-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,222,XOF
+2020-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,489,XOF
+2020-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,277,XOF
+2020-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,398,XOF
+2020-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,212,XOF
+2020-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,491,XOF
+2020-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,288,XOF
+2020-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,418,XOF
+2020-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,206,XOF
+2020-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,470,XOF
+2020-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,280,XOF
+2020-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,436,XOF
+2020-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,209,XOF
+2020-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,495,XOF
+2020-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,269,XOF
+2020-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,449,XOF
+2020-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,207,NGN
+2020-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,474,NGN
+2020-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,263,NGN
+2020-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,397,NGN
+2020-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,218,XOF
+2020-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,489,XOF
+2020-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,268,XOF
+2020-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,424,XOF
+2020-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,191,XOF
+2020-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,452,XOF
+2020-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,252,XOF
+2020-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,394,XOF
+2020-06-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,204,XOF
+2020-06-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,471,XOF
+2020-06-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,281,XOF
+2020-06-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,414,XOF
+2020-06-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,208,XOF
+2020-06-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,460,XOF
+2020-06-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,232,XOF
+2020-06-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,410,XOF
+2020-06-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,206,NGN
+2020-06-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,519,NGN
+2020-06-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,254,NGN
+2020-06-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,417,NGN
+2020-06-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,205,XOF
+2020-06-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,435,XOF
+2020-06-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,271,XOF
+2020-06-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,426,XOF
+2020-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,204,XOF
+2020-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,421,XOF
+2020-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,262,XOF
+2020-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,364,XOF
+2020-07-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,202,XOF
+2020-07-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,489,XOF
+2020-07-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,233,XOF
+2020-07-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,381,XOF
+2020-07-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,197,XOF
+2020-07-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,430,XOF
+2020-07-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,226,XOF
+2020-07-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,393,XOF
+2020-07-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,186,NGN
+2020-07-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,451,NGN
+2020-07-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,234,NGN
+2020-07-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,422,NGN
+2020-07-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,188,XOF
+2020-07-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,434,XOF
+2020-07-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,255,XOF
+2020-07-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,368,XOF
+2020-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,191,XOF
+2020-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,454,XOF
+2020-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,218,XOF
+2020-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,382,XOF
+2020-08-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,192,XOF
+2020-08-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,443,XOF
+2020-08-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,222,XOF
+2020-08-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,354,XOF
+2020-08-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,194,XOF
+2020-08-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,432,XOF
+2020-08-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,240,XOF
+2020-08-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,385,XOF
+2020-08-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,183,NGN
+2020-08-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,431,NGN
+2020-08-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,240,NGN
+2020-08-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,365,NGN
+2020-08-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,207,XOF
+2020-08-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,436,XOF
+2020-08-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,223,XOF
+2020-08-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,391,XOF
+2020-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,178,XOF
+2020-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,438,XOF
+2020-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,248,XOF
+2020-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,360,XOF
+2020-09-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,197,XOF
+2020-09-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,431,XOF
+2020-09-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,244,XOF
+2020-09-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,411,XOF
+2020-09-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,185,XOF
+2020-09-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,406,XOF
+2020-09-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,224,XOF
+2020-09-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,360,XOF
+2020-09-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,187,NGN
+2020-09-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,429,NGN
+2020-09-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,238,NGN
+2020-09-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,390,NGN
+2020-09-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,188,XOF
+2020-09-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,452,XOF
+2020-09-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,231,XOF
+2020-09-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,426,XOF
+2020-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,197,XOF
+2020-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,412,XOF
+2020-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,226,XOF
+2020-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,392,XOF
+2020-10-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,189,XOF
+2020-10-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,446,XOF
+2020-10-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,245,XOF
+2020-10-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,381,XOF
+2020-10-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,183,XOF
+2020-10-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,398,XOF
+2020-10-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,234,XOF
+2020-10-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,399,XOF
+2020-10-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,193,NGN
+2020-10-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,403,NGN
+2020-10-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,241,NGN
+2020-10-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,390,NGN
+2020-10-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,183,XOF
+2020-10-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,434,XOF
+2020-10-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,240,XOF
+2020-10-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,361,XOF
+2020-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,203,XOF
+2020-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,462,XOF
+2020-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,263,XOF
+2020-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,421,XOF
+2020-11-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,186,XOF
+2020-11-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,429,XOF
+2020-11-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,256,XOF
+2020-11-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,410,XOF
+2020-11-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,205,XOF
+2020-11-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,536,XOF
+2020-11-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,257,XOF
+2020-11-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,422,XOF
+2020-11-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,209,NGN
+2020-11-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,464,NGN
+2020-11-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,246,NGN
+2020-11-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,415,NGN
+2020-11-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,192,XOF
+2020-11-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,444,XOF
+2020-11-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,244,XOF
+2020-11-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,401,XOF
+2020-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,236,XOF
+2020-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,431,XOF
+2020-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,273,XOF
+2020-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,389,XOF
+2020-12-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,206,XOF
+2020-12-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,502,XOF
+2020-12-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,265,XOF
+2020-12-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,400,XOF
+2020-12-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,204,XOF
+2020-12-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,492,XOF
+2020-12-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,255,XOF
+2020-12-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,427,XOF
+2020-12-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,212,NGN
+2020-12-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,460,NGN
+2020-12-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,293,NGN
+2020-12-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,436,NGN
+2020-12-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,190,XOF
+2020-12-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,480,XOF
+2020-12-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,256,XOF
+2020-12-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,441,XOF
+2021-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,214,XOF
+2021-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,499,XOF
+2021-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,286,XOF
+2021-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,465,XOF
+2021-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,210,XOF
+2021-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,494,XOF
+2021-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,272,XOF
+2021-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,432,XOF
+2021-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,243,XOF
+2021-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,512,XOF
+2021-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,261,XOF
+2021-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,467,XOF
+2021-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,247,NGN
+2021-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,528,NGN
+2021-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,258,NGN
+2021-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,435,NGN
+2021-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,237,XOF
+2021-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,484,XOF
+2021-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,285,XOF
+2021-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,463,XOF
+2021-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,221,XOF
+2021-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,520,XOF
+2021-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,243,XOF
+2021-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,440,XOF
+2021-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,229,XOF
+2021-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,489,XOF
+2021-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,314,XOF
+2021-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,431,XOF
+2021-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,227,XOF
+2021-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,525,XOF
+2021-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,311,XOF
+2021-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,431,XOF
+2021-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,245,NGN
+2021-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,522,NGN
+2021-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,276,NGN
+2021-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,475,NGN
+2021-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,234,XOF
+2021-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,506,XOF
+2021-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,291,XOF
+2021-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,455,XOF
+2021-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,237,XOF
+2021-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,549,XOF
+2021-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,318,XOF
+2021-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,443,XOF
+2021-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,261,XOF
+2021-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,479,XOF
+2021-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,293,XOF
+2021-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,486,XOF
+2021-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,239,XOF
+2021-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,514,XOF
+2021-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,292,XOF
+2021-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,460,XOF
+2021-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,229,NGN
+2021-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,554,NGN
+2021-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,300,NGN
+2021-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,456,NGN
+2021-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,247,XOF
+2021-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,539,XOF
+2021-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,307,XOF
+2021-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,487,XOF
+2021-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,225,XOF
+2021-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,512,XOF
+2021-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,304,XOF
+2021-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,483,XOF
+2021-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,234,XOF
+2021-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,530,XOF
+2021-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,312,XOF
+2021-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,455,XOF
+2021-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,241,XOF
+2021-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,522,XOF
+2021-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,290,XOF
+2021-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,494,XOF
+2021-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,244,NGN
+2021-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,549,NGN
+2021-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,312,NGN
+2021-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,469,NGN
+2021-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,242,XOF
+2021-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,519,XOF
+2021-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,298,XOF
+2021-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,465,XOF
+2021-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,229,XOF
+2021-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,527,XOF
+2021-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,273,XOF
+2021-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,503,XOF
+2021-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,216,XOF
+2021-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,481,XOF
+2021-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,301,XOF
+2021-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,473,XOF
+2021-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,235,XOF
+2021-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,528,XOF
+2021-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,284,XOF
+2021-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,435,XOF
+2021-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,228,NGN
+2021-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,494,NGN
+2021-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,298,NGN
+2021-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,452,NGN
+2021-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,218,XOF
+2021-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,504,XOF
+2021-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,290,XOF
+2021-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,442,XOF
+2021-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,209,XOF
+2021-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,496,XOF
+2021-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,275,XOF
+2021-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,424,XOF
+2021-06-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,213,XOF
+2021-06-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,495,XOF
+2021-06-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,252,XOF
+2021-06-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,405,XOF
+2021-06-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,210,XOF
+2021-06-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,485,XOF
+2021-06-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,276,XOF
+2021-06-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,467,XOF
+2021-06-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,227,NGN
+2021-06-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,486,NGN
+2021-06-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,272,NGN
+2021-06-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,414,NGN
+2021-06-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,217,XOF
+2021-06-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,483,XOF
+2021-06-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,276,XOF
+2021-06-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,417,XOF
+2021-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,213,XOF
+2021-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,503,XOF
+2021-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,258,XOF
+2021-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,424,XOF
+2021-07-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,215,XOF
+2021-07-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,458,XOF
+2021-07-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,263,XOF
+2021-07-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,416,XOF
+2021-07-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,209,XOF
+2021-07-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,449,XOF
+2021-07-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,260,XOF
+2021-07-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,426,XOF
+2021-07-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,223,NGN
+2021-07-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,490,NGN
+2021-07-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,288,NGN
+2021-07-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,400,NGN
+2021-07-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,217,XOF
+2021-07-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,472,XOF
+2021-07-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,288,XOF
+2021-07-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,399,XOF
+2021-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,192,XOF
+2021-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,438,XOF
+2021-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,224,XOF
+2021-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,391,XOF
+2021-08-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,193,XOF
+2021-08-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,455,XOF
+2021-08-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,255,XOF
+2021-08-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,439,XOF
+2021-08-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,210,XOF
+2021-08-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,439,XOF
+2021-08-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,240,XOF
+2021-08-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,411,XOF
+2021-08-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,187,NGN
+2021-08-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,493,NGN
+2021-08-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,266,NGN
+2021-08-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,392,NGN
+2021-08-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,184,XOF
+2021-08-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,482,XOF
+2021-08-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,249,XOF
+2021-08-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,426,XOF
+2021-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,183,XOF
+2021-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,434,XOF
+2021-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,248,XOF
+2021-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,398,XOF
+2021-09-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,194,XOF
+2021-09-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,461,XOF
+2021-09-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,235,XOF
+2021-09-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,395,XOF
+2021-09-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,200,XOF
+2021-09-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,459,XOF
+2021-09-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,257,XOF
+2021-09-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,375,XOF
+2021-09-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,183,NGN
+2021-09-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,476,NGN
+2021-09-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,253,NGN
+2021-09-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,383,NGN
+2021-09-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,214,XOF
+2021-09-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,450,XOF
+2021-09-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,263,XOF
+2021-09-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,399,XOF
+2021-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,223,XOF
+2021-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,496,XOF
+2021-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,250,XOF
+2021-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,425,XOF
+2021-10-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,209,XOF
+2021-10-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,487,XOF
+2021-10-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,241,XOF
+2021-10-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,419,XOF
+2021-10-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,213,XOF
+2021-10-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,416,XOF
+2021-10-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,238,XOF
+2021-10-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,364,XOF
+2021-10-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,200,NGN
+2021-10-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,472,NGN
+2021-10-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,272,NGN
+2021-10-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,407,NGN
+2021-10-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,219,XOF
+2021-10-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,424,XOF
+2021-10-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,232,XOF
+2021-10-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,404,XOF
+2021-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,216,XOF
+2021-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,476,XOF
+2021-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,237,XOF
+2021-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,422,XOF
+2021-11-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,198,XOF
+2021-11-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,492,XOF
+2021-11-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,269,XOF
+2021-11-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,404,XOF
+2021-11-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,206,XOF
+2021-11-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,451,XOF
+2021-11-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,264,XOF
+2021-11-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,444,XOF
+2021-11-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,201,NGN
+2021-11-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,488,NGN
+2021-11-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,258,NGN
+2021-11-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,407,NGN
+2021-11-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,211,XOF
+2021-11-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,452,XOF
+2021-11-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,257,XOF
+2021-11-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,398,XOF
+2021-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,246,XOF
+2021-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,505,XOF
+2021-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,270,XOF
+2021-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,453,XOF
+2021-12-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,223,XOF
+2021-12-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,498,XOF
+2021-12-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,288,XOF
+2021-12-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,465,XOF
+2021-12-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,218,XOF
+2021-12-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,489,XOF
+2021-12-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,276,XOF
+2021-12-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,396,XOF
+2021-12-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,207,NGN
+2021-12-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,538,NGN
+2021-12-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,303,NGN
+2021-12-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,442,NGN
+2021-12-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,230,XOF
+2021-12-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,512,XOF
+2021-12-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,323,XOF
+2021-12-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,473,XOF
+2022-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,235,XOF
+2022-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,506,XOF
+2022-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,272,XOF
+2022-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,477,XOF
+2022-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,227,XOF
+2022-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,494,XOF
+2022-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,286,XOF
+2022-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,447,XOF
+2022-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,256,XOF
+2022-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,555,XOF
+2022-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,295,XOF
+2022-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,507,XOF
+2022-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,237,NGN
+2022-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,509,NGN
+2022-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,318,NGN
+2022-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,485,NGN
+2022-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,224,XOF
+2022-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,526,XOF
+2022-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,282,XOF
+2022-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,440,XOF
+2022-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,257,XOF
+2022-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,605,XOF
+2022-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,285,XOF
+2022-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,505,XOF
+2022-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,238,XOF
+2022-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,539,XOF
+2022-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,298,XOF
+2022-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,470,XOF
+2022-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,246,XOF
+2022-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,530,XOF
+2022-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,311,XOF
+2022-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,490,XOF
+2022-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,243,NGN
+2022-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,527,NGN
+2022-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,298,NGN
+2022-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,510,NGN
+2022-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,252,XOF
+2022-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,525,XOF
+2022-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,308,XOF
+2022-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,510,XOF
+2022-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,229,XOF
+2022-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,577,XOF
+2022-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,302,XOF
+2022-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,514,XOF
+2022-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,240,XOF
+2022-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,511,XOF
+2022-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,287,XOF
+2022-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,501,XOF
+2022-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,253,XOF
+2022-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,536,XOF
+2022-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,322,XOF
+2022-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,458,XOF
+2022-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,249,NGN
+2022-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,528,NGN
+2022-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,302,NGN
+2022-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,501,NGN
+2022-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,239,XOF
+2022-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,551,XOF
+2022-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,328,XOF
+2022-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,485,XOF
+2022-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,258,XOF
+2022-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,526,XOF
+2022-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,318,XOF
+2022-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,531,XOF
+2022-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,217,XOF
+2022-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,535,XOF
+2022-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,319,XOF
+2022-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,491,XOF
+2022-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,252,XOF
+2022-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,541,XOF
+2022-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,311,XOF
+2022-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,492,XOF
+2022-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,262,NGN
+2022-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,565,NGN
+2022-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,315,NGN
+2022-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,485,NGN
+2022-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,242,XOF
+2022-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,545,XOF
+2022-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,316,XOF
+2022-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,485,XOF
+2022-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,244,XOF
+2022-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,597,XOF
+2022-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,314,XOF
+2022-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,473,XOF
+2022-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,255,XOF
+2022-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,530,XOF
+2022-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,270,XOF
+2022-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,457,XOF
+2022-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,218,XOF
+2022-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,532,XOF
+2022-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,301,XOF
+2022-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,521,XOF
+2022-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,244,NGN
+2022-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,535,NGN
+2022-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,313,NGN
+2022-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,428,NGN
+2022-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,243,XOF
+2022-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,562,XOF
+2022-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,278,XOF
+2022-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,509,XOF
+2022-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,234,XOF
+2022-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,507,XOF
+2022-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,297,XOF
+2022-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,513,XOF
+2022-06-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,232,XOF
+2022-06-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,524,XOF
+2022-06-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,281,XOF
+2022-06-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,441,XOF
+2022-06-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,240,XOF
+2022-06-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,496,XOF
+2022-06-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,289,XOF
+2022-06-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,449,XOF
+2022-06-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,236,NGN
+2022-06-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,526,NGN
+2022-06-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,303,NGN
+2022-06-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,449,NGN
+2022-06-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,227,XOF
+2022-06-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,492,XOF
+2022-06-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,281,XOF
+2022-06-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,469,XOF
+2022-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,228,XOF
+2022-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,471,XOF
+2022-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,286,XOF
+2022-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,469,XOF
+2022-07-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,224,XOF
+2022-07-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,540,XOF
+2022-07-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,264,XOF
+2022-07-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,412,XOF
+2022-07-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,200,XOF
+2022-07-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,531,XOF
+2022-07-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,283,XOF
+2022-07-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,438,XOF
+2022-07-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,223,NGN
+2022-07-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,466,NGN
+2022-07-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,308,NGN
+2022-07-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,442,NGN
+2022-07-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,221,XOF
+2022-07-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,512,XOF
+2022-07-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,281,XOF
+2022-07-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,444,XOF
+2022-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,204,XOF
+2022-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,488,XOF
+2022-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,290,XOF
+2022-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,453,XOF
+2022-08-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,229,XOF
+2022-08-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,465,XOF
+2022-08-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,252,XOF
+2022-08-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,422,XOF
+2022-08-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,213,XOF
+2022-08-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,503,XOF
+2022-08-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,243,XOF
+2022-08-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,457,XOF
+2022-08-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,210,NGN
+2022-08-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,467,NGN
+2022-08-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,252,NGN
+2022-08-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,389,NGN
+2022-08-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,221,XOF
+2022-08-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,479,XOF
+2022-08-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,248,XOF
+2022-08-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,397,XOF
+2022-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,206,XOF
+2022-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,512,XOF
+2022-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,259,XOF
+2022-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,388,XOF
+2022-09-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,207,XOF
+2022-09-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,466,XOF
+2022-09-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,227,XOF
+2022-09-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,419,XOF
+2022-09-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,207,XOF
+2022-09-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,489,XOF
+2022-09-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,287,XOF
+2022-09-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,443,XOF
+2022-09-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,207,NGN
+2022-09-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,446,NGN
+2022-09-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,296,NGN
+2022-09-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,421,NGN
+2022-09-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,210,XOF
+2022-09-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,472,XOF
+2022-09-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,265,XOF
+2022-09-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,417,XOF
+2022-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,208,XOF
+2022-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,468,XOF
+2022-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,267,XOF
+2022-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,416,XOF
+2022-10-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,206,XOF
+2022-10-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,484,XOF
+2022-10-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,264,XOF
+2022-10-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,460,XOF
+2022-10-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,186,XOF
+2022-10-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,508,XOF
+2022-10-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,284,XOF
+2022-10-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,384,XOF
+2022-10-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,210,NGN
+2022-10-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,473,NGN
+2022-10-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,249,NGN
+2022-10-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,411,NGN
+2022-10-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,202,XOF
+2022-10-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,524,XOF
+2022-10-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,280,XOF
+2022-10-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,455,XOF
+2022-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,232,XOF
+2022-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,475,XOF
+2022-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,272,XOF
+2022-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,458,XOF
+2022-11-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,210,XOF
+2022-11-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,521,XOF
+2022-11-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,276,XOF
+2022-11-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,439,XOF
+2022-11-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,232,XOF
+2022-11-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,514,XOF
+2022-11-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,274,XOF
+2022-11-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,473,XOF
+2022-11-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,211,NGN
+2022-11-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,518,NGN
+2022-11-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,288,NGN
+2022-11-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,440,NGN
+2022-11-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,227,XOF
+2022-11-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,472,XOF
+2022-11-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,292,XOF
+2022-11-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,443,XOF
+2022-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,230,XOF
+2022-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,560,XOF
+2022-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,285,XOF
+2022-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,439,XOF
+2022-12-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,218,XOF
+2022-12-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,548,XOF
+2022-12-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,277,XOF
+2022-12-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,514,XOF
+2022-12-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,212,XOF
+2022-12-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,577,XOF
+2022-12-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,299,XOF
+2022-12-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,470,XOF
+2022-12-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,230,NGN
+2022-12-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,542,NGN
+2022-12-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,295,NGN
+2022-12-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,499,NGN
+2022-12-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,238,XOF
+2022-12-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,536,XOF
+2022-12-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,290,XOF
+2022-12-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,471,XOF
+2023-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,253,XOF
+2023-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,513,XOF
+2023-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,291,XOF
+2023-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,517,XOF
+2023-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,251,XOF
+2023-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,556,XOF
+2023-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,312,XOF
+2023-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,507,XOF
+2023-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,243,XOF
+2023-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,539,XOF
+2023-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,315,XOF
+2023-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,474,XOF
+2023-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,254,NGN
+2023-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,513,NGN
+2023-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,328,NGN
+2023-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,510,NGN
+2023-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,252,XOF
+2023-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,588,XOF
+2023-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,338,XOF
+2023-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,524,XOF
+2023-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,235,XOF
+2023-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,546,XOF
+2023-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,314,XOF
+2023-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,519,XOF
+2023-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,266,XOF
+2023-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,562,XOF
+2023-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,327,XOF
+2023-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,499,XOF
+2023-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,251,XOF
+2023-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,542,XOF
+2023-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,309,XOF
+2023-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,483,XOF
+2023-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,246,NGN
+2023-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,614,NGN
+2023-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,308,NGN
+2023-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,586,NGN
+2023-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,265,XOF
+2023-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,588,XOF
+2023-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,310,XOF
+2023-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,536,XOF
+2023-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,256,XOF
+2023-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,596,XOF
+2023-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,371,XOF
+2023-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,524,XOF
+2023-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,279,XOF
+2023-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,572,XOF
+2023-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,329,XOF
+2023-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,574,XOF
+2023-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,255,XOF
+2023-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,646,XOF
+2023-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,341,XOF
+2023-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,512,XOF
+2023-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,272,NGN
+2023-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,622,NGN
+2023-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,340,NGN
+2023-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,485,NGN
+2023-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,254,XOF
+2023-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,585,XOF
+2023-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,328,XOF
+2023-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,543,XOF
+2023-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,264,XOF
+2023-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,549,XOF
+2023-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,333,XOF
+2023-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,539,XOF
+2023-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,269,XOF
+2023-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,620,XOF
+2023-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,340,XOF
+2023-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,535,XOF
+2023-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,260,XOF
+2023-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,539,XOF
+2023-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,334,XOF
+2023-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,528,XOF
+2023-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,265,NGN
+2023-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,550,NGN
+2023-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,309,NGN
+2023-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,550,NGN
+2023-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,261,XOF
+2023-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,608,XOF
+2023-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,327,XOF
+2023-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,523,XOF
+2023-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,266,XOF
+2023-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,556,XOF
+2023-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,319,XOF
+2023-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,496,XOF
+2023-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,248,XOF
+2023-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,562,XOF
+2023-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,321,XOF
+2023-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,495,XOF
+2023-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,270,XOF
+2023-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,545,XOF
+2023-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,314,XOF
+2023-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,496,XOF
+2023-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,272,NGN
+2023-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,576,NGN
+2023-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,333,NGN
+2023-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,470,NGN
+2023-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,257,XOF
+2023-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,596,XOF
+2023-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,318,XOF
+2023-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,534,XOF
+2023-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,236,XOF
+2023-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,584,XOF
+2023-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,338,XOF
+2023-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,476,XOF
+2023-06-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,237,XOF
+2023-06-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,586,XOF
+2023-06-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,327,XOF
+2023-06-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,473,XOF
+2023-06-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,238,XOF
+2023-06-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,538,XOF
+2023-06-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,283,XOF
+2023-06-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,463,XOF
+2023-06-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,230,NGN
+2023-06-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,525,NGN
+2023-06-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,303,NGN
+2023-06-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,491,NGN
+2023-06-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,261,XOF
+2023-06-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,519,XOF
+2023-06-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,318,XOF
+2023-06-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,480,XOF
+2023-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,231,XOF
+2023-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,538,XOF
+2023-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,273,XOF
+2023-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,472,XOF
+2023-07-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,233,XOF
+2023-07-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,534,XOF
+2023-07-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,294,XOF
+2023-07-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,520,XOF
+2023-07-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,224,XOF
+2023-07-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,507,XOF
+2023-07-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,280,XOF
+2023-07-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,450,XOF
+2023-07-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,224,NGN
+2023-07-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,552,NGN
+2023-07-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,310,NGN
+2023-07-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,450,NGN
+2023-07-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,222,XOF
+2023-07-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,533,XOF
+2023-07-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,281,XOF
+2023-07-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,478,XOF
+2023-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,226,XOF
+2023-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,465,XOF
+2023-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,301,XOF
+2023-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,487,XOF
+2023-08-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,217,XOF
+2023-08-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,493,XOF
+2023-08-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,283,XOF
+2023-08-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,454,XOF
+2023-08-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,231,XOF
+2023-08-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,553,XOF
+2023-08-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,277,XOF
+2023-08-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,429,XOF
+2023-08-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,208,NGN
+2023-08-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,484,NGN
+2023-08-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,279,NGN
+2023-08-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,487,NGN
+2023-08-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,218,XOF
+2023-08-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,508,XOF
+2023-08-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,279,XOF
+2023-08-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,474,XOF
+2023-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,249,XOF
+2023-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,484,XOF
+2023-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,270,XOF
+2023-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,465,XOF
+2023-09-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,229,XOF
+2023-09-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,544,XOF
+2023-09-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,284,XOF
+2023-09-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,434,XOF
+2023-09-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,228,XOF
+2023-09-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,525,XOF
+2023-09-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,288,XOF
+2023-09-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,454,XOF
+2023-09-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,233,NGN
+2023-09-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,527,NGN
+2023-09-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,296,NGN
+2023-09-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,457,NGN
+2023-09-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,219,XOF
+2023-09-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,501,XOF
+2023-09-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,293,XOF
+2023-09-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,424,XOF
+2023-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,230,XOF
+2023-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,497,XOF
+2023-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,282,XOF
+2023-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,480,XOF
+2023-10-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,228,XOF
+2023-10-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,508,XOF
+2023-10-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,263,XOF
+2023-10-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,468,XOF
+2023-10-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,233,XOF
+2023-10-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,562,XOF
+2023-10-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,277,XOF
+2023-10-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,456,XOF
+2023-10-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,228,NGN
+2023-10-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,547,NGN
+2023-10-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,280,NGN
+2023-10-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,457,NGN
+2023-10-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,232,XOF
+2023-10-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,512,XOF
+2023-10-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,275,XOF
+2023-10-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,455,XOF
+2023-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,248,XOF
+2023-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,502,XOF
+2023-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,296,XOF
+2023-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,454,XOF
+2023-11-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,249,XOF
+2023-11-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,489,XOF
+2023-11-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,286,XOF
+2023-11-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,480,XOF
+2023-11-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,254,XOF
+2023-11-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,528,XOF
+2023-11-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,286,XOF
+2023-11-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,515,XOF
+2023-11-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,218,NGN
+2023-11-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,471,NGN
+2023-11-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,301,NGN
+2023-11-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,459,NGN
+2023-11-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,223,XOF
+2023-11-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,548,XOF
+2023-11-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,298,XOF
+2023-11-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,458,XOF
+2023-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,233,XOF
+2023-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,584,XOF
+2023-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,321,XOF
+2023-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,495,XOF
+2023-12-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,272,XOF
+2023-12-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,530,XOF
+2023-12-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,287,XOF
+2023-12-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,480,XOF
+2023-12-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,248,XOF
+2023-12-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,567,XOF
+2023-12-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,307,XOF
+2023-12-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,506,XOF
+2023-12-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,233,NGN
+2023-12-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,600,NGN
+2023-12-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,310,NGN
+2023-12-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,525,NGN
+2023-12-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,253,XOF
+2023-12-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,573,XOF
+2023-12-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,320,XOF
+2023-12-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,509,XOF
+2024-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,271,XOF
+2024-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,630,XOF
+2024-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,331,XOF
+2024-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,543,XOF
+2024-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,261,XOF
+2024-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,633,XOF
+2024-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,317,XOF
+2024-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,572,XOF
+2024-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,262,XOF
+2024-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,548,XOF
+2024-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,330,XOF
+2024-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,507,XOF
+2024-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,273,NGN
+2024-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,571,NGN
+2024-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,321,NGN
+2024-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,475,NGN
+2024-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,256,XOF
+2024-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,519,XOF
+2024-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,302,XOF
+2024-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,545,XOF
+2024-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,283,XOF
+2024-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,626,XOF
+2024-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,324,XOF
+2024-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,544,XOF
+2024-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,273,XOF
+2024-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,578,XOF
+2024-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,366,XOF
+2024-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,569,XOF
+2024-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,270,XOF
+2024-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,614,XOF
+2024-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,344,XOF
+2024-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,490,XOF
+2024-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,269,NGN
+2024-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,593,NGN
+2024-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,324,NGN
+2024-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,538,NGN
+2024-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,297,XOF
+2024-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,633,XOF
+2024-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,331,XOF
+2024-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,561,XOF
+2024-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,297,XOF
+2024-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,652,XOF
+2024-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,347,XOF
+2024-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,536,XOF
+2024-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,287,XOF
+2024-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,636,XOF
+2024-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,362,XOF
+2024-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,572,XOF
+2024-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,292,XOF
+2024-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,607,XOF
+2024-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,369,XOF
+2024-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,560,XOF
+2024-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,306,NGN
+2024-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,602,NGN
+2024-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,376,NGN
+2024-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,560,NGN
+2024-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,268,XOF
+2024-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,608,XOF
+2024-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,341,XOF
+2024-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,566,XOF
+2024-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,282,XOF
+2024-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,601,XOF
+2024-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,343,XOF
+2024-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,609,XOF
+2024-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,299,XOF
+2024-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,632,XOF
+2024-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,344,XOF
+2024-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,553,XOF
+2024-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,283,XOF
+2024-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,587,XOF
+2024-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,339,XOF
+2024-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,504,XOF
+2024-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,280,NGN
+2024-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,639,NGN
+2024-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,335,NGN
+2024-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,593,NGN
+2024-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,258,XOF
+2024-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,573,XOF
+2024-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,347,XOF
+2024-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,579,XOF
+2024-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,289,XOF
+2024-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,586,XOF
+2024-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,351,XOF
+2024-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,532,XOF
+2024-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,264,XOF
+2024-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,627,XOF
+2024-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,344,XOF
+2024-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,491,XOF
+2024-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,286,XOF
+2024-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,642,XOF
+2024-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,323,XOF
+2024-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,544,XOF
+2024-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,273,NGN
+2024-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,608,NGN
+2024-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,324,NGN
+2024-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,516,NGN
+2024-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,266,XOF
+2024-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,635,XOF
+2024-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,342,XOF
+2024-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,524,XOF
+2024-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,265,XOF
+2024-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,492,XOF
+2024-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,337,XOF
+2024-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,466,XOF
+2024-06-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,250,XOF
+2024-06-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,542,XOF
+2024-06-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,298,XOF
+2024-06-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,540,XOF
+2024-06-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,249,XOF
+2024-06-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,584,XOF
+2024-06-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,318,XOF
+2024-06-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,522,XOF
+2024-06-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,256,NGN
+2024-06-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,537,NGN
+2024-06-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,335,NGN
+2024-06-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,498,NGN
+2024-06-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,235,XOF
+2024-06-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,562,XOF
+2024-06-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,343,XOF
+2024-06-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,532,XOF
+2024-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,239,XOF
+2024-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,538,XOF
+2024-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,299,XOF
+2024-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,537,XOF
+2024-07-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,248,XOF
+2024-07-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,559,XOF
+2024-07-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,320,XOF
+2024-07-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,492,XOF
+2024-07-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,240,XOF
+2024-07-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,542,XOF
+2024-07-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,303,XOF
+2024-07-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,486,XOF
+2024-07-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,252,NGN
+2024-07-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,549,NGN
+2024-07-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,315,NGN
+2024-07-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,485,NGN
+2024-07-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,244,XOF
+2024-07-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,493,XOF
+2024-07-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,318,XOF
+2024-07-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,495,XOF
+2024-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,247,XOF
+2024-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,452,XOF
+2024-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,324,XOF
+2024-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,466,XOF
+2024-08-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,248,XOF
+2024-08-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,501,XOF
+2024-08-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,303,XOF
+2024-08-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,445,XOF
+2024-08-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,228,XOF
+2024-08-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,579,XOF
+2024-08-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,291,XOF
+2024-08-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,475,XOF
+2024-08-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,245,NGN
+2024-08-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,542,NGN
+2024-08-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,296,NGN
+2024-08-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,478,NGN
+2024-08-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,263,XOF
+2024-08-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,527,XOF
+2024-08-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,297,XOF
+2024-08-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,494,XOF
+2024-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,245,XOF
+2024-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,554,XOF
+2024-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,300,XOF
+2024-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,438,XOF
+2024-09-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,251,XOF
+2024-09-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,493,XOF
+2024-09-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,295,XOF
+2024-09-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,447,XOF
+2024-09-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,232,XOF
+2024-09-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,531,XOF
+2024-09-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,295,XOF
+2024-09-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,475,XOF
+2024-09-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,251,NGN
+2024-09-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,535,NGN
+2024-09-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,287,NGN
+2024-09-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,487,NGN
+2024-09-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,246,XOF
+2024-09-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,491,XOF
+2024-09-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,299,XOF
+2024-09-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,481,XOF
+2024-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,233,XOF
+2024-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,569,XOF
+2024-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,294,XOF
+2024-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,477,XOF
+2024-10-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,235,XOF
+2024-10-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,533,XOF
+2024-10-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,280,XOF
+2024-10-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,439,XOF
+2024-10-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,256,XOF
+2024-10-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,510,XOF
+2024-10-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,281,XOF
+2024-10-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,423,XOF
+2024-10-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,229,NGN
+2024-10-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,497,NGN
+2024-10-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,320,NGN
+2024-10-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,497,NGN
+2024-10-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,229,XOF
+2024-10-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,593,XOF
+2024-10-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,310,XOF
+2024-10-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,466,XOF
+2024-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,216,XOF
+2024-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,620,XOF
+2024-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,288,XOF
+2024-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,454,XOF
+2024-11-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,260,XOF
+2024-11-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,624,XOF
+2024-11-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,330,XOF
+2024-11-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,508,XOF
+2024-11-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,255,XOF
+2024-11-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,580,XOF
+2024-11-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,321,XOF
+2024-11-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,501,XOF
+2024-11-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,249,NGN
+2024-11-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,555,NGN
+2024-11-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,297,NGN
+2024-11-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,488,NGN
+2024-11-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,226,XOF
+2024-11-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,554,XOF
+2024-11-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,294,XOF
+2024-11-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,467,XOF
+2024-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,264,XOF
+2024-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,629,XOF
+2024-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,342,XOF
+2024-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,482,XOF
+2024-12-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,248,XOF
+2024-12-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,616,XOF
+2024-12-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,311,XOF
+2024-12-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,517,XOF
+2024-12-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,268,XOF
+2024-12-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,559,XOF
+2024-12-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,328,XOF
+2024-12-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,488,XOF
+2024-12-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,253,NGN
+2024-12-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,597,NGN
+2024-12-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,301,NGN
+2024-12-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,534,NGN
+2024-12-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,261,XOF
+2024-12-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,604,XOF
+2024-12-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,330,XOF
+2024-12-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,558,XOF
+2025-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,277,XOF
+2025-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,606,XOF
+2025-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,346,XOF
+2025-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,566,XOF
+2025-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,276,XOF
+2025-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,621,XOF
+2025-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,332,XOF
+2025-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,533,XOF
+2025-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,256,XOF
+2025-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,674,XOF
+2025-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,323,XOF
+2025-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,532,XOF
+2025-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,266,NGN
+2025-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,648,NGN
+2025-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,339,NGN
+2025-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,585,NGN
+2025-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,266,XOF
+2025-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,628,XOF
+2025-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,330,XOF
+2025-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,610,XOF
+2025-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,269,XOF
+2025-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,654,XOF
+2025-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,369,XOF
+2025-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,584,XOF
+2025-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,284,XOF
+2025-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,640,XOF
+2025-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,359,XOF
+2025-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,568,XOF
+2025-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,300,XOF
+2025-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,715,XOF
+2025-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,348,XOF
+2025-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,533,XOF
+2025-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,285,NGN
+2025-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,727,NGN
+2025-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,343,NGN
+2025-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,619,NGN
+2025-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,310,XOF
+2025-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,626,XOF
+2025-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,368,XOF
+2025-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,619,XOF
+2025-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,285,XOF
+2025-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,648,XOF
+2025-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,353,XOF
+2025-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,552,XOF
+2025-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,281,XOF
+2025-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,614,XOF
+2025-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,364,XOF
+2025-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,559,XOF
+2025-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,294,XOF
+2025-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,604,XOF
+2025-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,370,XOF
+2025-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,606,XOF
+2025-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,262,NGN
+2025-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,667,NGN
+2025-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,386,NGN
+2025-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,547,NGN
+2025-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,315,XOF
+2025-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,668,XOF
+2025-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,351,XOF
+2025-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,580,XOF
+2025-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,296,XOF
+2025-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,651,XOF
+2025-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,370,XOF
+2025-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,550,XOF
+2025-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,291,XOF
+2025-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,603,XOF
+2025-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,359,XOF
+2025-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,551,XOF
+2025-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,278,XOF
+2025-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,689,XOF
+2025-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,380,XOF
+2025-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,594,XOF
+2025-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,273,NGN
+2025-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,639,NGN
+2025-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,382,NGN
+2025-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,581,NGN
+2025-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,322,XOF
+2025-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,662,XOF
+2025-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,364,XOF
+2025-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,568,XOF
+2025-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,282,XOF
+2025-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,625,XOF
+2025-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,362,XOF
+2025-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,586,XOF
+2025-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,269,XOF
+2025-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,588,XOF
+2025-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,318,XOF
+2025-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,574,XOF
+2025-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,264,XOF
+2025-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,562,XOF
+2025-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,357,XOF
+2025-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,629,XOF
+2025-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,280,NGN
+2025-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,656,NGN
+2025-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,351,NGN
+2025-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,557,NGN
+2025-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,293,XOF
+2025-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,620,XOF
+2025-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,354,XOF
+2025-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,569,XOF
+2025-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,259,XOF
+2025-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,632,XOF
+2025-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,331,XOF
+2025-06-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,515,XOF
+2025-06-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,275,XOF
+2025-06-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,575,XOF
+2025-06-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,335,XOF
+2025-06-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,535,XOF
+2025-06-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,282,XOF
+2025-06-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,616,XOF
+2025-06-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,334,XOF
+2025-06-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,557,XOF
+2025-06-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,286,NGN
+2025-06-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,619,NGN
+2025-06-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,335,NGN
+2025-06-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,500,NGN
+2025-06-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,253,XOF
+2025-06-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,593,XOF
+2025-06-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,324,XOF
+2025-06-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,530,XOF
+2025-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,256,XOF
+2025-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,589,XOF
+2025-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,318,XOF
+2025-07-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,523,XOF
+2025-07-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,256,XOF
+2025-07-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,517,XOF
+2025-07-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,304,XOF
+2025-07-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,507,XOF
+2025-07-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,240,XOF
+2025-07-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,591,XOF
+2025-07-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,343,XOF
+2025-07-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,541,XOF
+2025-07-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,252,NGN
+2025-07-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,617,NGN
+2025-07-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,321,NGN
+2025-07-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,502,NGN
+2025-07-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,247,XOF
+2025-07-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,565,XOF
+2025-07-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,313,XOF
+2025-07-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,515,XOF
+2025-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,248,XOF
+2025-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,554,XOF
+2025-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,315,XOF
+2025-08-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,522,XOF
+2025-08-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,258,XOF
+2025-08-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,513,XOF
+2025-08-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,269,XOF
+2025-08-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,516,XOF
+2025-08-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,229,XOF
+2025-08-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,548,XOF
+2025-08-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,290,XOF
+2025-08-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,448,XOF
+2025-08-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,253,NGN
+2025-08-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,575,NGN
+2025-08-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,299,NGN
+2025-08-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,429,NGN
+2025-08-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,240,XOF
+2025-08-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,565,XOF
+2025-08-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,285,XOF
+2025-08-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,497,XOF
+2025-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,243,XOF
+2025-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,564,XOF
+2025-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,306,XOF
+2025-09-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,463,XOF
+2025-09-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,258,XOF
+2025-09-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,544,XOF
+2025-09-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,304,XOF
+2025-09-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,464,XOF
+2025-09-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,238,XOF
+2025-09-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,524,XOF
+2025-09-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,302,XOF
+2025-09-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,529,XOF
+2025-09-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,227,NGN
+2025-09-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,504,NGN
+2025-09-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,327,NGN
+2025-09-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,482,NGN
+2025-09-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,235,XOF
+2025-09-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,577,XOF
+2025-09-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,295,XOF
+2025-09-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,532,XOF
+2025-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,257,XOF
+2025-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,545,XOF
+2025-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,344,XOF
+2025-10-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,481,XOF
+2025-10-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,257,XOF
+2025-10-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,567,XOF
+2025-10-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,330,XOF
+2025-10-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,535,XOF
+2025-10-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,249,XOF
+2025-10-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,537,XOF
+2025-10-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,317,XOF
+2025-10-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,480,XOF
+2025-10-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,273,NGN
+2025-10-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,562,NGN
+2025-10-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,305,NGN
+2025-10-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,501,NGN
+2025-10-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,231,XOF
+2025-10-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,531,XOF
+2025-10-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,329,XOF
+2025-10-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,480,XOF
+2025-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,246,XOF
+2025-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,599,XOF
+2025-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,343,XOF
+2025-11-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,537,XOF
+2025-11-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,272,XOF
+2025-11-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,561,XOF
+2025-11-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,301,XOF
+2025-11-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,557,XOF
+2025-11-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,255,XOF
+2025-11-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,576,XOF
+2025-11-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,345,XOF
+2025-11-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,533,XOF
+2025-11-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,265,NGN
+2025-11-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,646,NGN
+2025-11-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,313,NGN
+2025-11-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,542,NGN
+2025-11-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,260,XOF
+2025-11-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,591,XOF
+2025-11-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,349,XOF
+2025-11-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,531,XOF
+2025-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,281,XOF
+2025-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,649,XOF
+2025-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,336,XOF
+2025-12-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,525,XOF
+2025-12-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,259,XOF
+2025-12-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,555,XOF
+2025-12-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,377,XOF
+2025-12-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,517,XOF
+2025-12-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,271,XOF
+2025-12-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,607,XOF
+2025-12-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,347,XOF
+2025-12-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,570,XOF
+2025-12-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,286,NGN
+2025-12-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,598,NGN
+2025-12-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,339,NGN
+2025-12-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,555,NGN
+2025-12-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,270,XOF
+2025-12-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,665,XOF
+2025-12-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,351,XOF
+2025-12-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,568,XOF
+2026-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,298,XOF
+2026-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,687,XOF
+2026-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,364,XOF
+2026-01-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,540,XOF
+2026-01-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,294,XOF
+2026-01-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,628,XOF
+2026-01-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,351,XOF
+2026-01-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,594,XOF
+2026-01-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,306,XOF
+2026-01-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,650,XOF
+2026-01-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,366,XOF
+2026-01-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,626,XOF
+2026-01-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,292,NGN
+2026-01-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,734,NGN
+2026-01-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,371,NGN
+2026-01-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,526,NGN
+2026-01-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,299,XOF
+2026-01-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,662,XOF
+2026-01-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,384,XOF
+2026-01-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,597,XOF
+2026-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,298,XOF
+2026-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,633,XOF
+2026-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,371,XOF
+2026-02-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,574,XOF
+2026-02-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,291,XOF
+2026-02-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,694,XOF
+2026-02-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,406,XOF
+2026-02-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,611,XOF
+2026-02-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,282,XOF
+2026-02-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,689,XOF
+2026-02-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,397,XOF
+2026-02-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,581,XOF
+2026-02-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,298,NGN
+2026-02-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,675,NGN
+2026-02-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,360,NGN
+2026-02-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,619,NGN
+2026-02-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,298,XOF
+2026-02-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,689,XOF
+2026-02-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,358,XOF
+2026-02-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,586,XOF
+2026-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,316,XOF
+2026-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,673,XOF
+2026-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,414,XOF
+2026-03-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,597,XOF
+2026-03-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,308,XOF
+2026-03-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,717,XOF
+2026-03-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,354,XOF
+2026-03-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,556,XOF
+2026-03-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,281,XOF
+2026-03-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,729,XOF
+2026-03-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,370,XOF
+2026-03-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,687,XOF
+2026-03-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,296,NGN
+2026-03-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,692,NGN
+2026-03-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,410,NGN
+2026-03-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,670,NGN
+2026-03-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,336,XOF
+2026-03-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,727,XOF
+2026-03-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,400,XOF
+2026-03-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,627,XOF
+2026-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,314,XOF
+2026-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,661,XOF
+2026-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,362,XOF
+2026-04-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,604,XOF
+2026-04-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,299,XOF
+2026-04-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,664,XOF
+2026-04-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,391,XOF
+2026-04-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,633,XOF
+2026-04-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,303,XOF
+2026-04-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,730,XOF
+2026-04-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,356,XOF
+2026-04-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,598,XOF
+2026-04-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,291,NGN
+2026-04-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,616,NGN
+2026-04-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,376,NGN
+2026-04-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,600,NGN
+2026-04-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,325,XOF
+2026-04-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,701,XOF
+2026-04-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,358,XOF
+2026-04-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,660,XOF
+2026-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Maïs (blanc),KG,311,XOF
+2026-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Riz (importé),KG,678,XOF
+2026-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Gari (blanc),KG,362,XOF
+2026-05-01,Bénin,Dantokpa (Cotonou),6.37,2.44,Niébé (blanc),KG,558,XOF
+2026-05-01,Bénin,Malanville,11.87,3.38,Maïs (blanc),KG,287,XOF
+2026-05-01,Bénin,Malanville,11.87,3.38,Riz (importé),KG,695,XOF
+2026-05-01,Bénin,Malanville,11.87,3.38,Gari (blanc),KG,401,XOF
+2026-05-01,Bénin,Malanville,11.87,3.38,Niébé (blanc),KG,631,XOF
+2026-05-01,Niger,Niamey,13.51,2.12,Maïs (blanc),KG,286,XOF
+2026-05-01,Niger,Niamey,13.51,2.12,Riz (importé),KG,622,XOF
+2026-05-01,Niger,Niamey,13.51,2.12,Gari (blanc),KG,369,XOF
+2026-05-01,Niger,Niamey,13.51,2.12,Niébé (blanc),KG,534,XOF
+2026-05-01,Nigeria,Lagos,6.52,3.37,Maïs (blanc),KG,298,NGN
+2026-05-01,Nigeria,Lagos,6.52,3.37,Riz (importé),KG,654,NGN
+2026-05-01,Nigeria,Lagos,6.52,3.37,Gari (blanc),KG,358,NGN
+2026-05-01,Nigeria,Lagos,6.52,3.37,Niébé (blanc),KG,539,NGN
+2026-05-01,Togo,Lomé,6.13,1.22,Maïs (blanc),KG,300,XOF
+2026-05-01,Togo,Lomé,6.13,1.22,Riz (importé),KG,641,XOF
+2026-05-01,Togo,Lomé,6.13,1.22,Gari (blanc),KG,345,XOF
+2026-05-01,Togo,Lomé,6.13,1.22,Niébé (blanc),KG,502,XOF

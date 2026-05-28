@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MITCHÔ | Le Problème - Intelligence Stratégique au Bénin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "secondary": "#745b22",
+                    "secondary-fixed": "#ffdf9e",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2c322d",
+                    "on-tertiary-fixed": "#40000a",
+                    "background": "#f5fbf3",
+                    "on-tertiary-fixed-variant": "#80272e",
+                    "primary": "#006b3f",
+                    "surface-dim": "#d6dcd4",
+                    "secondary-container": "#fedb95",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#3e4a41",
+                    "surface-container-high": "#e4eae2",
+                    "surface-bright": "#f5fbf3",
+                    "inverse-primary": "#70db9d",
+                    "surface-container-highest": "#dee4dd",
+                    "on-surface": "#171d19",
+                    "primary-container": "#008751",
+                    "outline-variant": "#bdcabe",
+                    "tertiary-fixed-dim": "#ffb3b3",
+                    "on-secondary-container": "#785f25",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#00522f",
+                    "surface-variant": "#dee4dd",
+                    "primary-fixed-dim": "#70db9d",
+                    "primary-fixed": "#8df8b7",
+                    "surface": "#f5fbf3",
+                    "on-secondary-fixed-variant": "#5a430b",
+                    "on-primary-fixed": "#002110",
+                    "tertiary": "#9d3d43",
+                    "surface-container": "#eaefe8",
+                    "surface-container-low": "#f0f5ee",
+                    "on-primary-container": "#fdfff9",
+                    "outline": "#6e7a70",
+                    "on-tertiary-container": "#fffeff",
+                    "inverse-on-surface": "#edf2eb",
+                    "on-secondary-fixed": "#261a00",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-background": "#171d19",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdad9",
+                    "secondary-fixed-dim": "#e4c27e",
+                    "surface-tint": "#006d40",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#bd555a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "section-gap": "80px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Playfair Display"],
+                    "caption": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f5fbf3;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 w-full border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface">MITCHÔ</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Accueil</a>
+<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1 font-medium transition-colors duration-300" href="#">Problème</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Solution</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Tendances</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Publications</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Abonnement</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm font-semibold hover:opacity-90 active:scale-[0.98] transition-all">
+                Contact
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Header -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap flex flex-col items-center text-center fade-in">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface max-w-4xl mb-stack-lg leading-tight">
+                L'insécurité du silence : Les défis de la souveraineté alimentaire
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                Derrière l'apparente stabilité des étals se cache une fragilité structurelle. L'absence d'information en temps réel transforme chaque variation climatique ou économique en une menace invisible pour l'équilibre de la nation.
+            </p>
+</section>
+<!-- Section 1: Instabilité des Marchés -->
+<section class="w-full bg-surface-container-lowest py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 md:order-1">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Analyse des Marchés</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Instabilité des Marchés</h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+                            Le prix des denrées alimentaires au Bénin n'est pas simplement une question d'offre et de demande locales. Il est le fruit d'une volatilité complexe, influencée par des dynamiques régionales opaques et des intermédiaires agissant dans l'ombre de la donnée.
+                        </p>
+<p>
+                            Cette instabilité crée une incertitude permanente pour les producteurs, qui peinent à planifier leurs récoltes, et pour les consommateurs, dont le pouvoir d'achat est suspendu à des fluctuations imprévisibles.
+                        </p>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Marché local au Bénin" class="w-full h-auto object-cover rounded shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJrX8Cn2zCarWkwWl3L3OBBGgjwICHCb1vL9xhbVgXEK7nGQkIP-XVsAPYnj1IwxCWHqA7G69RT1ELDrgRDlglJ7N02h_bQYZ4BcuVBpo9POENunEZQH5-ayc7pOch21DPimjjIJCSSxe--5Vw3YGZi3jqjwvKkB6EQ7YgddYs7Qou8mg5xaDO5tuoFMyFsnBjm-2b5s8coJ1fg-Sn46XLih5rJS3C4lBHUgb4pXali_BIozfL7eoLpzVP2JPh-Ks7E2r6D0G17PM"/>
+</div>
+</div>
+</section>
+<!-- Section 2: L'Angle Mort de l'Information -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap flex flex-col items-center text-center">
+<div class="max-w-3xl">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Le Vide Informationnel</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg">L'Angle Mort de l'Information</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Les décideurs publics et privés naviguent aujourd'hui dans un brouillard statistique. Sans une compréhension précise et géolocalisée des flux, l'intervention publique reste réactive plutôt que proactive, limitant l'efficacité des politiques de souveraineté.
+                </p>
+</div>
+</section>
+<!-- Section 3: Vulnérabilité aux Chocs -->
+<section class="relative w-full h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Paysage rural béninois" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrPisGQlq5qfZh7ue0tnVXNZEdsTGZVIYvv6uDtmo0is8X8cqhgkgQzr6XFsrOA7GCqhiUKVOE6G2HTja4XwUstGIH5WLmTFmII9qF0uxlY3pR9kn1IjfDbVdcNJovieCdIFc9-VQ2LWqHqAu6_QbdJklh1uAZzipJD6fLxmXyw_4QUdoV1WBfJj8UoA_Fia2wGs92r9VikCmiPTwvCIdGfXNYb-_kJ79WhbBLbAzOI5Rfox9-DPGRxVTFys-i7xyBWR8l39EZ88Q"/>
+<div class="absolute inset-0 bg-on-surface/40"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<div class="max-w-xl bg-surface/95 backdrop-blur p-stack-lg md:p-12 border-l-4 border-primary shadow-xl">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Résilience &amp; Risques</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Vulnérabilité aux Chocs</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Le changement climatique n'est plus une menace lointaine. Les cycles agricoles se désynchronisent, rendant les méthodes traditionnelles de prédiction obsolètes. Face à ces chocs, la résilience de notre système dépendra de notre capacité à anticiper par la donnée.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 4: Le Coût du Retard -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap border-b border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface sticky top-32">Le Coût du Retard</h2>
+</div>
+<div class="md:col-span-8 space-y-8 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+                        Chaque jour sans intelligence stratégique est un jour où les opportunités de stabilisation se perdent. Le coût social et économique d'une intervention tardive dépasse largement l'investissement nécessaire à une surveillance moderne.
+                    </p>
+<p>
+                        L'absence de coordination basée sur des faits réels entraîne une dispersion des ressources, là où une précision chirurgicale permettrait de sécuriser les chaînes d'approvisionnement vitales pour le pays.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Conclusion -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap flex flex-col items-center text-center">
+<div class="max-w-2xl">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">L'ère de l'intuition touche à sa fin.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
+                    Comprendre ces défis est la première étape. Découvrir comment l'intelligence de MITCHÔ les transforme en leviers de croissance est la seconde.
+                </p>
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-label-sm text-label-sm font-bold hover:opacity-90 transition-all shadow-md" href="#">
+                    Découvrir notre Solution
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-stack-lg px-margin-mobile md:px-gutter border-t border-outline-variant">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-lg">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-2">MITCHÔ</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80">© 2024 MITCHÔ. Intelligence Stratégique au service du Bénin.</p>
+</div>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Mentions Légales</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Presse</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Partenariats</a>
+</div>
+</div>
+</footer>
+<!-- Floating AI Assistant -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[100]" title="AI Assistant">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</button>
+</body></html>

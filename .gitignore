@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+mitcho-backend/.venv/
+mitcho-backend/venv/
+.venv/
+venv/
+
+# Environment — NEVER commit
+mitcho-backend/.env
+.env
+
+# Databases
+mitcho-backend/*.db
+mitcho-backend/*.sqlite3
+*.db
+*.sqlite3
+
+# ChromaDB vector store (large, regenerable)
+mitcho-backend/chroma_db/
+
+# Generated PDF reports
+mitcho-backend/reports/
+mitcho-backend/test_rapport_mitchou.pdf
+mitcho-backend/_test_token.txt
+
+# HuggingFace / ML model cache
+*.safetensors
+*.bin
+mitcho-backend/.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.cursor/
+.vscode/
+*.code-workspace
+
+# Logs
+*.log

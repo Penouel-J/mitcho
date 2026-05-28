@@ -22,7 +22,9 @@ bcrypt==4.2.1
 python-multipart==0.0.17
 
 # RAG — embeddings
-sentence-transformers==3.3.1
+# sentence-transformers désactivé sur Render (USE_SENTENCE_TRANSFORMERS=false)
+# Décommenter pour l'environnement local si besoin d'embeddings de haute qualité
+# sentence-transformers==3.3.1
 
 # RAG — vector store
 chromadb==0.5.23

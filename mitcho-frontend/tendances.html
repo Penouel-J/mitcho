@@ -609,9 +609,26 @@
       </div>`).join('');
   }
 
-  // Appliqué immédiatement + après connexion
+  // Exposée globalement pour que mitcho-auth.js puisse l'appeler directement
+  window.applyProfileContent = applyProfileContent;
+
+  // Premier appel immédiat (peut montrer "decideur" si session absente, sera corrigé après login)
   applyProfileContent();
-  window.addEventListener('mitcho-auth-changed', applyProfileContent);
+
+  // Polling de sécurité : vérifie le profil toutes les 500ms pendant 10s après chargement
+  // (couvre tous les cas de timing où l'événement ne suffit pas)
+  let _pollCount = 0;
+  let _lastProfile = null;
+  const _profilePoller = setInterval(() => {
+    _pollCount++;
+    const s = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
+    const current = s?.profile || null;
+    if (current !== _lastProfile) {
+      _lastProfile = current;
+      applyProfileContent();
+    }
+    if (_pollCount > 20) clearInterval(_profilePoller);
+  }, 500);
 
   function handleDownloadPDF() {
     const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');

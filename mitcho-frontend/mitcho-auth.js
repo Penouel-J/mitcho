@@ -395,6 +395,10 @@ function getUserProfile() {
 
 /* ── Mise à jour de la nav ── */
 function _dispatchAuthChanged() {
+  // Appel direct si la page expose la fonction (plus fiable que l'événement)
+  if (typeof window.applyProfileContent === 'function') {
+    window.applyProfileContent();
+  }
   window.dispatchEvent(new Event('mitcho-auth-changed'));
 }
 
@@ -449,7 +453,4 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initAuth);
 } else {
   _initAuth();
-  // Notifier les pages qui écoutent mitcho-auth-changed (ex: tendances.html)
-  // afin qu'elles appliquent le bon contenu si la session existait déjà
-  _dispatchAuthChanged();
 }

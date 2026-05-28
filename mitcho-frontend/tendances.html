@@ -529,46 +529,79 @@
       pdfBtn: 'Télécharger le rapport PDF, Mai 2026',
     },
 
-    agriculteur: {
-      heroLabel: 'Conseils de mai 2026',
-      heroTitle: 'Que faire ce mois ?<br/><span class="text-primary">Les prix de vos marchés</span>',
-      heroSubtitle: 'Les prix actuels, les bons marchés pour vendre, et vos conseils pratiques pour le mois de mai.',
+    commercant: {
+      heroLabel: 'Bulletin Marché · Mai 2026',
+      heroTitle: 'Où acheter, où vendre ?<br/><span class="text-primary">Opportunités du mois</span>',
+      heroSubtitle: 'Prix des marchés, marges, arbitrages et conseils d\'achat-revente pour les commerçants de vivres.',
+      syntheseTitre: 'Situation des marchés ce mois',
+      syntheseHTML: `
+        <p>Ce mois de mai, <strong class="text-on-surface font-semibold">le maïs blanc offre une bonne opportunité d'achat</strong> à Parakou (environ 285 FCFA/kg) pour revente à Cotonou (299 FCFA/kg). Marge brute estimée à <strong class="text-on-surface font-semibold">~14 FCFA/kg</strong> avant transport.</p>
+        <p>Le <strong class="text-on-surface font-semibold">riz importé est à 687 FCFA/kg</strong> — le plus haut depuis le début de l'année. La demande reste soutenue à Cotonou. Si vous avez du stock, c'est le bon moment de vendre. <strong class="text-on-surface font-semibold">Ne rachetez pas maintenant</strong> — le prix risque de corriger dans 4 à 6 semaines.</p>
+        <p>Le <strong class="text-on-surface font-semibold">niébé blanc recule à 595 FCFA/kg</strong> (-4% vs avril). Opportunité d'achat pour stocker en prévision de la période de soudure (juillet-août) où les prix remontent habituellement.</p>`,
+      recoLabel: 'Opportunités du mois',
+      recoTitre: 'Vos décisions d\'achat-revente',
+      recoCards: [
+        { num:'01', color:'primary', tag:'Achetez',
+          titre:'Niébé blanc — stocker pour juillet',
+          texte:'Le niébé est à 595 FCFA/kg (-4%). Les prix de la période de soudure (juillet-août) remontent généralement à 650-680 FCFA/kg. Achetez à Malanville ou Parakou maintenant, revendez à Cotonou dans 6-8 semaines. Marge estimée : 50-80 FCFA/kg.' },
+        { num:'02', color:'tertiary', tag:'Vendez',
+          titre:'Riz importé — liquidez vos stocks',
+          texte:'Le riz est au plus haut (687 FCFA/kg). La pression à la baisse depuis Lomé (641 FCFA/kg) risque de s\'accentuer. Si vous avez du stock, revendez maintenant avant une éventuelle correction. Ne rachetez pas avant 4 semaines.' },
+        { num:'03', color:'secondary', tag:'Arbitrage',
+          titre:'Maïs : Parakou → Cotonou',
+          texte:'Écart de 14 FCFA/kg entre Parakou et Cotonou. Avec un camion de 5 tonnes, marge brute potentielle de 70 000 FCFA. Surveiller la route nationale 2 — des ralentissements logistiques ont été signalés ce mois.' },
+      ],
+      pdfLabel: 'Bulletin commerçant',
+      pdfTitle: 'Rapport d\'analyse marchés',
+      pdfDesc: 'Le bulletin PDF de mai 2026 contient tous les prix par marché, les opportunités d\'arbitrage, les prévisions de prix et les recommandations d\'achat-revente pour le mois.',
+      pdfItems: [
+        "Prix détaillés par marché (Cotonou, Malanville, Parakou, Bohicon)",
+        "Opportunités d'arbitrage avec marges estimées",
+        "Prévisions de prix sur 6 semaines",
+        "Alertes risques et conseils stratégiques",
+      ],
+      pdfBtn: 'Télécharger le bulletin, Mai 2026',
+    },
+
+    citoyen: {
+      heroLabel: 'Infos consommateurs · Mai 2026',
+      heroTitle: 'Les prix du marché<br/><span class="text-primary">Ce mois de mai</span>',
+      heroSubtitle: 'Où acheter pas cher, quels produits vont monter en prix, et comment gérer votre budget alimentation.',
       syntheseTitre: 'Comment vont les prix ce mois ?',
       syntheseHTML: `
-        <p>Ce mois de mai 2026, <strong class="text-on-surface font-semibold">les prix sont hauts</strong>. C'est une bonne nouvelle si vous avez des récoltes à vendre.</p>
-        <p>Le <strong class="text-on-surface font-semibold">maïs blanc vaut 299 FCFA le kilo</strong> à Cotonou. C'est moins cher qu'en avril (-3%), mais toujours <strong class="text-on-surface font-semibold">24 FCFA de plus que la normale</strong> de l'année. Si vous avez du maïs, c'est encore le bon moment pour vendre.</p>
-        <p>Le <strong class="text-on-surface font-semibold">niébé blanc a baissé à 595 FCFA le kilo</strong> (-4% vs avril). Si vous aviez attendu pour vendre votre niébé, il vaut mieux vendre maintenant avant que le prix baisse encore.</p>
-        <p>Le <strong class="text-on-surface font-semibold">gari blanc reste stable à 382 FCFA le kilo</strong>. Pas urgent de vendre — vous pouvez attendre un peu si vous voulez un meilleur prix.</p>`,
-      recoLabel: 'Vos conseils du mois',
-      recoTitre: 'Que faire maintenant ?',
+        <p>Ce mois de mai 2026, <strong class="text-on-surface font-semibold">les prix des aliments sont un peu hauts</strong>. Le riz importé et le maïs coûtent plus cher que d'habitude. Mais il y a de bonnes nouvelles : <strong class="text-on-surface font-semibold">le niébé a baissé</strong> — c'est le bon moment d'en acheter.</p>
+        <p>Le <strong class="text-on-surface font-semibold">riz importé coûte 687 FCFA le kilo</strong>, soit environ <strong class="text-on-surface font-semibold">17 000 FCFA pour un sac de 25 kg</strong>. C'est cher. Si votre budget est limité, le <strong class="text-on-surface font-semibold">gari blanc à 382 FCFA/kg</strong> est une bonne alternative — nourrissant et moins cher.</p>
+        <p>Le <strong class="text-on-surface font-semibold">niébé blanc est à 595 FCFA/kg</strong> ce mois. Achetez-en un peu de stock maintenant — dans 2 mois, le prix va probablement remonter.</p>`,
+      recoLabel: 'Conseils du mois',
+      recoTitre: 'Comment faire vos courses ce mois',
       recoCards: [
-        { num:'01', color:'tertiary', tag:'Faites vite',
-          titre:'Vendez votre niébé cette semaine',
-          texte:'Le prix du niébé est à 595 FCFA/kg et il continue de baisser. Si vous avez du niébé à vendre, ne tardez pas. Dans 3 à 4 semaines, le prix sera probablement plus bas à cause des nouvelles récoltes.' },
-        { num:'02', color:'primary', tag:'Bon moment',
-          titre:'Vendez votre maïs à Malanville',
-          texte:'Le maïs vaut 299 FCFA/kg à Cotonou, mais les acheteurs du Niger payent souvent plus à Malanville. Si vous êtes dans le nord du Bénin, allez au marché de Malanville — vous pouvez gagner 20 à 30 FCFA de plus par kilo.' },
-        { num:'03', color:'secondary', tag:'Attendez',
-          titre:'Gardez votre gari encore un peu',
-          texte:"Le gari blanc est stable à 382 FCFA/kg. Les prix du manioc sont bons en ce moment. Vous pouvez garder votre stock encore 2 à 3 semaines — le prix pourrait monter un peu avec l'approche de la saison sèche." },
+        { num:'01', color:'primary', tag:'Bon plan',
+          titre:'Remplacez le riz par du gari',
+          texte:'Le riz est cher ce mois (687 FCFA/kg). Le gari blanc à 382 FCFA/kg est beaucoup moins cher et tout aussi nourrissant. Pour une famille de 5 personnes, vous économisez environ 3 000 FCFA par semaine en mangeant du gari 3 fois par semaine à la place du riz.' },
+        { num:'02', color:'secondary', tag:'Faites des stocks',
+          titre:'Achetez du niébé maintenant',
+          texte:'Le niébé blanc est à 595 FCFA/kg — c\'est moins cher qu\'en mars (630 FCFA/kg). Achetez un sac de 10 kg maintenant (~5 900 FCFA). Dans 2 mois, le prix va probablement remonter à 650-680 FCFA/kg avec la saison de soudure.' },
+        { num:'03', color:'tertiary', tag:'Attention',
+          titre:'Le prix du maïs et du riz peut encore monter',
+          texte:'Le maïs blanc (299 FCFA/kg) et le riz importé (687 FCFA/kg) sont déjà chers. Les experts prévoient que les prix pourraient encore monter en juin-juillet. Si vous pouvez, faites vos stocks de maïs cette semaine avant la hausse.' },
       ],
-      pdfLabel: 'Votre guide agricole',
-      pdfTitle: 'Guide pratique du mois',
-      pdfDesc: 'Téléchargez votre guide pratique de mai 2026. Il contient tous les prix, les meilleurs marchés, et vos conseils pour vendre au bon moment. Facile à lire et à partager.',
+      pdfLabel: 'Guide consommateur',
+      pdfTitle: 'Guide pratique des prix',
+      pdfDesc: 'Téléchargez le guide pratique de mai 2026 : tous les prix des marchés en FCFA, les bons plans du mois, et des conseils simples pour bien gérer votre budget alimentation.',
       pdfItems: [
-        "Les prix de tous vos produits en FCFA",
-        "Les meilleurs marchés où vendre ce mois",
-        "Conseils clairs : vendre maintenant ou attendre ?",
-        "Ce qui va changer dans les prochaines semaines",
+        "Tous les prix en FCFA (kilo et sac)",
+        "Les marchés les moins chers près de chez vous",
+        "Produits qui vont monter — faites vos stocks",
+        "5 conseils pour manger bien à petit budget",
       ],
-      pdfBtn: 'Télécharger mon guide, Mai 2026',
+      pdfBtn: 'Télécharger le guide, Mai 2026',
     },
   };
 
   function applyProfileContent() {
     const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
-    const profile = session?.profile || 'decideur';
-    const c = CONTENT[profile] || CONTENT.decideur;
+    const profile = session?.profile || 'citoyen';
+    const c = CONTENT[profile] || CONTENT.citoyen;
 
     // Hero
     document.getElementById('hero-label').textContent = c.heroLabel;

@@ -1,6 +1,6 @@
 """
-LLM generator: uses Groq (Llama 3.3) with retrieved context to produce
-structured analysis, forecasts, and recommendations for MITCHÔ.
+LLM generator — Groq (Llama 3.3) with RAG context.
+Three profiles: "decideur" | "commercant" | "citoyen"
 """
 import logging
 from datetime import datetime
@@ -12,41 +12,55 @@ from app.rag.retriever import retrieve_context
 
 logger = logging.getLogger(__name__)
 
+# ── SYSTEM PROMPTS ────────────────────────────────────────────────────────────
+
 SYSTEM_PROMPT_DECIDEUR = """Tu es MITCHÔ Analyst, un système d'intelligence publique spécialisé dans la sécurité alimentaire au Bénin.
 
-Ta mission est d'analyser les données de prix vivriers, les événements médiatiques (GDELT), et les signaux économiques pour produire des rapports d'analyse stratégiques destinés aux décideurs publics béninois (MAEP, ONASA, Ministère du Commerce, Présidence).
+Ta mission : analyser les données de prix vivriers, les événements médiatiques (GDELT), et les signaux économiques pour produire des rapports stratégiques destinés aux décideurs publics béninois (MAEP, ONASA, Ministère du Commerce, Présidence).
 
 Tes analyses doivent :
-- Être précises, factuelles, et basées sur les données fournies dans le contexte
+- Être précises, factuelles, basées sur les données fournies
 - Identifier les tendances de prix sur les marchés clés (Cotonou, Malanville, Parakou, Bohicon)
 - Détecter les signaux d'alerte précoce (tensions, perturbations logistiques, chocs climatiques)
 - Formuler des prévisions sur 1 à 3 mois avec niveau de confiance explicite
-- Proposer des recommandations de politique publique actionnables (stocks tampons, subventions, interventions)
+- Proposer des recommandations de politique publique actionnables
 
 Produits surveillés : Maïs blanc, Riz importé, Gari blanc, Niébé blanc, Sorgho, Mil.
-
 Tu réponds TOUJOURS en français. Ton ton est analytique, institutionnel, et professionnel."""
 
-SYSTEM_PROMPT_AGRICULTEUR = """Tu es MITCHÔ, un conseiller de confiance pour les paysans et agriculteurs du Bénin.
+SYSTEM_PROMPT_COMMERCANT = """Tu es MITCHÔ, un conseiller de confiance pour les commerçants et revendeurs de vivres au Bénin.
 
-Tu parles comme un ami du village qui connait bien les marchés et qui veut vraiment aider. Ton rôle : dire clairement quand vendre, où vendre, et quand attendre.
+Tu parles à des commerçants qui achètent et revendent des produits alimentaires sur les marchés. Leur objectif : acheter au meilleur moment et au meilleur endroit, revendre avec une marge correcte.
 
-REGLES ABSOLUES pour ecrire :
-- Langage tres simple. Pas de mots compliques. Dis "le prix monte" pas "hausse conjoncturelle".
-- Toujours des chiffres en FCFA. Ex : "250 FCFA le kilo" pas "250 XOF/kg".
-- Sois direct et court. Une idee par phrase. Phrases courtes.
-- Dis clairement ce qu'il faut faire : "Vendez maintenant", "Attendez encore 3 semaines", "Allez a Malanville".
-- Compare avec ce que les gens connaissent : "c'est 40 FCFA de plus par kilo qu'en janvier".
-- Si c'est urgent, dis-le fort : "ATTENTION : les prix vont baisser dans 4 semaines !"
-- Parle a la 2e personne : "vous pouvez vendre", "si vous avez du stock, gardez-le".
-- Jamais de jargon : pas de "volatilite", "conjoncture", "macroeconomique", "indicateurs".
+REGLES :
+- Toujours des prix en FCFA. Parle de marges, d'écarts entre marchés, de timing d'achat.
+- Dis clairement : "Achetez maintenant à Parakou", "Revendez à Cotonou — écart de 45 FCFA/kg".
+- Mentionne les marchés sources (Malanville, Parakou, Bohicon) et de vente (Cotonou, Dantokpa).
+- Signale les opportunités d'arbitrage entre régions et pays voisins (Niger, Togo).
+- Alerte sur les risques de surstock et de chute de prix.
+- Langage simple mais orienté business. Parle à la 2e personne.
 
-TES LECTEURS ont souvent une education limitee. Sois simple, concret, et utile comme un bon voisin.
-Produits : Mais blanc, Riz, Gari blanc, Niebe blanc, Sorgho, Mil."""
+Produits : Maïs blanc, Riz importé, Gari blanc, Niébé blanc, Sorgho, Mil."""
+
+SYSTEM_PROMPT_CITOYEN = """Tu es MITCHÔ, un assistant simple et utile pour les ménages et citoyens du Bénin.
+
+Tu aides les gens ordinaires à comprendre les prix des aliments : où acheter moins cher, quels produits vont devenir plus chers, comment gérer leur budget alimentation.
+
+REGLES :
+- Langage très simple, accessible à tous. Pas de jargon économique.
+- Toujours des prix en FCFA. Donne les prix au kilo ET au sac quand possible.
+- Conseils pratiques pour le budget quotidien.
+- Indique les marchés les plus accessibles.
+- Signale les produits qui vont monter pour que les gens s'approvisionnent à l'avance.
+- Parle de produits de substitution si un produit est trop cher.
+- Ton chaleureux, rassurant, et pratique. Parle à la 2e personne.
+
+Produits : Maïs, Riz, Gari, Niébé, Sorgho, Mil."""
+
+# ── REPORT TEMPLATES ─────────────────────────────────────────────────────────
 
 REPORT_PROMPT_DECIDEUR = """
-Voici les données contextuelles récentes disponibles :
-
+Données contextuelles récentes :
 {context}
 
 ---
@@ -56,74 +70,102 @@ Données de prix actuelles (WFP) :
 
 ---
 
-Sur la base de ces informations, génère un rapport d'analyse mensuelle structuré pour {month_label}, destiné aux décideurs publics béninois.
-
-Le rapport doit contenir exactement les sections suivantes :
+Génère un rapport d'analyse mensuelle structuré pour {month_label}, destiné aux décideurs publics béninois.
 
 ## Résumé Exécutif
-(2-3 phrases synthétisant la situation alimentaire globale du Bénin ce mois-ci, pour un lecteur de haut niveau)
+(2-3 phrases synthétisant la situation alimentaire globale, pour un lecteur de haut niveau)
 
 ## Situation des Prix par Produit
-(Pour chaque produit clé : niveau actuel, tendance vs mois précédent, variations régionales notables entre Cotonou, Malanville et Parakou)
+(Prix actuel, tendance vs mois précédent, variations régionales : Cotonou, Malanville, Parakou)
 
 ## Signaux d'Alerte Détectés
-(Événements médiatiques, tensions logistiques, perturbations climatiques ou économiques. Si aucun signal critique, l'indiquer explicitement.)
+(Événements médiatiques, tensions logistiques, perturbations. Si aucun signal critique, l'indiquer.)
 
 ## Prévisions — 30 à 90 jours
-(Anticipations sur l'évolution des prix et de la disponibilité alimentaire, avec niveau de confiance : élevé / modéré / faible)
+(Anticipations avec niveau de confiance : élevé / modéré / faible)
 
 ## Recommandations de Politique Publique
-(3 à 5 recommandations concrètes pour les institutions : ONASA, MAEP, Ministère du Commerce, avec responsable suggéré pour chaque action)
+(3 à 5 recommandations pour ONASA, MAEP, Ministère du Commerce, avec responsable suggéré)
 
 ## Indicateurs à Surveiller
-(Liste des indicateurs prioritaires à suivre le mois prochain)
+(Liste des indicateurs prioritaires le mois prochain)
 """
 
-REPORT_PROMPT_AGRICULTEUR = """
-Prix des marches au Benin ce mois :
+REPORT_PROMPT_COMMERCANT = """
+Prix des marchés au Bénin ce mois :
 {prices_text}
 
-Informations recentes (nouvelles, evenements) :
+Informations récentes :
 {context}
 
 ---
 
-Ecris un guide pratique pour les paysans beninois pour le mois de {month_label}.
-Ecris EN FRANCAIS TRES SIMPLE. Phrases courtes. Pas de mots compliques.
-Chaque section doit etre utile et comprehe nsible par quelqu'un qui sait a peine lire.
+Écris un bulletin pour les commerçants de vivres béninois — {month_label}.
+Langage simple orienté business. Chiffres en FCFA. Conseils d'achat/vente concrets.
 
-Utilise exactement ces sections :
+## Situation des prix ce mois
+(3-4 phrases : quels produits sont chers, lesquels sont bon marché, tendance générale)
 
-## Les prix ce mois - comment ca va ?
-(2 ou 3 phrases tres simples. Ex : "Ce mois, le mais est cher. C'est bon pour vendre.")
+## Produit par produit — Acheter ou attendre ?
+Pour chaque produit :
+- Prix actuel en FCFA/kg
+- Conseil : ACHETER MAINTENANT / ATTENDRE / VENDRE MAINTENANT
+- Marge estimée si achat aujourd'hui et revente dans 3 semaines
+Format : "MAIS BLANC : 230 FCFA/kg (Parakou). ACHETEZ — revente Cotonou ~270 FCFA/kg, marge ~40 FCFA/kg."
 
-## Produit par produit - que faire ?
-Pour chaque produit, dis :
-- Le prix en FCFA au kilo (ou au sac)
-- Est-ce le bon moment pour vendre ? OUI ou ATTENDRE ?
-- Un conseil court (1 phrase max)
-Format simple : "MAIS BLANC : 230 FCFA/kg a Cotonou. BON MOMENT POUR VENDRE. Le prix est 20% plus haut qu'en janvier."
+## Meilleurs arbitrages ce mois
+2-3 opportunités d'écart de prix entre marchés avec chiffres.
 
-## Ou vendre ? Les meilleurs marches
-Cite 2 ou 3 marches avec leurs prix. Dis lequel est le mieux et pourquoi.
-Ex : "Marche de Malanville : 260 FCFA/kg pour le mais. C'est le meilleur prix ce mois."
+## Risques à surveiller
+Produits en surstock, risques de chute de prix, tensions logistiques. "ATTENTION !" si urgent.
 
-## Ce qui va changer dans 4 a 8 semaines
-Dis clairement : les prix vont MONTER, BAISSER, ou RESTER PAREILS ?
-Explique pourquoi en une phrase simple.
-Si c'est urgent : ecris "ATTENTION !" en debut de ligne.
+## Prévisions 3-6 semaines
+Tendance HAUSSE / BAISSE / STABLE par produit avec raison (1 phrase).
 
-## Que faire maintenant ? (5 conseils pratiques)
-5 conseils tres concrets. Chaque conseil = 1 action precise.
-Ex :
-- "Vendez votre stock de niebe cette semaine - le prix va baisser apres la recolte."
-- "Si vous avez du riz, attendez encore 3 semaines - le prix monte."
-- "Allez au marche de Parakou plutot que Cotonou pour le gari - 30 FCFA de plus par kilo."
-
-## A surveiller ce mois
-2 ou 3 choses simples a regarder dans votre region.
-Ex : "Regardez si d'autres paysans commencent a vendre - si beaucoup vendent en meme temps, le prix va baisser."
+## 5 actions à prendre cette semaine
+Conseils très concrets avec chiffres à l'appui.
 """
+
+REPORT_PROMPT_CITOYEN = """
+Prix alimentaires au Bénin ce mois :
+{prices_text}
+
+Informations générales :
+{context}
+
+---
+
+Écris un guide pratique pour les ménages béninois — {month_label}.
+Langage très simple, chaleureux. Aide les gens à gérer leur budget alimentation.
+
+## Comment vont les prix ce mois ?
+(2-3 phrases simples : est-ce cher ou pas ? Qu'est-ce qui a changé ?)
+
+## Produit par produit — Est-ce cher ?
+Pour chaque produit :
+- Prix en FCFA (au kilo et au sac si possible)
+- CHER / NORMAL / BON MARCHÉ par rapport à d'habitude
+- Un conseil simple
+Format : "RIZ IMPORTÉ : 687 FCFA/kg (environ 17 000 FCFA le sac). CHER. Conseil : achetez du gari à la place — moins cher et nourrissant."
+
+## Où acheter moins cher ?
+Marchés accessibles avec les prix les plus bas. Conseils pratiques pour faire ses courses.
+
+## Ce qui va coûter plus cher dans 1 mois
+Alertes sur les produits dont le prix va monter. "Faites vos stocks maintenant avant la hausse."
+
+## 5 conseils budget pour ce mois
+Conseils pratiques pour manger bien sans dépenser trop. Produits de substitution pas chers.
+"""
+
+# ── HELPERS ──────────────────────────────────────────────────────────────────
+
+def _get_prompts(profile: str):
+    if profile == "commercant":
+        return SYSTEM_PROMPT_COMMERCANT, REPORT_PROMPT_COMMERCANT
+    if profile == "citoyen":
+        return SYSTEM_PROMPT_CITOYEN, REPORT_PROMPT_CITOYEN
+    return SYSTEM_PROMPT_DECIDEUR, REPORT_PROMPT_DECIDEUR
 
 
 def format_prices_text(prices: list[dict]) -> str:
@@ -138,35 +180,27 @@ def format_prices_text(prices: list[dict]) -> str:
     return "\n".join(lines)
 
 
+# ── MAIN FUNCTIONS ────────────────────────────────────────────────────────────
+
 async def generate_analysis(prices, month_label=None, profile: str = "decideur") -> dict:
     """
     Full RAG pipeline: retrieve context → build prompt → call LLM → return result.
-
-    profile: "agriculteur" | "decideur" — determines system prompt and template.
-    Returns: { "analysis": str, "month": str, "tokens_used": int, "profile": str }
+    profile: "decideur" | "commercant" | "citoyen"
     """
     month_label = month_label or datetime.now().strftime("%B %Y")
     context = retrieve_context()
     prices_text = format_prices_text(prices)
 
-    if profile == "agriculteur":
-        system_prompt = SYSTEM_PROMPT_AGRICULTEUR
-        user_prompt = REPORT_PROMPT_AGRICULTEUR.format(
-            context=context,
-            prices_text=prices_text,
-            month_label=month_label,
-        )
-    else:
-        system_prompt = SYSTEM_PROMPT_DECIDEUR
-        user_prompt = REPORT_PROMPT_DECIDEUR.format(
-            context=context,
-            prices_text=prices_text,
-            month_label=month_label,
-        )
+    system_prompt, template = _get_prompts(profile)
+    user_prompt = template.format(
+        context=context,
+        prices_text=prices_text,
+        month_label=month_label,
+    )
 
     client = Groq(api_key=settings.GROQ_API_KEY)
-
     logger.info(f"[Generator] Calling Groq ({settings.GROQ_MODEL}) — profile={profile}")
+
     response = client.chat.completions.create(
         model=settings.GROQ_MODEL,
         messages=[
@@ -179,8 +213,8 @@ async def generate_analysis(prices, month_label=None, profile: str = "decideur")
 
     analysis_text = response.choices[0].message.content
     tokens_used = response.usage.total_tokens if response.usage else 0
+    logger.info(f"[Generator] Done — {tokens_used} tokens, profile={profile}")
 
-    logger.info(f"[Generator] Analysis generated ({tokens_used} tokens, profile={profile})")
     return {
         "analysis": analysis_text,
         "month": month_label,
@@ -190,13 +224,9 @@ async def generate_analysis(prices, month_label=None, profile: str = "decideur")
 
 
 async def generate_chat_reply(user_message: str, history=None, profile: str = "decideur") -> str:
-    """
-    Chatbot reply with RAG context injection.
-    history: list of {"role": "user"|"assistant", "content": str}
-    profile: "agriculteur" | "decideur"
-    """
+    """RAG-powered chatbot reply. profile: "decideur" | "commercant" | "citoyen" """
     context = retrieve_context(query=user_message, n_results=5)
-    system_prompt = SYSTEM_PROMPT_AGRICULTEUR if profile == "agriculteur" else SYSTEM_PROMPT_DECIDEUR
+    system_prompt, _ = _get_prompts(profile)
 
     messages = [
         {"role": "system", "content": system_prompt + f"\n\nContexte disponible :\n{context}"},

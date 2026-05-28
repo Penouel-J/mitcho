@@ -57,7 +57,7 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
     if result.scalar_one_or_none():
         raise HTTPException(status_code=400, detail="Cet email est déjà utilisé")
 
-    profile = body.profile if body.profile in ("agriculteur", "decideur") else "decideur"
+    profile = body.profile if body.profile in ("commercant", "decideur", "citoyen") else "citoyen"
     user = User(
         email=body.email,
         name=body.name,

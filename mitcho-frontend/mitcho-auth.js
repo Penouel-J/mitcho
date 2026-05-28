@@ -35,36 +35,49 @@ let _selectedProfile = null;   // profil choisi à l'étape 1
         Votre profil adapte les analyses et recommandations à vos besoins réels.
       </p>
 
-      <div class="grid grid-cols-2 gap-4">
-        <!-- Carte Agriculteur -->
-        <button onclick="selectProfile('agriculteur')"
-          id="card-agriculteur"
-          class="group flex flex-col items-center gap-3 p-5 rounded-2xl border-2 border-outline-variant/30 hover:border-primary hover:bg-primary/5 transition-all text-left">
-          <div class="w-14 h-14 rounded-2xl bg-[#e8f5e9] flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-            <span class="material-symbols-outlined text-[32px] text-[#2e7d32]" style="font-variation-settings:'FILL' 1;">agriculture</span>
+      <div class="grid grid-cols-3 gap-3">
+        <!-- Commerçant -->
+        <button onclick="selectProfile('commercant')" id="card-commercant"
+          class="group flex flex-col items-center gap-2 p-4 rounded-2xl border-2 border-outline-variant/30 hover:border-primary hover:bg-primary/5 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-[#fff8e1] flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+            <span class="material-symbols-outlined text-[28px] text-[#f57c00]" style="font-variation-settings:'FILL' 1;">storefront</span>
           </div>
           <div class="text-center">
-            <p class="font-label-sm text-[13px] font-semibold text-on-surface">Agriculteur</p>
-            <p class="font-caption text-[11px] text-on-surface-variant mt-0.5">Producteur / Éleveur</p>
+            <p class="font-label-sm text-[12px] font-semibold text-on-surface">Commerçant</p>
+            <p class="font-caption text-[10px] text-on-surface-variant mt-0.5">Revendeur / Trader</p>
           </div>
           <div class="text-[10px] text-on-surface-variant text-center leading-relaxed">
-            Conseils pratiques, meilleures périodes de vente, marchés favorables
+            Marges, arbitrages, timing d'achat
           </div>
         </button>
 
-        <!-- Carte Décideur -->
-        <button onclick="selectProfile('decideur')"
-          id="card-decideur"
-          class="group flex flex-col items-center gap-3 p-5 rounded-2xl border-2 border-outline-variant/30 hover:border-primary hover:bg-primary/5 transition-all text-left">
-          <div class="w-14 h-14 rounded-2xl bg-[#e8eaf6] flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-            <span class="material-symbols-outlined text-[32px] text-[#303f9f]" style="font-variation-settings:'FILL' 1;">account_balance</span>
+        <!-- Décideur -->
+        <button onclick="selectProfile('decideur')" id="card-decideur"
+          class="group flex flex-col items-center gap-2 p-4 rounded-2xl border-2 border-outline-variant/30 hover:border-primary hover:bg-primary/5 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-[#e8eaf6] flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+            <span class="material-symbols-outlined text-[28px] text-[#303f9f]" style="font-variation-settings:'FILL' 1;">account_balance</span>
           </div>
           <div class="text-center">
-            <p class="font-label-sm text-[13px] font-semibold text-on-surface">Décideur public</p>
-            <p class="font-caption text-[11px] text-on-surface-variant mt-0.5">Ministère / Institution</p>
+            <p class="font-label-sm text-[12px] font-semibold text-on-surface">Décideur</p>
+            <p class="font-caption text-[10px] text-on-surface-variant mt-0.5">Ministère / ONG</p>
           </div>
           <div class="text-[10px] text-on-surface-variant text-center leading-relaxed">
-            Analyse stratégique, alertes précoces, recommandations de politique
+            Analyse stratégique, politique publique
+          </div>
+        </button>
+
+        <!-- Citoyen -->
+        <button onclick="selectProfile('citoyen')" id="card-citoyen"
+          class="group flex flex-col items-center gap-2 p-4 rounded-2xl border-2 border-outline-variant/30 hover:border-primary hover:bg-primary/5 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-[#e8f5e9] flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+            <span class="material-symbols-outlined text-[28px] text-[#2e7d32]" style="font-variation-settings:'FILL' 1;">people</span>
+          </div>
+          <div class="text-center">
+            <p class="font-label-sm text-[12px] font-semibold text-on-surface">Citoyen</p>
+            <p class="font-caption text-[10px] text-on-surface-variant mt-0.5">Grand public</p>
+          </div>
+          <div class="text-[10px] text-on-surface-variant text-center leading-relaxed">
+            Où acheter pas cher, budget ménager
           </div>
         </button>
       </div>
@@ -178,20 +191,23 @@ function selectProfile(profile) {
   _selectedProfile = profile;
 
   // Feedback visuel sur les cartes
-  ['agriculteur', 'decideur'].forEach(p => {
+  ['commercant', 'decideur', 'citoyen'].forEach(p => {
     const card = document.getElementById(`card-${p}`);
     if (!card) return;
-    if (p === profile) {
-      card.classList.add('border-primary', 'bg-primary/5', 'shadow-md');
-    } else {
-      card.classList.remove('border-primary', 'bg-primary/5', 'shadow-md');
-    }
+    card.classList.toggle('border-primary', p === profile);
+    card.classList.toggle('bg-primary/5', p === profile);
+    card.classList.toggle('shadow-md', p === profile);
   });
 
   // Badge profil
-  const isAgri = profile === 'agriculteur';
-  document.getElementById('badge-icon').textContent = isAgri ? 'agriculture' : 'account_balance';
-  document.getElementById('badge-label').textContent = isAgri ? 'Agriculteur' : 'Décideur public';
+  const PROFILE_META = {
+    commercant: { icon: 'storefront',       label: 'Commerçant',     sub: 'Conseils marché & marges' },
+    decideur:   { icon: 'account_balance',  label: 'Décideur public', sub: 'Analyses stratégiques' },
+    citoyen:    { icon: 'people',           label: 'Citoyen',         sub: 'Budget & courses' },
+  };
+  const meta = PROFILE_META[profile] || PROFILE_META.citoyen;
+  document.getElementById('badge-icon').textContent  = meta.icon;
+  document.getElementById('badge-label').textContent = meta.label;
 
   // Si déjà connecté mais sans profil → sauvegarder le choix directement et fermer
   const session = getSession();
@@ -211,9 +227,7 @@ function selectProfile(profile) {
   setTimeout(() => {
     document.getElementById('step-profile').classList.add('hidden');
     document.getElementById('step-auth').classList.remove('hidden');
-    document.getElementById('auth-header-sub').textContent = isAgri
-      ? 'Espace agriculteur · Conseils pratiques'
-      : 'Espace décideur · Analyses stratégiques';
+    document.getElementById('auth-header-sub').textContent = meta.sub;
     setTimeout(() => document.querySelector('#form-register input')?.focus(), 80);
   }, 200);
 }

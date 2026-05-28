@@ -8,6 +8,10 @@ services:
     plan: free
 
     envVars:
+      # ── Version Python (force 3.11 — tokenizers/pyo3 incompatible Python 3.14) ─
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+
       # ── Obligatoire ──────────────────────────────────────────────────────────
       - key: GROQ_API_KEY
         sync: false          # à renseigner manuellement dans le dashboard Render

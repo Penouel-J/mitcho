@@ -674,12 +674,23 @@
 
   function handleDownloadPDF() {
     const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
-    if (!session?.loggedIn) {
-      // Pass startPDFGeneration as callback — auto-triggered after login/register
+    if (!session?.loggedIn || !session?.token) {
       openAuthModal('register', startPDFGeneration);
       return;
     }
     startPDFGeneration();
+  }
+
+  function _resetPDFBtn() {
+    const btn = document.getElementById('btn-download-pdf');
+    const container = document.getElementById('pdf-progress-container');
+    const bar = document.getElementById('pdf-progress-bar');
+    btn.disabled = false;
+    btn.classList.remove('opacity-50', 'cursor-not-allowed');
+    bar.classList.remove('bg-red-400');
+    bar.classList.add('bg-inverse-primary');
+    container.classList.add('hidden');
+    bar.style.width = '0%';
   }
 
   async function startPDFGeneration() {
@@ -693,7 +704,6 @@
     btn.classList.add('opacity-50', 'cursor-not-allowed');
     container.classList.remove('hidden');
 
-    // Fake progress animation while the backend generates
     const fakeSteps = [
       [15,  'Collecte des données de marché...'],
       [35,  'Analyse des prix vivriers...'],
@@ -712,16 +722,25 @@
     }, 900);
 
     try {
-      // Get auth token
       const session = JSON.parse(sessionStorage.getItem('mitcho_session') || 'null');
-      const token = session?.token || '';
+      const token   = session?.token || '';
 
       const response = await fetch('http://localhost:8000/report/pdf/stream', {
         method: 'GET',
-        headers: token ? { 'Authorization': `Bearer ${token}` } : {},
+        headers: { 'Authorization': `Bearer ${token}` },
       });
 
       clearInterval(fakeInterval);
+
+      // Token expiré ou compte supprimé → se reconnecter
+      if (response.status === 401) {
+        sessionStorage.removeItem('mitcho_session');
+        if (typeof refreshAuthNav === 'function') refreshAuthNav();
+        _resetPDFBtn();
+        // Ouvre la modal de connexion et relance le téléchargement après login
+        openAuthModal('login', startPDFGeneration);
+        return;
+      }
 
       if (!response.ok) {
         const err = await response.text();

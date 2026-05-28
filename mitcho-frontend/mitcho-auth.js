@@ -428,11 +428,28 @@ function showToast(message, icon = 'check_circle') {
 }
 
 /* ── Init : auth obligatoire au chargement si pas de session ── */
-document.addEventListener('DOMContentLoaded', () => {
+function _initAuth() {
   refreshAuthNav();
   const session = getSession();
+
+  // Session sans profil (créée avant l'ajout du champ) → forcer reconnexion
+  if (session?.loggedIn && !session?.profile) {
+    sessionStorage.removeItem('mitcho_session');
+    setTimeout(() => openAuthModal('register', null, true), 400);
+    return;
+  }
+
   if (!session?.loggedIn) {
-    // Légère pause pour laisser la page se rendre
     setTimeout(() => openAuthModal('register', null, true), 400);
   }
-});
+}
+
+// DOMContentLoaded peut déjà être passé quand ce script charge (fin de body)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _initAuth);
+} else {
+  _initAuth();
+  // Notifier les pages qui écoutent mitcho-auth-changed (ex: tendances.html)
+  // afin qu'elles appliquent le bon contenu si la session existait déjà
+  _dispatchAuthChanged();
+}

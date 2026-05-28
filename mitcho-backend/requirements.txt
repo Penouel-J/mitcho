@@ -33,7 +33,7 @@ python-multipart==0.0.17
 chromadb==0.4.24
 
 # LLM
-groq==0.12.0
+groq>=0.13.0
 
 # PDF generation
 fpdf2==2.8.1
